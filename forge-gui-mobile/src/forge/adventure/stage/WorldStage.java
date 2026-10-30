@@ -74,9 +74,12 @@ public class WorldStage extends GameStage implements SaveFileContent {
         if (isPaused() || MapStage.getInstance().isDialogOnlyInput() || Forge.advFreezePlayerControls)
             return;
         drawNavigationArrow();
-        if (player.isMoving()) {
+        boolean playerMoving = player.isMoving();
+        //Cronache plane: the world keeps living while the player stands still, so challengers come to the player
+        if (playerMoving || CronacheRewards.isActive()) {
             handleMonsterSpawn(delta);
-            collided = collided || handlePointsOfInterestCollision();
+            if (playerMoving)
+                collided = collided || handlePointsOfInterestCollision();
             globalTimer += delta;
 
             for (int i = 0; i < enemies.size(); i++) {

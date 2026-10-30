@@ -31739,7 +31739,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 10,
 		"rewards": [
 			{
@@ -31763,7 +31763,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 10,
 		"rewards": [
 			{
@@ -31789,7 +31789,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 10,
 		"rewards": [
 			{
@@ -31815,7 +31815,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 10,
 		"rewards": [
 			{
@@ -31839,7 +31839,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -31864,7 +31864,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -31888,7 +31888,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 27,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -31912,7 +31912,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -31937,7 +31937,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -31963,7 +31963,7 @@
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -31988,7 +31988,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -32013,7 +32013,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 11,
 		"rewards": [
 			{
@@ -32037,7 +32037,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32061,7 +32061,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 30,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32085,7 +32085,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32109,7 +32109,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32133,7 +32133,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32158,7 +32158,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32183,7 +32183,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32208,7 +32208,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 30,
+		"speed": 32,
 		"life": 12,
 		"rewards": [
 			{
@@ -32232,7 +32232,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32258,7 +32258,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32282,7 +32282,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32307,7 +32307,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32333,7 +32333,7 @@
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -32358,7 +32358,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32382,7 +32382,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32406,7 +32406,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32430,7 +32430,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 13,
 		"rewards": [
 			{
@@ -32455,7 +32455,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32479,7 +32479,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32504,7 +32504,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 29,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32528,7 +32528,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32554,7 +32554,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 30,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32578,7 +32578,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32602,7 +32602,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32626,7 +32626,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 14,
 		"rewards": [
 			{
@@ -32650,7 +32650,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32674,7 +32674,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32698,7 +32698,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32723,7 +32723,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32748,7 +32748,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32772,7 +32772,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32796,7 +32796,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32821,7 +32821,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 15,
 		"rewards": [
 			{
@@ -32845,7 +32845,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -32871,7 +32871,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -32895,7 +32895,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -32919,7 +32919,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -32945,7 +32945,7 @@
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 24,
 		"rewards": [
 			{
@@ -32971,7 +32971,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -32996,7 +32996,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -33021,7 +33021,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 28,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -33045,7 +33045,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 16,
 		"rewards": [
 			{
@@ -33069,7 +33069,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 27,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33094,7 +33094,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 80,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33119,7 +33119,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33145,7 +33145,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 23,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33169,7 +33169,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 29,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33194,7 +33194,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33218,7 +33218,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33243,7 +33243,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 17,
 		"rewards": [
 			{
@@ -33268,7 +33268,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 27,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33292,7 +33292,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33316,7 +33316,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 23,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33341,7 +33341,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 29,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33365,7 +33365,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33390,7 +33390,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33415,7 +33415,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33439,7 +33439,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 23,
+		"speed": 32,
 		"life": 18,
 		"rewards": [
 			{
@@ -33463,7 +33463,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 28,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33487,7 +33487,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 29,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33511,7 +33511,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33535,7 +33535,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33561,7 +33561,7 @@
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 26,
 		"rewards": [
 			{
@@ -33586,7 +33586,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33610,7 +33610,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33635,7 +33635,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 23,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33660,7 +33660,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 23,
+		"speed": 32,
 		"life": 19,
 		"rewards": [
 			{
@@ -33685,7 +33685,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33709,7 +33709,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33734,7 +33734,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33758,7 +33758,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33782,7 +33782,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33806,7 +33806,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33830,7 +33830,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 24,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33855,7 +33855,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 20,
 		"rewards": [
 			{
@@ -33880,7 +33880,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 27,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -33905,7 +33905,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -33931,7 +33931,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -33956,7 +33956,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -33980,7 +33980,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -34005,7 +34005,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -34030,7 +34030,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -34054,7 +34054,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 28,
+		"speed": 32,
 		"life": 21,
 		"rewards": [
 			{
@@ -34079,7 +34079,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 22,
 		"rewards": [
 			{
@@ -34104,7 +34104,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 31,
+		"speed": 32,
 		"life": 22,
 		"rewards": [
 			{
@@ -34129,7 +34129,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 25,
+		"speed": 32,
 		"life": 22,
 		"rewards": [
 			{
@@ -34153,7 +34153,7 @@
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 22,
 		"rewards": [
 			{
@@ -34179,7 +34179,7 @@
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 22,
+		"speed": 32,
 		"life": 30,
 		"rewards": [
 			{
