@@ -118,6 +118,8 @@ public class WorldStage extends GameStage implements SaveFileContent {
                     if (collided)
                         return;
                     collided = true;
+                    if (CronacheRewards.isActive())
+                        Current.player().heal(1.0f); //Cronache: every challenge starts at full life
                     player.setAnimation(CharacterSprite.AnimationTypes.Attack);
                     player.playEffect(Paths.EFFECT_SPARKS, 0.5f);
                     mob.setAnimation(CharacterSprite.AnimationTypes.Attack);

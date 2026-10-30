@@ -431,7 +431,7 @@
                 &quot;options&quot;: [
                   {
                     &quot;name&quot;: &quot;«E adesso?»&quot;,
-                    &quot;text&quot;: &quot;«Adesso esci dal portale da cui sei arrivato, quello che gira alle mie spalle. A valle c'è un villaggio. Cerca la campanara: si chiama Ilde, e ne sa più di me.»&quot;,
+                    &quot;text&quot;: &quot;«Adesso resta qui, accanto al fuoco. La campana li chiamerà attraverso il portale, uno alla volta. Batterli è l'unico modo di farla tacere. Quando sarai stanco, il fuoco ti rimetterà in forze.»&quot;,
                     &quot;options&quot;: [
                       {
                         &quot;name&quot;: &quot;(Vai)&quot;,
@@ -466,7 +466,7 @@
         &quot;checkQuestFlag&quot;: &quot;cronacheMago&quot;
       }
     ],
-    &quot;text&quot;: &quot;«Il portale è alle mie spalle. Vai a valle e cerca Ilde, la campanara. La campana non aspetta.»&quot;,
+    &quot;text&quot;: &quot;«Siediti accanto al fuoco e aspetta. Arriveranno dal portale. La campana non dorme mai.»&quot;,
     &quot;options&quot;: [
       {
         &quot;name&quot;: &quot;(Annuisci)&quot;

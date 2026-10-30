@@ -11310,10 +11310,10 @@
 					"options": [
 						{
 							"name": "(Continua)",
-							"text": "Ti svegli su pietra fredda, senza ricordi. Nel buio arriva un rintocco lento e profondo, che senti nelle ossa più che nelle orecchie. Poi un secondo. Al terzo, qualcosa là fuori smette di essere morto.",
+							"text": "Ti svegli su pietra fredda, in una sala di roccia illuminata da un fuoco. Un rintocco lento e profondo, che senti nelle ossa più che nelle orecchie. Il portale da cui sei arrivato si chiude con un sibilo. Al secondo rintocco, dall'altra parte, qualcosa ha sentito la campana. Non dovrai cercarli: verranno loro, uno alla volta.",
 							"options": [
 								{
-									"name": "(Alzati)"
+									"name": "(Preparati alla prima sfida)"
 								}
 							],
 							"action": [
@@ -11397,33 +11397,11 @@
 		"stages": [
 			{
 				"id": 1,
-				"name": "Esci dalla grotta",
-				"description": "Il portale da cui sei arrivato gira ancora vicino al fuoco: attraversalo per uscire. Il vecchio accanto al fuoco può spiegarti qualcosa.",
-				"objective": "Leave",
-				"anyPOI": true,
-				"mapFlag": "",
-				"mapFlagValue": 1,
-				"prologue": {},
-				"POIToken": "",
-				"epilogue": {
-					"text": "Fuori il cielo è color cenere. Senti un nuovo rintocco, e all'orizzonte qualcosa si volta verso di te. Il vecchio aveva ragione: la campana chiama sfidanti, e tu ne porti il suono addosso. Non dovrai cercarli: verranno loro.",
-					"options": [
-						{
-							"name": "(Preparati alla prima sfida)"
-						}
-					]
-				}
-			},
-			{
-				"id": 2,
 				"name": "Sfida 1: Ciclope",
-				"description": "Sfida 1 di 100: Ciclope. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 1 di 100: Ciclope. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					1
-				],
 				"enemyTags": [
 					"Cronache_Sfida_001"
 				],
@@ -11442,15 +11420,12 @@
 				"POIToken": ""
 			},
 			{
-				"id": 3,
+				"id": 2,
 				"name": "Sfida 2: Avvoltoio",
-				"description": "Sfida 2 di 100: Avvoltoio. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 2 di 100: Avvoltoio. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					2
-				],
 				"enemyTags": [
 					"Cronache_Sfida_002"
 				],
@@ -11459,18 +11434,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					1
+				]
 			},
 			{
-				"id": 4,
+				"id": 3,
 				"name": "Sfida 3: Pipistrello",
-				"description": "Sfida 3 di 100: Pipistrello. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 3 di 100: Pipistrello. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					3
-				],
 				"enemyTags": [
 					"Cronache_Sfida_003"
 				],
@@ -11506,18 +11481,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					2
+				]
 			},
 			{
-				"id": 5,
+				"id": 4,
 				"name": "Sfida 4: Ghoul",
-				"description": "Sfida 4 di 100: Ghoul. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 4 di 100: Ghoul. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					4
-				],
 				"enemyTags": [
 					"Cronache_Sfida_004"
 				],
@@ -11526,18 +11501,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					3
+				]
 			},
 			{
-				"id": 6,
+				"id": 5,
 				"name": "Sfida 5: Homarid",
-				"description": "Sfida 5 di 100: Homarid. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 5 di 100: Homarid. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					5
-				],
 				"enemyTags": [
 					"Cronache_Sfida_005"
 				],
@@ -11546,7 +11521,7 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {
-					"text": "Una donna con le mani fasciate di corda ti raggiunge di corsa. «Sei tu quello che fa suonare la campana? Io sono Ilde, la campanara. Ascoltami: la Campana dei Morti l'ha spezzata Morvane, il Re Sepolto. Ogni volta che vinci, il suo suono si indebolisce. Cento vittorie, e il velo si richiude.»\n\nCento. Ti guardi le mani.\n\nTobia ricompare con il suo carretto. «Ancora vivo? Bene, i clienti morti pagano male. Dai un'occhiata.»",
+					"text": "Il portale si apre un istante e ne esce di corsa una donna con le mani fasciate di corda. «Sei tu quello che fa suonare la campana? Io sono Ilde, la campanara. Ascoltami: la Campana dei Morti l'ha spezzata Morvane, il Re Sepolto. Ogni volta che vinci, il suo suono si indebolisce. Cento vittorie, e il velo si richiude.»\n\nCento. Ti guardi le mani.\n\nTobia ricompare con il suo carretto. «Ancora vivo? Bene, i clienti morti pagano male. Dai un'occhiata.»",
 					"options": [
 						{
 							"name": "(Guarda la merce)",
@@ -11573,18 +11548,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					4
+				]
 			},
 			{
-				"id": 7,
+				"id": 6,
 				"name": "Sfida 6: Guerriero Minotauro",
-				"description": "Sfida 6 di 100: Guerriero Minotauro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 6 di 100: Guerriero Minotauro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					6
-				],
 				"enemyTags": [
 					"Cronache_Sfida_006"
 				],
@@ -11593,18 +11568,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					5
+				]
 			},
 			{
-				"id": 8,
+				"id": 7,
 				"name": "Sfida 7: Boggart",
-				"description": "Sfida 7 di 100: Boggart. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 7 di 100: Boggart. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					7
-				],
 				"enemyTags": [
 					"Cronache_Sfida_007"
 				],
@@ -11613,18 +11588,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					6
+				]
 			},
 			{
-				"id": 9,
+				"id": 8,
 				"name": "Sfida 8: Spettro",
-				"description": "Sfida 8 di 100: Spettro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 8 di 100: Spettro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					8
-				],
 				"enemyTags": [
 					"Cronache_Sfida_008"
 				],
@@ -11633,18 +11608,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					7
+				]
 			},
 			{
-				"id": 10,
+				"id": 9,
 				"name": "Sfida 9: Bandito con la Fionda",
-				"description": "Sfida 9 di 100: Bandito con la Fionda. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 9 di 100: Bandito con la Fionda. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					9
-				],
 				"enemyTags": [
 					"Cronache_Sfida_009"
 				],
@@ -11680,18 +11655,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					8
+				]
 			},
 			{
-				"id": 11,
+				"id": 10,
 				"name": "Sfida 10: Araldo Scarno",
-				"description": "Sfida 10 di 100 (boss): Araldo Scarno. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 10 di 100 (boss): Araldo Scarno. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					10
-				],
 				"enemyTags": [
 					"Cronache_Sfida_010"
 				],
@@ -11707,18 +11682,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					9
+				]
 			},
 			{
-				"id": 12,
+				"id": 11,
 				"name": "Sfida 11: Gargoyle",
-				"description": "Sfida 11 di 100: Gargoyle. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 11 di 100: Gargoyle. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					11
-				],
 				"enemyTags": [
 					"Cronache_Sfida_011"
 				],
@@ -11727,18 +11702,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					10
+				]
 			},
 			{
-				"id": 13,
+				"id": 12,
 				"name": "Sfida 12: Guerriero",
-				"description": "Sfida 12 di 100: Guerriero. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 12 di 100: Guerriero. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					12
-				],
 				"enemyTags": [
 					"Cronache_Sfida_012"
 				],
@@ -11774,18 +11749,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					11
+				]
 			},
 			{
-				"id": 14,
+				"id": 13,
 				"name": "Sfida 13: Cammello",
-				"description": "Sfida 13 di 100: Cammello. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 13 di 100: Cammello. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					13
-				],
 				"enemyTags": [
 					"Cronache_Sfida_013"
 				],
@@ -11794,18 +11769,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					12
+				]
 			},
 			{
-				"id": 15,
+				"id": 14,
 				"name": "Sfida 14: Khan",
-				"description": "Sfida 14 di 100: Khan. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 14 di 100: Khan. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					14
-				],
 				"enemyTags": [
 					"Cronache_Sfida_014"
 				],
@@ -11841,18 +11816,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					13
+				]
 			},
 			{
-				"id": 16,
+				"id": 15,
 				"name": "Sfida 15: Avventuriero",
-				"description": "Sfida 15 di 100: Avventuriero. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 15 di 100: Avventuriero. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					15
-				],
 				"enemyTags": [
 					"Cronache_Sfida_015"
 				],
@@ -11868,18 +11843,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					14
+				]
 			},
 			{
-				"id": 17,
+				"id": 16,
 				"name": "Sfida 16: Gorgone",
-				"description": "Sfida 16 di 100: Gorgone. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 16 di 100: Gorgone. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					16
-				],
 				"enemyTags": [
 					"Cronache_Sfida_016"
 				],
@@ -11888,18 +11863,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					15
+				]
 			},
 			{
-				"id": 18,
+				"id": 17,
 				"name": "Sfida 17: Abominio di Carne",
-				"description": "Sfida 17 di 100: Abominio di Carne. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 17 di 100: Abominio di Carne. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					17
-				],
 				"enemyTags": [
 					"Cronache_Sfida_017"
 				],
@@ -11935,18 +11910,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					16
+				]
 			},
 			{
-				"id": 19,
+				"id": 18,
 				"name": "Sfida 18: Djinn di Tarkir",
-				"description": "Sfida 18 di 100: Djinn di Tarkir. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 18 di 100: Djinn di Tarkir. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					18
-				],
 				"enemyTags": [
 					"Cronache_Sfida_018"
 				],
@@ -11955,18 +11930,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					17
+				]
 			},
 			{
-				"id": 20,
+				"id": 19,
 				"name": "Sfida 19: Stegosauro",
-				"description": "Sfida 19 di 100: Stegosauro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 19 di 100: Stegosauro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					19
-				],
 				"enemyTags": [
 					"Cronache_Sfida_019"
 				],
@@ -12002,18 +11977,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					18
+				]
 			},
 			{
-				"id": 21,
+				"id": 20,
 				"name": "Sfida 20: Guerriero Centauro",
-				"description": "Sfida 20 di 100: Guerriero Centauro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 20 di 100: Guerriero Centauro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					20
-				],
 				"enemyTags": [
 					"Cronache_Sfida_020"
 				],
@@ -12022,18 +11997,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					19
+				]
 			},
 			{
-				"id": 22,
+				"id": 21,
 				"name": "Sfida 21: Gufo",
-				"description": "Sfida 21 di 100: Gufo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 21 di 100: Gufo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					21
-				],
 				"enemyTags": [
 					"Cronache_Sfida_021"
 				],
@@ -12042,18 +12017,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					20
+				]
 			},
 			{
-				"id": 23,
+				"id": 22,
 				"name": "Sfida 22: Pirata",
-				"description": "Sfida 22 di 100: Pirata. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 22 di 100: Pirata. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					22
-				],
 				"enemyTags": [
 					"Cronache_Sfida_022"
 				],
@@ -12062,18 +12037,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					21
+				]
 			},
 			{
-				"id": 24,
+				"id": 23,
 				"name": "Sfida 23: Serpente Velenoso",
-				"description": "Sfida 23 di 100: Serpente Velenoso. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 23 di 100: Serpente Velenoso. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					23
-				],
 				"enemyTags": [
 					"Cronache_Sfida_023"
 				],
@@ -12109,18 +12084,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					22
+				]
 			},
 			{
-				"id": 25,
+				"id": 24,
 				"name": "Sfida 24: Guerriero Khenra",
-				"description": "Sfida 24 di 100: Guerriero Khenra. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 24 di 100: Guerriero Khenra. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					24
-				],
 				"enemyTags": [
 					"Cronache_Sfida_024"
 				],
@@ -12129,18 +12104,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					23
+				]
 			},
 			{
-				"id": 26,
+				"id": 25,
 				"name": "Sfida 25: Il Custode del Cimitero",
-				"description": "Sfida 25 di 100 (boss): Il Custode del Cimitero. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 25 di 100 (boss): Il Custode del Cimitero. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					25
-				],
 				"enemyTags": [
 					"Cronache_Sfida_025"
 				],
@@ -12176,18 +12151,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					24
+				]
 			},
 			{
-				"id": 27,
+				"id": 26,
 				"name": "Sfida 26: Verme",
-				"description": "Sfida 26 di 100: Verme. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 26 di 100: Verme. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					26
-				],
 				"enemyTags": [
 					"Cronache_Sfida_026"
 				],
@@ -12196,18 +12171,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					25
+				]
 			},
 			{
-				"id": 28,
+				"id": 27,
 				"name": "Sfida 27: Scheletro",
-				"description": "Sfida 27 di 100: Scheletro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 27 di 100: Scheletro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					27
-				],
 				"enemyTags": [
 					"Cronache_Sfida_027"
 				],
@@ -12216,18 +12191,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					26
+				]
 			},
 			{
-				"id": 29,
+				"id": 28,
 				"name": "Sfida 28: Gigante Errante",
-				"description": "Sfida 28 di 100: Gigante Errante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 28 di 100: Gigante Errante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					28
-				],
 				"enemyTags": [
 					"Cronache_Sfida_028"
 				],
@@ -12263,18 +12238,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					27
+				]
 			},
 			{
-				"id": 30,
+				"id": 29,
 				"name": "Sfida 29: Coccodrillo",
-				"description": "Sfida 29 di 100: Coccodrillo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 29 di 100: Coccodrillo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					29
-				],
 				"enemyTags": [
 					"Cronache_Sfida_029"
 				],
@@ -12283,18 +12258,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					28
+				]
 			},
 			{
-				"id": 31,
+				"id": 30,
 				"name": "Sfida 30: Angelo dell'Ortodossia",
-				"description": "Sfida 30 di 100: Angelo dell'Ortodossia. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 30 di 100: Angelo dell'Ortodossia. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					30
-				],
 				"enemyTags": [
 					"Cronache_Sfida_030"
 				],
@@ -12303,18 +12278,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					29
+				]
 			},
 			{
-				"id": 32,
+				"id": 31,
 				"name": "Sfida 31: Scarabeo",
-				"description": "Sfida 31 di 100: Scarabeo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 31 di 100: Scarabeo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					31
-				],
 				"enemyTags": [
 					"Cronache_Sfida_031"
 				],
@@ -12350,18 +12325,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					30
+				]
 			},
 			{
-				"id": 33,
+				"id": 32,
 				"name": "Sfida 32: Goblin Fanatico",
-				"description": "Sfida 32 di 100: Goblin Fanatico. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 32 di 100: Goblin Fanatico. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					32
-				],
 				"enemyTags": [
 					"Cronache_Sfida_032"
 				],
@@ -12370,18 +12345,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					31
+				]
 			},
 			{
-				"id": 34,
+				"id": 33,
 				"name": "Sfida 33: Pappagallo",
-				"description": "Sfida 33 di 100: Pappagallo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 33 di 100: Pappagallo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					33
-				],
 				"enemyTags": [
 					"Cronache_Sfida_033"
 				],
@@ -12417,18 +12392,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					32
+				]
 			},
 			{
-				"id": 35,
+				"id": 34,
 				"name": "Sfida 34: Spirito Oscuro",
-				"description": "Sfida 34 di 100: Spirito Oscuro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 34 di 100: Spirito Oscuro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					34
-				],
 				"enemyTags": [
 					"Cronache_Sfida_034"
 				],
@@ -12437,18 +12412,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					33
+				]
 			},
 			{
-				"id": 36,
+				"id": 35,
 				"name": "Sfida 35: Panda Gigante",
-				"description": "Sfida 35 di 100: Panda Gigante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 35 di 100: Panda Gigante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					35
-				],
 				"enemyTags": [
 					"Cronache_Sfida_035"
 				],
@@ -12484,18 +12459,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					34
+				]
 			},
 			{
-				"id": 37,
+				"id": 36,
 				"name": "Sfida 36: Mago Blu Corrotto",
-				"description": "Sfida 36 di 100: Mago Blu Corrotto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 36 di 100: Mago Blu Corrotto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					36
-				],
 				"enemyTags": [
 					"Cronache_Sfida_036"
 				],
@@ -12504,18 +12479,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					35
+				]
 			},
 			{
-				"id": 38,
+				"id": 37,
 				"name": "Sfida 37: Sliver Bianco",
-				"description": "Sfida 37 di 100: Sliver Bianco. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 37 di 100: Sliver Bianco. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					37
-				],
 				"enemyTags": [
 					"Cronache_Sfida_037"
 				],
@@ -12551,18 +12526,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					36
+				]
 			},
 			{
-				"id": 39,
+				"id": 38,
 				"name": "Sfida 38: Signore delle Bestie",
-				"description": "Sfida 38 di 100: Signore delle Bestie. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 38 di 100: Signore delle Bestie. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					38
-				],
 				"enemyTags": [
 					"Cronache_Sfida_038"
 				],
@@ -12571,18 +12546,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					37
+				]
 			},
 			{
-				"id": 40,
+				"id": 39,
 				"name": "Sfida 39: Prototipo Verde",
-				"description": "Sfida 39 di 100: Prototipo Verde. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 39 di 100: Prototipo Verde. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					39
-				],
 				"enemyTags": [
 					"Cronache_Sfida_039"
 				],
@@ -12591,18 +12566,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					38
+				]
 			},
 			{
-				"id": 41,
+				"id": 40,
 				"name": "Sfida 40: Spirito",
-				"description": "Sfida 40 di 100: Spirito. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 40 di 100: Spirito. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					40
-				],
 				"enemyTags": [
 					"Cronache_Sfida_040"
 				],
@@ -12618,18 +12593,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					39
+				]
 			},
 			{
-				"id": 42,
+				"id": 41,
 				"name": "Sfida 41: Demone Minore",
-				"description": "Sfida 41 di 100: Demone Minore. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 41 di 100: Demone Minore. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					41
-				],
 				"enemyTags": [
 					"Cronache_Sfida_041"
 				],
@@ -12665,18 +12640,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					40
+				]
 			},
 			{
-				"id": 43,
+				"id": 42,
 				"name": "Sfida 42: Prototipo Blu",
-				"description": "Sfida 42 di 100: Prototipo Blu. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 42 di 100: Prototipo Blu. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					42
-				],
 				"enemyTags": [
 					"Cronache_Sfida_042"
 				],
@@ -12685,18 +12660,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					41
+				]
 			},
 			{
-				"id": 44,
+				"id": 43,
 				"name": "Sfida 43: Mostro Marino",
-				"description": "Sfida 43 di 100: Mostro Marino. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 43 di 100: Mostro Marino. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					43
-				],
 				"enemyTags": [
 					"Cronache_Sfida_043"
 				],
@@ -12732,18 +12707,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					42
+				]
 			},
 			{
-				"id": 45,
+				"id": 44,
 				"name": "Sfida 44: Criosfinge",
-				"description": "Sfida 44 di 100: Criosfinge. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 44 di 100: Criosfinge. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					44
-				],
 				"enemyTags": [
 					"Cronache_Sfida_044"
 				],
@@ -12752,18 +12727,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					43
+				]
 			},
 			{
-				"id": 46,
+				"id": 45,
 				"name": "Sfida 45: Mago Blu Adepto",
-				"description": "Sfida 45 di 100: Mago Blu Adepto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 45 di 100: Mago Blu Adepto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					45
-				],
 				"enemyTags": [
 					"Cronache_Sfida_045"
 				],
@@ -12772,18 +12747,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					44
+				]
 			},
 			{
-				"id": 47,
+				"id": 46,
 				"name": "Sfida 46: Angelo Sorvegliante",
-				"description": "Sfida 46 di 100: Angelo Sorvegliante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 46 di 100: Angelo Sorvegliante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					46
-				],
 				"enemyTags": [
 					"Cronache_Sfida_046"
 				],
@@ -12819,18 +12794,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					45
+				]
 			},
 			{
-				"id": 48,
+				"id": 47,
 				"name": "Sfida 47: Nano Demolitore",
-				"description": "Sfida 47 di 100: Nano Demolitore. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 47 di 100: Nano Demolitore. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					47
-				],
 				"enemyTags": [
 					"Cronache_Sfida_047"
 				],
@@ -12839,18 +12814,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					46
+				]
 			},
 			{
-				"id": 49,
+				"id": 48,
 				"name": "Sfida 48: Chierico Corrotto",
-				"description": "Sfida 48 di 100: Chierico Corrotto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 48 di 100: Chierico Corrotto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					48
-				],
 				"enemyTags": [
 					"Cronache_Sfida_048"
 				],
@@ -12886,18 +12861,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					47
+				]
 			},
 			{
-				"id": 50,
+				"id": 49,
 				"name": "Sfida 49: Leone",
-				"description": "Sfida 49 di 100: Leone. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 49 di 100: Leone. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					49
-				],
 				"enemyTags": [
 					"Cronache_Sfida_049"
 				],
@@ -12906,18 +12881,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					48
+				]
 			},
 			{
-				"id": 51,
+				"id": 50,
 				"name": "Sfida 50: Sorella Vessa",
-				"description": "Sfida 50 di 100 (boss): Sorella Vessa. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 50 di 100 (boss): Sorella Vessa. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					50
-				],
 				"enemyTags": [
 					"Cronache_Sfida_050"
 				],
@@ -12933,18 +12908,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					49
+				]
 			},
 			{
-				"id": 52,
+				"id": 51,
 				"name": "Sfida 51: Barbaro",
-				"description": "Sfida 51 di 100: Barbaro. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 51 di 100: Barbaro. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					51
-				],
 				"enemyTags": [
 					"Cronache_Sfida_051"
 				],
@@ -12980,18 +12955,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					50
+				]
 			},
 			{
-				"id": 53,
+				"id": 52,
 				"name": "Sfida 52: Cespuglio Nascosto",
-				"description": "Sfida 52 di 100: Cespuglio Nascosto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 52 di 100: Cespuglio Nascosto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					52
-				],
 				"enemyTags": [
 					"Cronache_Sfida_052"
 				],
@@ -13000,18 +12975,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					51
+				]
 			},
 			{
-				"id": 54,
+				"id": 53,
 				"name": "Sfida 53: Sfidante Errante",
-				"description": "Sfida 53 di 100: Sfidante Errante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 53 di 100: Sfidante Errante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					53
-				],
 				"enemyTags": [
 					"Cronache_Sfida_053"
 				],
@@ -13047,18 +13022,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					52
+				]
 			},
 			{
-				"id": 55,
+				"id": 54,
 				"name": "Sfida 54: Canalizzatore dell'Etere",
-				"description": "Sfida 54 di 100: Canalizzatore dell'Etere. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 54 di 100: Canalizzatore dell'Etere. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					54
-				],
 				"enemyTags": [
 					"Cronache_Sfida_054"
 				],
@@ -13067,18 +13042,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					53
+				]
 			},
 			{
-				"id": 56,
+				"id": 55,
 				"name": "Sfida 55: Guerriero Amphin",
-				"description": "Sfida 55 di 100: Guerriero Amphin. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 55 di 100: Guerriero Amphin. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					55
-				],
 				"enemyTags": [
 					"Cronache_Sfida_055"
 				],
@@ -13087,18 +13062,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					54
+				]
 			},
 			{
-				"id": 57,
+				"id": 56,
 				"name": "Sfida 56: Minotauro Chiamaguerra",
-				"description": "Sfida 56 di 100: Minotauro Chiamaguerra. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 56 di 100: Minotauro Chiamaguerra. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					56
-				],
 				"enemyTags": [
 					"Cronache_Sfida_056"
 				],
@@ -13134,18 +13109,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					55
+				]
 			},
 			{
-				"id": 58,
+				"id": 57,
 				"name": "Sfida 57: Ombra",
-				"description": "Sfida 57 di 100: Ombra. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 57 di 100: Ombra. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					57
-				],
 				"enemyTags": [
 					"Cronache_Sfida_057"
 				],
@@ -13154,18 +13129,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					56
+				]
 			},
 			{
-				"id": 59,
+				"id": 58,
 				"name": "Sfida 58: Elementale di Fiamma",
-				"description": "Sfida 58 di 100: Elementale di Fiamma. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 58 di 100: Elementale di Fiamma. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					58
-				],
 				"enemyTags": [
 					"Cronache_Sfida_058"
 				],
@@ -13174,18 +13149,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					57
+				]
 			},
 			{
-				"id": 60,
+				"id": 59,
 				"name": "Sfida 59: Angelo Caduto",
-				"description": "Sfida 59 di 100: Angelo Caduto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 59 di 100: Angelo Caduto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					59
-				],
 				"enemyTags": [
 					"Cronache_Sfida_059"
 				],
@@ -13221,18 +13196,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					58
+				]
 			},
 			{
-				"id": 61,
+				"id": 60,
 				"name": "Sfida 60: Signore della Pestilenza",
-				"description": "Sfida 60 di 100: Signore della Pestilenza. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 60 di 100: Signore della Pestilenza. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					60
-				],
 				"enemyTags": [
 					"Cronache_Sfida_060"
 				],
@@ -13248,18 +13223,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					59
+				]
 			},
 			{
-				"id": 62,
+				"id": 61,
 				"name": "Sfida 61: Cacciatore Orco",
-				"description": "Sfida 61 di 100: Cacciatore Orco. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 61 di 100: Cacciatore Orco. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					61
-				],
 				"enemyTags": [
 					"Cronache_Sfida_061"
 				],
@@ -13268,18 +13243,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					60
+				]
 			},
 			{
-				"id": 63,
+				"id": 62,
 				"name": "Sfida 62: Polpo",
-				"description": "Sfida 62 di 100: Polpo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 62 di 100: Polpo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					62
-				],
 				"enemyTags": [
 					"Cronache_Sfida_062"
 				],
@@ -13315,18 +13290,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					61
+				]
 			},
 			{
-				"id": 64,
+				"id": 63,
 				"name": "Sfida 63: Guerriero Leonin",
-				"description": "Sfida 63 di 100: Guerriero Leonin. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 63 di 100: Guerriero Leonin. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					63
-				],
 				"enemyTags": [
 					"Cronache_Sfida_063"
 				],
@@ -13335,18 +13310,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					62
+				]
 			},
 			{
-				"id": 65,
+				"id": 64,
 				"name": "Sfida 64: Capitano Pirata",
-				"description": "Sfida 64 di 100: Capitano Pirata. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 64 di 100: Capitano Pirata. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					64
-				],
 				"enemyTags": [
 					"Cronache_Sfida_064"
 				],
@@ -13355,18 +13330,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					63
+				]
 			},
 			{
-				"id": 66,
+				"id": 65,
 				"name": "Sfida 65: Gigante del Fuoco",
-				"description": "Sfida 65 di 100: Gigante del Fuoco. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 65 di 100: Gigante del Fuoco. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					65
-				],
 				"enemyTags": [
 					"Cronache_Sfida_065"
 				],
@@ -13402,18 +13377,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					64
+				]
 			},
 			{
-				"id": 67,
+				"id": 66,
 				"name": "Sfida 66: Goblin Predatore",
-				"description": "Sfida 66 di 100: Goblin Predatore. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 66 di 100: Goblin Predatore. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					66
-				],
 				"enemyTags": [
 					"Cronache_Sfida_066"
 				],
@@ -13422,18 +13397,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					65
+				]
 			},
 			{
-				"id": 68,
+				"id": 67,
 				"name": "Sfida 67: Kobold Operaio",
-				"description": "Sfida 67 di 100: Kobold Operaio. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 67 di 100: Kobold Operaio. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					67
-				],
 				"enemyTags": [
 					"Cronache_Sfida_067"
 				],
@@ -13469,18 +13444,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					66
+				]
 			},
 			{
-				"id": 69,
+				"id": 68,
 				"name": "Sfida 68: Arboreo Scelto",
-				"description": "Sfida 68 di 100: Arboreo Scelto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 68 di 100: Arboreo Scelto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					68
-				],
 				"enemyTags": [
 					"Cronache_Sfida_068"
 				],
@@ -13489,18 +13464,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					67
+				]
 			},
 			{
-				"id": 70,
+				"id": 69,
 				"name": "Sfida 69: Accolita di Chandra",
-				"description": "Sfida 69 di 100: Accolita di Chandra. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 69 di 100: Accolita di Chandra. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					69
-				],
 				"enemyTags": [
 					"Cronache_Sfida_069"
 				],
@@ -13536,18 +13511,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					68
+				]
 			},
 			{
-				"id": 71,
+				"id": 70,
 				"name": "Sfida 70: Titano della Tempesta",
-				"description": "Sfida 70 di 100: Titano della Tempesta. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 70 di 100: Titano della Tempesta. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					70
-				],
 				"enemyTags": [
 					"Cronache_Sfida_070"
 				],
@@ -13563,18 +13538,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					69
+				]
 			},
 			{
-				"id": 72,
+				"id": 71,
 				"name": "Sfida 71: Sfidante Veterano",
-				"description": "Sfida 71 di 100: Sfidante Veterano. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 71 di 100: Sfidante Veterano. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					71
-				],
 				"enemyTags": [
 					"Cronache_Sfida_071"
 				],
@@ -13583,18 +13558,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					70
+				]
 			},
 			{
-				"id": 73,
+				"id": 72,
 				"name": "Sfida 72: Capo Goblin",
-				"description": "Sfida 72 di 100: Capo Goblin. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 72 di 100: Capo Goblin. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					72
-				],
 				"enemyTags": [
 					"Cronache_Sfida_072"
 				],
@@ -13603,18 +13578,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					71
+				]
 			},
 			{
-				"id": 74,
+				"id": 73,
 				"name": "Sfida 73: Sliver Rosso",
-				"description": "Sfida 73 di 100: Sliver Rosso. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 73 di 100: Sliver Rosso. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					73
-				],
 				"enemyTags": [
 					"Cronache_Sfida_073"
 				],
@@ -13650,18 +13625,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					72
+				]
 			},
 			{
-				"id": 75,
+				"id": 74,
 				"name": "Sfida 74: Riccio",
-				"description": "Sfida 74 di 100: Riccio. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 74 di 100: Riccio. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					74
-				],
 				"enemyTags": [
 					"Cronache_Sfida_074"
 				],
@@ -13670,18 +13645,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					73
+				]
 			},
 			{
-				"id": 76,
+				"id": 75,
 				"name": "Sfida 75: Il Cardinale delle Ceneri",
-				"description": "Sfida 75 di 100 (boss): Il Cardinale delle Ceneri. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 75 di 100 (boss): Il Cardinale delle Ceneri. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					75
-				],
 				"enemyTags": [
 					"Cronache_Sfida_075"
 				],
@@ -13697,18 +13672,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					74
+				]
 			},
 			{
-				"id": 77,
+				"id": 76,
 				"name": "Sfida 76: Golem Blu",
-				"description": "Sfida 76 di 100: Golem Blu. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 76 di 100: Golem Blu. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					76
-				],
 				"enemyTags": [
 					"Cronache_Sfida_076"
 				],
@@ -13717,18 +13692,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					75
+				]
 			},
 			{
-				"id": 78,
+				"id": 77,
 				"name": "Sfida 77: Mago Simic",
-				"description": "Sfida 77 di 100: Mago Simic. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 77 di 100: Mago Simic. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					77
-				],
 				"enemyTags": [
 					"Cronache_Sfida_077"
 				],
@@ -13764,18 +13739,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					76
+				]
 			},
 			{
-				"id": 79,
+				"id": 78,
 				"name": "Sfida 78: Scoiattolo",
-				"description": "Sfida 78 di 100: Scoiattolo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 78 di 100: Scoiattolo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					78
-				],
 				"enemyTags": [
 					"Cronache_Sfida_078"
 				],
@@ -13784,18 +13759,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					77
+				]
 			},
 			{
-				"id": 80,
+				"id": 79,
 				"name": "Sfida 79: Gigante della Foresta",
-				"description": "Sfida 79 di 100: Gigante della Foresta. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 79 di 100: Gigante della Foresta. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					79
-				],
 				"enemyTags": [
 					"Cronache_Sfida_079"
 				],
@@ -13831,18 +13806,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					78
+				]
 			},
 			{
-				"id": 81,
+				"id": 80,
 				"name": "Sfida 80: Alchimista di Liliana",
-				"description": "Sfida 80 di 100: Alchimista di Liliana. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 80 di 100: Alchimista di Liliana. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					80
-				],
 				"enemyTags": [
 					"Cronache_Sfida_080"
 				],
@@ -13851,18 +13826,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					79
+				]
 			},
 			{
-				"id": 82,
+				"id": 81,
 				"name": "Sfida 81: Signore della Guerra Nano",
-				"description": "Sfida 81 di 100: Signore della Guerra Nano. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 81 di 100: Signore della Guerra Nano. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					81
-				],
 				"enemyTags": [
 					"Cronache_Sfida_081"
 				],
@@ -13871,18 +13846,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					80
+				]
 			},
 			{
-				"id": 83,
+				"id": 82,
 				"name": "Sfida 82: Negromante",
-				"description": "Sfida 82 di 100: Negromante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 82 di 100: Negromante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					82
-				],
 				"enemyTags": [
 					"Cronache_Sfida_082"
 				],
@@ -13918,18 +13893,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					81
+				]
 			},
 			{
-				"id": 84,
+				"id": 83,
 				"name": "Sfida 83: Mago Rakdos",
-				"description": "Sfida 83 di 100: Mago Rakdos. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 83 di 100: Mago Rakdos. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					83
-				],
 				"enemyTags": [
 					"Cronache_Sfida_083"
 				],
@@ -13938,18 +13913,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					82
+				]
 			},
 			{
-				"id": 85,
+				"id": 84,
 				"name": "Sfida 84: Golem d'Ossa",
-				"description": "Sfida 84 di 100: Golem d'Ossa. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 84 di 100: Golem d'Ossa. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					84
-				],
 				"enemyTags": [
 					"Cronache_Sfida_084"
 				],
@@ -13985,18 +13960,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					83
+				]
 			},
 			{
-				"id": 86,
+				"id": 85,
 				"name": "Sfida 85: Cavaliere Mercenario",
-				"description": "Sfida 85 di 100: Cavaliere Mercenario. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 85 di 100: Cavaliere Mercenario. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					85
-				],
 				"enemyTags": [
 					"Cronache_Sfida_085"
 				],
@@ -14012,18 +13987,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					84
+				]
 			},
 			{
-				"id": 87,
+				"id": 86,
 				"name": "Sfida 86: Capo dei Banditi",
-				"description": "Sfida 86 di 100: Capo dei Banditi. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 86 di 100: Capo dei Banditi. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					86
-				],
 				"enemyTags": [
 					"Cronache_Sfida_086"
 				],
@@ -14059,18 +14034,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					85
+				]
 			},
 			{
-				"id": 88,
+				"id": 87,
 				"name": "Sfida 87: Ciclope Gigante",
-				"description": "Sfida 87 di 100: Ciclope Gigante. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 87 di 100: Ciclope Gigante. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					87
-				],
 				"enemyTags": [
 					"Cronache_Sfida_087"
 				],
@@ -14079,18 +14054,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					86
+				]
 			},
 			{
-				"id": 89,
+				"id": 88,
 				"name": "Sfida 88: Talpa Cerebrale",
-				"description": "Sfida 88 di 100: Talpa Cerebrale. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 88 di 100: Talpa Cerebrale. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					88
-				],
 				"enemyTags": [
 					"Cronache_Sfida_088"
 				],
@@ -14099,18 +14074,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					87
+				]
 			},
 			{
-				"id": 90,
+				"id": 89,
 				"name": "Sfida 89: Guardiano delle Nuvole",
-				"description": "Sfida 89 di 100: Guardiano delle Nuvole. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 89 di 100: Guardiano delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					89
-				],
 				"enemyTags": [
 					"Cronache_Sfida_089"
 				],
@@ -14146,18 +14121,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					88
+				]
 			},
 			{
-				"id": 91,
+				"id": 90,
 				"name": "Sfida 90: Froghemoth",
-				"description": "Sfida 90 di 100: Froghemoth. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 90 di 100: Froghemoth. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					90
-				],
 				"enemyTags": [
 					"Cronache_Sfida_090"
 				],
@@ -14173,18 +14148,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					89
+				]
 			},
 			{
-				"id": 92,
+				"id": 91,
 				"name": "Sfida 91: Signore degli Zombie",
-				"description": "Sfida 91 di 100: Signore degli Zombie. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 91 di 100: Signore degli Zombie. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					91
-				],
 				"enemyTags": [
 					"Cronache_Sfida_091"
 				],
@@ -14193,18 +14168,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					90
+				]
 			},
 			{
-				"id": 93,
+				"id": 92,
 				"name": "Sfida 92: Gigante delle Nuvole",
-				"description": "Sfida 92 di 100: Gigante delle Nuvole. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 92 di 100: Gigante delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					92
-				],
 				"enemyTags": [
 					"Cronache_Sfida_092"
 				],
@@ -14240,18 +14215,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					91
+				]
 			},
 			{
-				"id": 94,
+				"id": 93,
 				"name": "Sfida 93: Tritone Scelto",
-				"description": "Sfida 93 di 100: Tritone Scelto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 93 di 100: Tritone Scelto. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					93
-				],
 				"enemyTags": [
 					"Cronache_Sfida_093"
 				],
@@ -14260,18 +14235,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					92
+				]
 			},
 			{
-				"id": 95,
+				"id": 94,
 				"name": "Sfida 94: Arboreo Golgari",
-				"description": "Sfida 94 di 100: Arboreo Golgari. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 94 di 100: Arboreo Golgari. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					94
-				],
 				"enemyTags": [
 					"Cronache_Sfida_094"
 				],
@@ -14307,18 +14282,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					93
+				]
 			},
 			{
-				"id": 96,
+				"id": 95,
 				"name": "Sfida 95: Fenice",
-				"description": "Sfida 95 di 100: Fenice. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 95 di 100: Fenice. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					95
-				],
 				"enemyTags": [
 					"Cronache_Sfida_095"
 				],
@@ -14334,18 +14309,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					94
+				]
 			},
 			{
-				"id": 97,
+				"id": 96,
 				"name": "Sfida 96: Kobold Evocadraghi",
-				"description": "Sfida 96 di 100: Kobold Evocadraghi. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 96 di 100: Kobold Evocadraghi. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					96
-				],
 				"enemyTags": [
 					"Cronache_Sfida_096"
 				],
@@ -14381,18 +14356,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					95
+				]
 			},
 			{
-				"id": 98,
+				"id": 97,
 				"name": "Sfida 97: Demone di Tibalt",
-				"description": "Sfida 97 di 100: Demone di Tibalt. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 97 di 100: Demone di Tibalt. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					97
-				],
 				"enemyTags": [
 					"Cronache_Sfida_097"
 				],
@@ -14401,18 +14376,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					96
+				]
 			},
 			{
-				"id": 99,
+				"id": 98,
 				"name": "Sfida 98: Bardo",
-				"description": "Sfida 98 di 100: Bardo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 98 di 100: Bardo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					98
-				],
 				"enemyTags": [
 					"Cronache_Sfida_098"
 				],
@@ -14421,18 +14396,18 @@
 				"count3": 1,
 				"prologue": {},
 				"epilogue": {},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					97
+				]
 			},
 			{
-				"id": 100,
+				"id": 99,
 				"name": "Sfida 99: Incubo",
-				"description": "Sfida 99 di 100: Incubo. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro.",
+				"description": "Sfida 99 di 100: Incubo. Entrerà nella Sala dal portale e verrà verso di te.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					99
-				],
 				"enemyTags": [
 					"Cronache_Sfida_099"
 				],
@@ -14468,18 +14443,18 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					98
+				]
 			},
 			{
-				"id": 101,
+				"id": 100,
 				"name": "Sfida 100: Morvane il Re Sepolto",
-				"description": "Sfida 100 di 100 (boss): Morvane il Re Sepolto. Lo sfidante ti sta cercando: quando compare, lascialo avvicinare o vagli incontro. Lo scontro si gioca al meglio delle tre partite.",
+				"description": "Sfida 100 di 100 (boss): Morvane il Re Sepolto. Entrerà nella Sala dal portale e verrà verso di te. Lo scontro si gioca al meglio delle tre partite.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
-				"prerequisiteIDs": [
-					100
-				],
 				"enemyTags": [
 					"Cronache_Sfida_100"
 				],
@@ -14535,7 +14510,10 @@
 						}
 					]
 				},
-				"POIToken": ""
+				"POIToken": "",
+				"prerequisiteIDs": [
+					99
+				]
 			}
 		]
 	}

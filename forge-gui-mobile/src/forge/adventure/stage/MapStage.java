@@ -229,6 +229,8 @@ public class MapStage extends GameStage {
         isLoadingMatch = false;
         isInMap = true;
         currentMap = targetMap;
+        cronacheRoomPrepared = false;
+        cronacheSpawnDelay = 2f;
         GameHUD.getInstance().showHideMap(false);
         this.tiledMap = map;
         for (MapActor actor : new Array.ArrayIterator<>(actors)) {
@@ -851,6 +853,17 @@ public class MapStage extends GameStage {
                 AdventureQuestController.instance().updateQuestsLose(currentMob);
                 AdventureQuestController.instance().showQuestDialogs(MapStage.this);
                 boolean defeated = Current.player().defeated();
+                if (isCronacheRoom()) {
+                    //Cronache room: the player stays, the challenger walks back out and returns shortly
+                    Current.player().heal(1.0f);
+                    currentMob.remove();
+                    actors.removeValue(currentMob, true);
+                    enemies.remove(currentMob);
+                    cronacheSpawnDelay = 3f;
+                    MapStage.this.stop();
+                    currentMob = null;
+                    return;
+                }
                 //If hardcore mode is added, check and redirect to game over screen here
                 if (canFailDungeon && !defeated)
                     dungeonFailedDialog(true, currentMob.getData().boss && !isArena);
@@ -969,6 +982,10 @@ public class MapStage extends GameStage {
         isLoadingMatch = false;
         if (!CronacheRewards.loadVictoryRewards(currentMob))
             RewardScene.instance().loadRewards(currentMob.getRewards(), RewardScene.Type.Loot, null);
+        if (isCronacheRoom()) {
+            Current.player().heal(1.0f); //rest by the fire after every duel
+            cronacheSpawnDelay = 3f;
+        }
         Forge.switchScene(RewardScene.instance());
         if (currentMob.defeatDialog == null) {
             currentMob.remove();
@@ -981,6 +998,57 @@ public class MapStage extends GameStage {
             player.setAnimation(CharacterSprite.AnimationTypes.Idle);
             currentMob.setAnimation(CharacterSprite.AnimationTypes.Idle);
         }
+    }
+
+    //---- Cronache del Velo: the starting cave is a closed room where challengers walk in through the portal ----
+    private static final int CRONACHE_ID_BASE = 20000;
+    private boolean cronacheRoomPrepared = false;
+    private float cronacheSpawnDelay = 2f;
+    private int cronacheSpawnCounter = 0;
+
+    public boolean isCronacheRoom() {
+        return isInMap && currentMap != null && currentMap.endsWith("spawn.tmx") && CronacheRewards.isActive();
+    }
+
+    private PortalActor findRoomPortal() {
+        for (int i = 0; i < actors.size; i++) {
+            if (actors.get(i) instanceof PortalActor)
+                return (PortalActor) actors.get(i);
+        }
+        return null;
+    }
+
+    private void spawnCronacheChallenger(float delta) {
+        if (!cronacheRoomPrepared) {
+            PortalActor portal = findRoomPortal();
+            if (portal != null)
+                portal.setAnimation("closed"); //nobody leaves the room
+            cronacheRoomPrepared = true;
+        }
+        cronacheSpawnDelay -= delta;
+        if (cronacheSpawnDelay > 0)
+            return;
+        cronacheSpawnDelay = 1.5f;
+        java.util.List<EnemyData> challengers = AdventureQuestController.instance().getExtraQuestSpawns(1.0f);
+        if (challengers.isEmpty())
+            return;
+        EnemyData challenger = challengers.get(0);
+        for (EnemySprite present : enemies) {
+            if (present != null && present.getData() != null && challenger.name.equals(present.getData().name))
+                return; //already in the room
+        }
+        cronacheSpawnCounter++;
+        EnemySprite mob = new EnemySprite(CRONACHE_ID_BASE + cronacheSpawnCounter, new EnemyData(challenger));
+        mob.threatRange = 2000f;
+        mob.pursueRange = 2000f;
+        PortalActor portal = findRoomPortal();
+        if (portal != null)
+            mob.setPosition(portal.getX(), portal.getY());
+        else
+            mob.setPosition(player.getX(), player.getY() + 64f);
+        enemies.add(mob);
+        addMapActor(mob);
+        mob.playEffect(Paths.EFFECT_TELEPORT, 0.5f);
     }
 
     public void removeAllEnemies() {
@@ -1000,6 +1068,11 @@ public class MapStage extends GameStage {
     protected void onActing(float delta) {
         if (isPaused() || isDialogOnlyInput() || Forge.advFreezePlayerControls || isPlayerLeavingDungeon)
             return;
+
+        if (isCronacheRoom()) {
+            spawnCronacheChallenger(delta);
+            freezeAllEnemyBehaviors = false; //challengers keep coming even if the player stands still
+        }
 
         if (freezeAllEnemyBehaviors) {
             if (!positions.contains(player.pos())) {
@@ -1150,6 +1223,8 @@ public class MapStage extends GameStage {
     
     public void beginDuel(EnemySprite mob) {
         if (mob == null) return;
+        if (CronacheRewards.isActive())
+            Current.player().heal(1.0f); //Cronache: every challenge starts at full life
         mob.clearCollisionHeight();
         currentMob = mob;
         player.setAnimation(CharacterSprite.AnimationTypes.Attack);
