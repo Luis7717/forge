@@ -15,6 +15,9 @@ on:
         required: false
         default: 'forge.cardforge.ios'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: macos-15
@@ -56,6 +59,19 @@ jobs:
           name: forge-ios-unsigned-ipa
           path: forge-gui-ios/target/robovm/*.ipa
           if-no-files-found: error
+
+      - name: Publish IPA as a release (easy download for sideloading)
+        if: github.repository != 'Card-Forge/forge'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          IPA=$(ls forge-gui-ios/target/robovm/*.ipa | head -1)
+          cp "$IPA" Forge-Cronache.ipa
+          gh release delete ipa-latest --yes --cleanup-tag || true
+          gh release create ipa-latest Forge-Cronache.ipa \
+            --title "Forge iOS - Cronache del Velo" \
+            --notes "IPA non firmato. Installalo con Sideloadly. Build del $(date -u +%Y-%m-%d)." \
+            --prerelease
 
       - name: Upload build reports
         if: always()

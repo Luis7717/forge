@@ -79,6 +79,11 @@ public class Config {
                     if (plane.equalsIgnoreCase("Shandalar"))
                         settingsData.plane = plane;
                 }
+                //personal build: prefer the "Cronache del Velo" story plane when present
+                for (String plane : adventures) {
+                    if (plane.equalsIgnoreCase("Cronache_del_Velo"))
+                        settingsData.plane = plane;
+                }
                 //if can't find shandalar, just get any random plane available
                 if (settingsData.plane == null || settingsData.plane.isEmpty())
                     settingsData.plane = Aggregates.random(adventures);
