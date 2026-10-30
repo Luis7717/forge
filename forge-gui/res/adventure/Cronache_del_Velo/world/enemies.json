@@ -31730,10 +31730,309 @@
 		]
 	},
 	{
-		"name": "Araldo Scarno",
+		"name": "Cronache Sfida 001",
+		"nameOverride": "Ciclope",
+		"sprite": "sprites/enemy/giant/cyclops.atlas",
+		"deck": [
+			"decks/standard/cyclops.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 10,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 33
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_001"
+		]
+	},
+	{
+		"name": "Cronache Sfida 002",
+		"nameOverride": "Avvoltoio",
+		"sprite": "sprites/enemy/beast/bird/vulture.atlas",
+		"deck": [
+			"decks/standard/vulture.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 10,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 36
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_002"
+		],
+		"flying": true,
+		"scale": 0.6
+	},
+	{
+		"name": "Cronache Sfida 003",
+		"nameOverride": "Pipistrello",
+		"sprite": "sprites/enemy/beast/smallmammals/bat.atlas",
+		"deck": [
+			"decks/standard/bat.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 10,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 39
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_003"
+		],
+		"flying": true,
+		"scale": 0.8
+	},
+	{
+		"name": "Cronache Sfida 004",
+		"nameOverride": "Ghoul",
+		"sprite": "sprites/enemy/undead/ghoul.atlas",
+		"deck": [
+			"decks/standard/ghoul.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 10,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 42
+			}
+		],
+		"colors": "BU",
+		"questTags": [
+			"Cronache_Sfida_004"
+		]
+	},
+	{
+		"name": "Cronache Sfida 005",
+		"nameOverride": "Homarid",
+		"sprite": "sprites/enemy/monstrosity/homarid.atlas",
+		"deck": [
+			"decks/standard/homarid.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 45
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_005"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 006",
+		"nameOverride": "Guerriero Minotauro",
+		"sprite": "sprites/enemy/humanoid/minotaur/amonkhet_minotaur.atlas",
+		"deck": [
+			"decks/standard/amonkhet_minotaur.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 48
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_006"
+		]
+	},
+	{
+		"name": "Cronache Sfida 007",
+		"nameOverride": "Boggart",
+		"sprite": "sprites/enemy/humanoid/goblin/goblin_2.atlas",
+		"deck": [
+			"decks/standard/eyeblight.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 27,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 51
+			}
+		],
+		"colors": "GR",
+		"questTags": [
+			"Cronache_Sfida_007"
+		]
+	},
+	{
+		"name": "Cronache Sfida 008",
+		"nameOverride": "Spettro",
+		"sprite": "sprites/enemy/undead/wraith.atlas",
+		"deck": [
+			"decks/standard/wraithswampwalk.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 54
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_008"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 009",
+		"nameOverride": "Bandito con la Fionda",
+		"sprite": "sprites/enemy/humanoid/human/bandit/banditslingshot.atlas",
+		"deck": [
+			"decks/standard/banditslingshot_flyers.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 57
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_009"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Boss 010",
+		"nameOverride": "Araldo Scarno",
 		"sprite": "sprites/enemy/undead/skeleton_2.atlas",
 		"deck": [
 			"decks/cronaca1/araldo.dck"
+		],
+		"ai": "",
+		"boss": true,
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 120
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_010"
+		],
+		"bossIntro": "Un forestiero che fa suonare la campana. Il mio signore ti vuole sotto terra."
+	},
+	{
+		"name": "Cronache Sfida 011",
+		"nameOverride": "Gargoyle",
+		"sprite": "sprites/enemy/construct/gargoyle_2.atlas",
+		"deck": [
+			"decks/standard/gargoyle.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 63
+			}
+		],
+		"colors": "W",
+		"questTags": [
+			"Cronache_Sfida_011"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 012",
+		"nameOverride": "Guerriero",
+		"sprite": "sprites/enemy/humanoid/human/warrior/warrior.atlas",
+		"deck": [
+			"decks/standard/human_warrior_amonkhet.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 11,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 66
+			}
+		],
+		"colors": "RGW",
+		"questTags": [
+			"Cronache_Sfida_012"
+		]
+	},
+	{
+		"name": "Cronache Sfida 013",
+		"nameOverride": "Cammello",
+		"sprite": "sprites/enemy/beast/largemammals/camel.atlas",
+		"deck": [
+			"decks/standard/camel.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31742,126 +32041,2160 @@
 		"life": 12,
 		"rewards": [
 			{
-				"type": "deckCard",
-				"probability": 1,
-				"count": 2,
-				"rarity": [
-					"common",
-					"uncommon"
-				]
-			},
-			{
 				"type": "gold",
 				"probability": 1,
-				"count": 30,
-				"addMaxCount": 50
+				"count": 69
 			}
 		],
-		"colors": "B",
+		"colors": "W",
 		"questTags": [
-			"CronacaI_Araldo"
+			"Cronache_Sfida_013"
 		]
 	},
 	{
-		"name": "Sorella Vessa",
-		"sprite": "sprites/enemy/humanoid/human/warlock/witchlarge.atlas",
+		"name": "Cronache Sfida 014",
+		"nameOverride": "Khan",
+		"sprite": "sprites/enemy/humanoid/human/knight/cavalier.atlas",
 		"deck": [
-			"decks/cronaca1/vessa.dck"
+			"decks/standard/mardu.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 18,
-		"scale": 0.75,
-		"life": 16,
+		"speed": 30,
+		"life": 12,
 		"rewards": [
-			{
-				"type": "deckCard",
-				"probability": 1,
-				"count": 2,
-				"rarity": [
-					"common",
-					"uncommon"
-				]
-			},
 			{
 				"type": "gold",
 				"probability": 1,
-				"count": 60,
-				"addMaxCount": 80
-			},
+				"count": 72
+			}
+		],
+		"colors": "BRW",
+		"questTags": [
+			"Cronache_Sfida_014"
+		]
+	},
+	{
+		"name": "Cronache Sfida 015",
+		"nameOverride": "Avventuriero",
+		"sprite": "sprites/enemy/humanoid/swordsman_3.atlas",
+		"deck": [
+			"decks/standard/adventurer.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 12,
+		"rewards": [
 			{
-				"type": "deckCard",
+				"type": "gold",
 				"probability": 1,
-				"count": 1,
-				"rarity": [
-					"rare"
-				],
-				"cardTypes": [
-					"Creature",
-					"Artifact",
-					"Enchantment",
-					"Instant",
-					"Sorcery"
-				]
+				"count": 75
+			}
+		],
+		"colors": "UW",
+		"questTags": [
+			"Cronache_Sfida_015"
+		]
+	},
+	{
+		"name": "Cronache Sfida 016",
+		"nameOverride": "Gorgone",
+		"sprite": "sprites/enemy/monstrosity/gorgonen.atlas",
+		"deck": [
+			"decks/standard/gorgon_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 12,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 78
 			}
 		],
 		"colors": "BG",
 		"questTags": [
-			"CronacaI_Vessa"
+			"Cronache_Sfida_016"
 		]
 	},
 	{
-		"name": "Morvane il Re Sepolto",
-		"sprite": "sprites/enemy/undead/lich_2.atlas",
+		"name": "Cronache Sfida 017",
+		"nameOverride": "Abominio di Carne",
+		"sprite": "sprites/enemy/monstrosity/flesh_horror.atlas",
 		"deck": [
-			"decks/cronaca1/morvane.dck"
+			"decks/standard/flesh_horror.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 12,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 81
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_017"
+		],
+		"scale": 0.65
+	},
+	{
+		"name": "Cronache Sfida 018",
+		"nameOverride": "Djinn di Tarkir",
+		"sprite": "sprites/enemy/elemental/djinn_2.atlas",
+		"deck": [
+			"decks/standard/djinn_tarkir.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 12,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 84
+			}
+		],
+		"colors": "RU",
+		"questTags": [
+			"Cronache_Sfida_018"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 019",
+		"nameOverride": "Stegosauro",
+		"sprite": "sprites/enemy/beast/dinosaur/dinosaur_stegosaurus.atlas",
+		"deck": [
+			"decks/standard/dinosaur_gruul_etali.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 12,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 87
+			}
+		],
+		"colors": "RG",
+		"questTags": [
+			"Cronache_Sfida_019"
+		],
+		"scale": 1.2
+	},
+	{
+		"name": "Cronache Sfida 020",
+		"nameOverride": "Guerriero Centauro",
+		"sprite": "sprites/enemy/fey/centaur_2.atlas",
+		"deck": [
+			"decks/standard/centaur_warrior.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 30,
+		"life": 12,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 90
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_020"
+		]
+	},
+	{
+		"name": "Cronache Sfida 021",
+		"nameOverride": "Gufo",
+		"sprite": "sprites/enemy/beast/bird/owl.atlas",
+		"deck": [
+			"decks/standard/owl.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 93
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_021"
+		],
+		"flying": true,
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 022",
+		"nameOverride": "Pirata",
+		"sprite": "sprites/enemy/humanoid/human/rogue/pirate.atlas",
+		"deck": [
+			"decks/standard/pirate.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 96
+			}
+		],
+		"colors": "UR",
+		"questTags": [
+			"Cronache_Sfida_022"
+		]
+	},
+	{
+		"name": "Cronache Sfida 023",
+		"nameOverride": "Serpente Velenoso",
+		"sprite": "sprites/enemy/beast/reptile/snake_cobra.atlas",
+		"deck": [
+			"decks/standard/poisonoussnake.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 99
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_023"
+		],
+		"scale": 0.9
+	},
+	{
+		"name": "Cronache Sfida 024",
+		"nameOverride": "Guerriero Khenra",
+		"sprite": "sprites/enemy/humanoid/khenra/jackalwarrior.atlas",
+		"deck": [
+			"decks/standard/jackal.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 102
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_024"
+		],
+		"scale": 0.5
+	},
+	{
+		"name": "Cronache Boss 025",
+		"nameOverride": "Il Custode del Cimitero",
+		"sprite": "sprites/enemy/undead/lich.atlas",
+		"deck": [
+			"decks/miniboss/darkenchanter.dck"
 		],
 		"ai": "",
 		"boss": true,
 		"spawnRate": 1,
 		"difficulty": 0.1,
-		"speed": 16,
-		"scale": 1.5,
-		"life": 22,
-		"gamesPerMatch": 3,
+		"speed": 22,
+		"life": 20,
 		"rewards": [
-			{
-				"type": "deckCard",
-				"probability": 1,
-				"count": 3,
-				"rarity": [
-					"common",
-					"uncommon"
-				]
-			},
 			{
 				"type": "gold",
 				"probability": 1,
-				"count": 150,
-				"addMaxCount": 150
-			},
+				"count": 210
+			}
+		],
+		"colors": "BG",
+		"questTags": [
+			"Cronache_Sfida_025"
+		],
+		"bossIntro": "Le lapidi hanno perso i loro nomi. Tra poco perderai anche il tuo."
+	},
+	{
+		"name": "Cronache Sfida 026",
+		"nameOverride": "Verme",
+		"sprite": "sprites/enemy/beast/insect/smallworm.atlas",
+		"deck": [
+			"decks/standard/worm.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 13,
+		"rewards": [
 			{
-				"type": "deckCard",
+				"type": "gold",
 				"probability": 1,
-				"count": 2,
-				"rarity": [
-					"rare"
-				],
-				"cardTypes": [
-					"Creature",
-					"Artifact",
-					"Enchantment",
-					"Instant",
-					"Sorcery"
-				]
+				"count": 108
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_026"
+		]
+	},
+	{
+		"name": "Cronache Sfida 027",
+		"nameOverride": "Scheletro",
+		"sprite": "sprites/enemy/undead/skeleton.atlas",
+		"deck": [
+			"decks/standard/skeleton.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 111
 			}
 		],
 		"colors": "B",
 		"questTags": [
-			"CronacaI_Morvane"
+			"Cronache_Sfida_027"
+		]
+	},
+	{
+		"name": "Cronache Sfida 028",
+		"nameOverride": "Gigante Errante",
+		"sprite": "sprites/enemy/giant/wanderinggiant.atlas",
+		"deck": [
+			"decks/standard/wanderinggiant.dck"
 		],
-		"bossIntro": "Hai suonato la mia campana. Ora ascolta come suona per te.",
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 114
+			}
+		],
+		"colors": "RW",
+		"questTags": [
+			"Cronache_Sfida_028"
+		]
+	},
+	{
+		"name": "Cronache Sfida 029",
+		"nameOverride": "Coccodrillo",
+		"sprite": "sprites/enemy/beast/reptile/crocodile_water.atlas",
+		"deck": [
+			"decks/standard/crocodile.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 13,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 117
+			}
+		],
+		"colors": "WU",
+		"questTags": [
+			"Cronache_Sfida_029"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 030",
+		"nameOverride": "Angelo dell'Ortodossia",
+		"sprite": "sprites/enemy/aberration/phyrexian/phyrexianangel.atlas",
+		"deck": [
+			"decks/standard/phyrexianangel.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 120
+			}
+		],
+		"colors": "WG",
+		"questTags": [
+			"Cronache_Sfida_030"
+		]
+	},
+	{
+		"name": "Cronache Sfida 031",
+		"nameOverride": "Scarabeo",
+		"sprite": "sprites/enemy/beast/insect/scarab.atlas",
+		"deck": [
+			"decks/standard/scarab.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 123
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_031"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 032",
+		"nameOverride": "Goblin Fanatico",
+		"sprite": "sprites/enemy/humanoid/goblin/goblin_3.atlas",
+		"deck": [
+			"decks/standard/goblin_fanatic.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 29,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 126
+			}
+		],
+		"colors": "GR",
+		"questTags": [
+			"Cronache_Sfida_032"
+		]
+	},
+	{
+		"name": "Cronache Sfida 033",
+		"nameOverride": "Pappagallo",
+		"sprite": "sprites/enemy/beast/bird/parrot.atlas",
+		"deck": [
+			"decks/standard/parrot.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 129
+			}
+		],
+		"colors": "BU",
+		"questTags": [
+			"Cronache_Sfida_033"
+		],
+		"flying": true,
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 034",
+		"nameOverride": "Spirito Oscuro",
+		"sprite": "sprites/enemy/undead/ghost.atlas",
+		"deck": [
+			"decks/standard/dark_spirit.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 30,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 132
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_034"
+		]
+	},
+	{
+		"name": "Cronache Sfida 035",
+		"nameOverride": "Panda Gigante",
+		"sprite": "sprites/enemy/beast/bear/giantpanda.atlas",
+		"deck": [
+			"decks/standard/giantpanda.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 135
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_035"
+		]
+	},
+	{
+		"name": "Cronache Sfida 036",
+		"nameOverride": "Mago Blu Corrotto",
+		"sprite": "sprites/enemy/humanoid/human/wizard/corrupted_bluewiz.atlas",
+		"deck": [
+			"decks/standard/bluewiz_corrupted.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 138
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_036"
+		]
+	},
+	{
+		"name": "Cronache Sfida 037",
+		"nameOverride": "Sliver Bianco",
+		"sprite": "sprites/enemy/aberration/sliver_white.atlas",
+		"deck": [
+			"decks/standard/sliver_white.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 14,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 141
+			}
+		],
+		"colors": "WGU",
+		"questTags": [
+			"Cronache_Sfida_037"
+		]
+	},
+	{
+		"name": "Cronache Sfida 038",
+		"nameOverride": "Signore delle Bestie",
+		"sprite": "sprites/enemy/humanoid/human/warrior/caribou_elite.atlas",
+		"deck": [
+			"decks/standard/beastmaster.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 144
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_038"
+		]
+	},
+	{
+		"name": "Cronache Sfida 039",
+		"nameOverride": "Prototipo Verde",
+		"sprite": "sprites/enemy/construct/prototype_green.atlas",
+		"deck": [
+			"decks/standard/prototype_green.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 147
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_039"
+		]
+	},
+	{
+		"name": "Cronache Sfida 040",
+		"nameOverride": "Spirito",
+		"sprite": "sprites/enemy/undead/ghost_3.atlas",
+		"deck": [
+			"decks/standard/spirit.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 150
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_040"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 041",
+		"nameOverride": "Demone Minore",
+		"sprite": "sprites/enemy/fiend/demon_4.atlas",
+		"deck": [
+			"decks/standard/demon4.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 153
+			}
+		],
+		"colors": "b",
+		"questTags": [
+			"Cronache_Sfida_041"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 042",
+		"nameOverride": "Prototipo Blu",
+		"sprite": "sprites/enemy/construct/prototype_blue.atlas",
+		"deck": [
+			"decks/standard/prototype_blue.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 156
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_042"
+		]
+	},
+	{
+		"name": "Cronache Sfida 043",
+		"nameOverride": "Mostro Marino",
+		"sprite": "sprites/enemy/aberration/leech_2.atlas",
+		"deck": [
+			"decks/standard/sea_monster.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 159
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_043"
+		]
+	},
+	{
+		"name": "Cronache Sfida 044",
+		"nameOverride": "Criosfinge",
+		"sprite": "sprites/enemy/monstrosity/criosphinx.atlas",
+		"deck": [
+			"decks/standard/sphinx amonkhet.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 162
+			}
+		],
+		"colors": "WU",
+		"questTags": [
+			"Cronache_Sfida_044"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 045",
+		"nameOverride": "Mago Blu Adepto",
+		"sprite": "sprites/enemy/humanoid/human/wizard/blue_wiz2.atlas",
+		"deck": [
+			"decks/standard/bluewizard_medium_donate.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 15,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 165
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_045"
+		]
+	},
+	{
+		"name": "Cronache Sfida 046",
+		"nameOverride": "Angelo Sorvegliante",
+		"sprite": "sprites/enemy/celestial/angel_2.atlas",
+		"deck": [
+			"decks/standard/azoriusangel.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 168
+			}
+		],
+		"colors": "uw",
+		"questTags": [
+			"Cronache_Sfida_046"
+		],
+		"flying": true,
+		"scale": 1.2
+	},
+	{
+		"name": "Cronache Sfida 047",
+		"nameOverride": "Nano Demolitore",
+		"sprite": "sprites/enemy/humanoid/dwarf/dwarf_3.atlas",
+		"deck": [
+			"decks/standard/dwarfdemolisher.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 171
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_047"
+		]
+	},
+	{
+		"name": "Cronache Sfida 048",
+		"nameOverride": "Chierico Corrotto",
+		"sprite": "sprites/enemy/humanoid/human/cleric/corrupted_cleric.atlas",
+		"deck": [
+			"decks/standard/corruptedcleric.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 174
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_048"
+		]
+	},
+	{
+		"name": "Cronache Sfida 049",
+		"nameOverride": "Leone",
+		"sprite": "sprites/enemy/beast/cat/lion.atlas",
+		"deck": [
+			"decks/standard/lion.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 177
+			}
+		],
+		"colors": "W",
+		"questTags": [
+			"Cronache_Sfida_049"
+		],
+		"scale": 0.9
+	},
+	{
+		"name": "Cronache Boss 050",
+		"nameOverride": "Sorella Vessa",
+		"sprite": "sprites/enemy/humanoid/human/warlock/witchlarge.atlas",
+		"deck": [
+			"decks/miniboss/conjure.dck"
+		],
+		"ai": "",
+		"boss": true,
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 24,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 360
+			}
+		],
+		"colors": "UB",
+		"questTags": [
+			"Cronache_Sfida_050"
+		],
+		"bossIntro": "Cinquanta rintocchi, piccolo campanaro. Vediamo se arrivi al cinquantunesimo.",
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 051",
+		"nameOverride": "Barbaro",
+		"sprite": "sprites/enemy/humanoid/human/barbarian/barbarian.atlas",
+		"deck": [
+			"decks/standard/barbarian.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 183
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_051"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 052",
+		"nameOverride": "Cespuglio Nascosto",
+		"sprite": "sprites/enemy/plant/hiddenbush.atlas",
+		"deck": [
+			"decks/standard/plant.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 186
+			}
+		],
+		"colors": "GU",
+		"questTags": [
+			"Cronache_Sfida_052"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 053",
+		"nameOverride": "Sfidante Errante",
+		"sprite": "sprites/enemy/aberration/challenger.atlas",
+		"deck": [
+			"decks/standard/challenger_20_allied_fires.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 28,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 189
+			}
+		],
+		"colors": "UBRWG",
+		"questTags": [
+			"Cronache_Sfida_053"
+		]
+	},
+	{
+		"name": "Cronache Sfida 054",
+		"nameOverride": "Canalizzatore dell'Etere",
+		"sprite": "sprites/enemy/humanoid/human/cleric/monk_3.atlas",
+		"deck": [
+			"decks/standard/aether_channeler.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 16,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 192
+			}
+		],
+		"colors": "WU",
+		"questTags": [
+			"Cronache_Sfida_054"
+		]
+	},
+	{
+		"name": "Cronache Sfida 055",
+		"nameOverride": "Guerriero Amphin",
+		"sprite": "sprites/enemy/humanoid/amphin/amphin_warrior.atlas",
+		"deck": [
+			"decks/standard/amphin_warrior.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 27,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 195
+			}
+		],
+		"colors": "GR",
+		"questTags": [
+			"Cronache_Sfida_055"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 056",
+		"nameOverride": "Minotauro Chiamaguerra",
+		"sprite": "sprites/enemy/humanoid/minotaur/minotaurlarge.atlas",
+		"deck": [
+			"decks/standard/minotaur_monored_castle.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 80,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 198
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_056"
+		],
+		"scale": 0.5
+	},
+	{
+		"name": "Cronache Sfida 057",
+		"nameOverride": "Ombra",
+		"sprite": "sprites/enemy/undead/shade.atlas",
+		"deck": [
+			"decks/standard/shade.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 201
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_057"
+		],
+		"flying": true,
+		"scale": 0.45
+	},
+	{
+		"name": "Cronache Sfida 058",
+		"nameOverride": "Elementale di Fiamma",
+		"sprite": "sprites/enemy/elemental/magmaelemental.atlas",
+		"deck": [
+			"decks/standard/flame_elemental.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 23,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 204
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_058"
+		]
+	},
+	{
+		"name": "Cronache Sfida 059",
+		"nameOverride": "Angelo Caduto",
+		"sprite": "sprites/enemy/celestial/fallen_angel.atlas",
+		"deck": [
+			"decks/standard/fallen_angel.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 29,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 207
+			}
+		],
+		"colors": "BW",
+		"questTags": [
+			"Cronache_Sfida_059"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 060",
+		"nameOverride": "Signore della Pestilenza",
+		"sprite": "sprites/enemy/undead/pestilencelord.atlas",
+		"deck": [
+			"decks/standard/trap.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 210
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_060"
+		]
+	},
+	{
+		"name": "Cronache Sfida 061",
+		"nameOverride": "Cacciatore Orco",
+		"sprite": "sprites/enemy/humanoid/orc/orc_hunter.atlas",
+		"deck": [
+			"decks/standard/orc_hunter.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 213
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_061"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 062",
+		"nameOverride": "Polpo",
+		"sprite": "sprites/enemy/beast/ocean/octopus.atlas",
+		"deck": [
+			"decks/standard/octopus.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 17,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 216
+			}
+		],
+		"colors": "",
+		"questTags": [
+			"Cronache_Sfida_062"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 063",
+		"nameOverride": "Guerriero Leonin",
+		"sprite": "sprites/enemy/humanoid/leonin/lion.atlas",
+		"deck": [
+			"decks/standard/leoninwarrior.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 27,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 219
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_063"
+		]
+	},
+	{
+		"name": "Cronache Sfida 064",
+		"nameOverride": "Capitano Pirata",
+		"sprite": "sprites/enemy/humanoid/human/rogue/pirate3.atlas",
+		"deck": [
+			"decks/standard/pirate3.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 222
+			}
+		],
+		"colors": "BRU",
+		"questTags": [
+			"Cronache_Sfida_064"
+		]
+	},
+	{
+		"name": "Cronache Sfida 065",
+		"nameOverride": "Gigante del Fuoco",
+		"sprite": "sprites/enemy/giant/firegiant.atlas",
+		"deck": [
+			"decks/standard/firegiant.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 23,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 225
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_065"
+		],
+		"scale": 1.4
+	},
+	{
+		"name": "Cronache Sfida 066",
+		"nameOverride": "Goblin Predatore",
+		"sprite": "sprites/enemy/humanoid/goblin/goblin_4.atlas",
+		"deck": [
+			"decks/standard/evilgoblin.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 29,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 228
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_066"
+		]
+	},
+	{
+		"name": "Cronache Sfida 067",
+		"nameOverride": "Kobold Operaio",
+		"sprite": "sprites/enemy/humanoid/kobold/koboldworker.atlas",
+		"deck": [
+			"decks/standard/koboldworker.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 231
+			}
+		],
+		"colors": "RB",
+		"questTags": [
+			"Cronache_Sfida_067"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 068",
+		"nameOverride": "Arboreo Scelto",
+		"sprite": "sprites/enemy/plant/treant_large.atlas",
+		"deck": [
+			"decks/standard/treefolkelite.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 234
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_068"
+		],
+		"scale": 0.5
+	},
+	{
+		"name": "Cronache Sfida 069",
+		"nameOverride": "Accolita di Chandra",
+		"sprite": "sprites/enemy/humanoid/human/wizard/red_wiz2.atlas",
+		"deck": [
+			"decks/standard/chandra1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 237
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_069"
+		]
+	},
+	{
+		"name": "Cronache Sfida 070",
+		"nameOverride": "Titano della Tempesta",
+		"sprite": "sprites/enemy/giant/stormtitan.atlas",
+		"deck": [
+			"decks/standard/stormtitan.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 23,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 240
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_070"
+		]
+	},
+	{
+		"name": "Cronache Sfida 071",
+		"nameOverride": "Sfidante Veterano",
+		"sprite": "sprites/enemy/aberration/challenger.atlas",
+		"deck": [
+			"decks/standard/challenger_22_dimir_control.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 28,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 243
+			}
+		],
+		"colors": "UBRWG",
+		"questTags": [
+			"Cronache_Sfida_071"
+		]
+	},
+	{
+		"name": "Cronache Sfida 072",
+		"nameOverride": "Capo Goblin",
+		"sprite": "sprites/enemy/humanoid/goblin/wolf_rider_2.atlas",
+		"deck": [
+			"decks/standard/goblin_chief_medium.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 29,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 246
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_072"
+		]
+	},
+	{
+		"name": "Cronache Sfida 073",
+		"nameOverride": "Sliver Rosso",
+		"sprite": "sprites/enemy/aberration/sliver_red.atlas",
+		"deck": [
+			"decks/standard/sliver_red.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 249
+			}
+		],
+		"colors": "RBG",
+		"questTags": [
+			"Cronache_Sfida_073"
+		]
+	},
+	{
+		"name": "Cronache Sfida 074",
+		"nameOverride": "Riccio",
+		"sprite": "sprites/enemy/beast/smallmammals/hedgehog.atlas",
+		"deck": [
+			"decks/standard/hedgehog.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 252
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_074"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Boss 075",
+		"nameOverride": "Il Cardinale delle Ceneri",
+		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
+		"deck": [
+			"decks/miniboss/nahiri.dck"
+		],
+		"ai": "",
+		"boss": true,
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 26,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 510
+			}
+		],
+		"colors": "RW",
+		"questTags": [
+			"Cronache_Sfida_075"
+		],
+		"bossIntro": "Tutto ciò che brucia diventa cenere. Anche la tua speranza."
+	},
+	{
+		"name": "Cronache Sfida 076",
+		"nameOverride": "Golem Blu",
+		"sprite": "sprites/enemy/construct/golem_blue.atlas",
+		"deck": [
+			"decks/standard/blue_golem.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 258
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_076"
+		]
+	},
+	{
+		"name": "Cronache Sfida 077",
+		"nameOverride": "Mago Simic",
+		"sprite": "sprites/enemy/humanoid/viashino/lizardwizard.atlas",
+		"deck": [
+			"decks/standard/simicwizard_intruderalarm.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 261
+			}
+		],
+		"colors": "UG",
+		"questTags": [
+			"Cronache_Sfida_077"
+		],
+		"scale": 0.6
+	},
+	{
+		"name": "Cronache Sfida 078",
+		"nameOverride": "Scoiattolo",
+		"sprite": "sprites/enemy/beast/smallmammals/squirrel.atlas",
+		"deck": [
+			"decks/standard/squirrel.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 23,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 264
+			}
+		],
+		"colors": "BG",
+		"questTags": [
+			"Cronache_Sfida_078"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 079",
+		"nameOverride": "Gigante della Foresta",
+		"sprite": "sprites/enemy/giant/forestgiant.atlas",
+		"deck": [
+			"decks/standard/foresttitan.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 23,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 267
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_079"
+		],
+		"scale": 1.4
+	},
+	{
+		"name": "Cronache Sfida 080",
+		"nameOverride": "Alchimista di Liliana",
+		"sprite": "sprites/enemy/humanoid/human/wizard/dimir_wiz.atlas",
+		"deck": [
+			"decks/standard/dimir_ninja.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 270
+			}
+		],
+		"colors": "BG",
+		"questTags": [
+			"Cronache_Sfida_080"
+		]
+	},
+	{
+		"name": "Cronache Sfida 081",
+		"nameOverride": "Signore della Guerra Nano",
+		"sprite": "sprites/enemy/humanoid/dwarf/dwarflarge.atlas",
+		"deck": [
+			"decks/standard/dwarf_whitecastle.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 273
+			}
+		],
+		"colors": "W",
+		"questTags": [
+			"Cronache_Sfida_081"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 082",
+		"nameOverride": "Negromante",
+		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
+		"deck": [
+			"decks/standard/reanimator.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 276
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_082"
+		]
+	},
+	{
+		"name": "Cronache Sfida 083",
+		"nameOverride": "Mago Rakdos",
+		"sprite": "sprites/enemy/humanoid/human/wizard/rakdos_wiz.atlas",
+		"deck": [
+			"decks/standard/rakdos_vamps.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 279
+			}
+		],
+		"colors": "BG",
+		"questTags": [
+			"Cronache_Sfida_083"
+		]
+	},
+	{
+		"name": "Cronache Sfida 084",
+		"nameOverride": "Golem d'Ossa",
+		"sprite": "sprites/enemy/undead/bonegolem.atlas",
+		"deck": [
+			"decks/standard/bonegolem.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 282
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_084"
+		]
+	},
+	{
+		"name": "Cronache Sfida 085",
+		"nameOverride": "Cavaliere Mercenario",
+		"sprite": "sprites/enemy/humanoid/human/knight/cavalier_2.atlas",
+		"deck": [
+			"decks/standard/knightmercenary.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 285
+			}
+		],
+		"colors": "UW",
+		"questTags": [
+			"Cronache_Sfida_085"
+		]
+	},
+	{
+		"name": "Cronache Sfida 086",
+		"nameOverride": "Capo dei Banditi",
+		"sprite": "sprites/enemy/humanoid/human/bandit/banditleader.atlas",
+		"deck": [
+			"decks/standard/banditleader_bolas.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 24,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 288
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_086"
+		],
+		"scale": 0.8
+	},
+	{
+		"name": "Cronache Sfida 087",
+		"nameOverride": "Ciclope Gigante",
+		"sprite": "sprites/enemy/giant/cyclops_large.atlas",
+		"deck": [
+			"decks/standard/luckyminotaur.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 291
+			}
+		],
+		"colors": "UR",
+		"questTags": [
+			"Cronache_Sfida_087"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 088",
+		"nameOverride": "Talpa Cerebrale",
+		"sprite": "sprites/enemy/monstrosity/brainmole.atlas",
+		"deck": [
+			"decks/standard/millwizard.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 27,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 294
+			}
+		],
+		"colors": "GR",
+		"questTags": [
+			"Cronache_Sfida_088"
+		],
+		"scale": 0.7
+	},
+	{
+		"name": "Cronache Sfida 089",
+		"nameOverride": "Guardiano delle Nuvole",
+		"sprite": "sprites/enemy/celestial/peerlesssolar.atlas",
+		"deck": [
+			"decks/standard/cloudguard.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 297
+			}
+		],
+		"colors": "WU",
+		"questTags": [
+			"Cronache_Sfida_089"
+		],
+		"flying": true,
+		"scale": 0.8
+	},
+	{
+		"name": "Cronache Sfida 090",
+		"nameOverride": "Froghemoth",
+		"sprite": "sprites/enemy/aberration/froghemoth.atlas",
+		"deck": [
+			"decks/standard/froghemoth.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 300
+			}
+		],
+		"colors": "RG",
+		"questTags": [
+			"Cronache_Sfida_090"
+		],
+		"scale": 0.55
+	},
+	{
+		"name": "Cronache Sfida 091",
+		"nameOverride": "Signore degli Zombie",
+		"sprite": "sprites/enemy/undead/lich_3.atlas",
+		"deck": [
+			"decks/standard/zombie_black_hard.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 303
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_091"
+		]
+	},
+	{
+		"name": "Cronache Sfida 092",
+		"nameOverride": "Gigante delle Nuvole",
+		"sprite": "sprites/enemy/giant/godlytitan.atlas",
+		"deck": [
+			"decks/standard/cloudgiant.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 306
+			}
+		],
+		"colors": "WUG",
+		"questTags": [
+			"Cronache_Sfida_092"
+		],
+		"scale": 0.8
+	},
+	{
+		"name": "Cronache Sfida 093",
+		"nameOverride": "Tritone Scelto",
+		"sprite": "sprites/enemy/humanoid/merfolk/naga.atlas",
+		"deck": [
+			"decks/standard/merfolk_elite.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 309
+			}
+		],
+		"colors": "UGW",
+		"questTags": [
+			"Cronache_Sfida_093"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 094",
+		"nameOverride": "Arboreo Golgari",
+		"sprite": "sprites/enemy/plant/treant_golgari.atlas",
+		"deck": [
+			"decks/standard/treefolk_golgari.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 312
+			}
+		],
+		"colors": "BG",
+		"questTags": [
+			"Cronache_Sfida_094"
+		]
+	},
+	{
+		"name": "Cronache Sfida 095",
+		"nameOverride": "Fenice",
+		"sprite": "sprites/enemy/elemental/phoenix.atlas",
+		"deck": [
+			"decks/standard/phoenix.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 28,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 315
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_095"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 096",
+		"nameOverride": "Kobold Evocadraghi",
+		"sprite": "sprites/enemy/humanoid/kobold/kobolddragoncaller.atlas",
+		"deck": [
+			"decks/standard/kobolddragoncaller.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 318
+			}
+		],
+		"colors": "RB",
+		"questTags": [
+			"Cronache_Sfida_096"
+		],
+		"scale": 0.75
+	},
+	{
+		"name": "Cronache Sfida 097",
+		"nameOverride": "Demone di Tibalt",
+		"sprite": "sprites/enemy/fiend/cacodaemon.atlas",
+		"deck": [
+			"decks/standard/tibalt_demon.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 31,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 321
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_097"
+		],
+		"flying": true
+	},
+	{
+		"name": "Cronache Sfida 098",
+		"nameOverride": "Bardo",
+		"sprite": "sprites/enemy/humanoid/human/bard/humanbard.atlas",
+		"deck": [
+			"decks/standard/humanbard.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 25,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 324
+			}
+		],
+		"colors": "RW",
+		"questTags": [
+			"Cronache_Sfida_098"
+		]
+	},
+	{
+		"name": "Cronache Sfida 099",
+		"nameOverride": "Incubo",
+		"sprite": "sprites/enemy/fiend/nightmare.atlas",
+		"deck": [
+			"decks/standard/nightmare.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 327
+			}
+		],
+		"colors": "RG",
+		"questTags": [
+			"Cronache_Sfida_099"
+		],
+		"scale": 0.65
+	},
+	{
+		"name": "Cronache Boss 100",
+		"nameOverride": "Morvane il Re Sepolto",
+		"sprite": "sprites/enemy/undead/lich_2.atlas",
+		"deck": [
+			"decks/boss/griselbrand.dck"
+		],
+		"ai": "",
+		"boss": true,
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 22,
+		"life": 30,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 660
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_100"
+		],
+		"bossIntro": "Hai suonato la mia campana cento volte. Ora ascolta come suona per te.",
+		"scale": 1.5,
+		"gamesPerMatch": 3,
 		"bossInsult": "Anche tu avrai una lapide senza nome."
 	}
 ]

@@ -467,6 +467,9 @@ public class MapDialog {
                RewardScene.instance().loadSelectableRewards(ret, RewardScene.Type.RewardChoice, 1);
                Forge.switchScene(RewardScene.instance());
             }
+            if (E.openMerchant != null && !E.openMerchant.isEmpty()) { //Travelling merchant (Cronache plane).
+                CronacheRewards.openMerchant(E.openMerchant);
+            }
             if (E.issueQuest != null && (!E.issueQuest.isEmpty())) {
                 questAccepted = E.issueQuest;
                 emitQuestAccepted();

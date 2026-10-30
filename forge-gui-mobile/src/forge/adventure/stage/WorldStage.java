@@ -178,7 +178,8 @@ public class WorldStage extends GameStage implements SaveFileContent {
                     currentMob.resetCollisionHeight();
                     float deathDuration = currentMob.getActionAnimationDuration(CharacterSprite.AnimationTypes.Death, 0.3f);
                     startPause(deathDuration, () -> {
-                        RewardScene.instance().loadRewards(currentMob.getRewards(), RewardScene.Type.Loot, null);
+                        if (!CronacheRewards.loadVictoryRewards(currentMob))
+                            RewardScene.instance().loadRewards(currentMob.getRewards(), RewardScene.Type.Loot, null);
                         WorldStage.this.removeEnemy(currentMob);
                         AdventureQuestController.instance().updateQuestsWin(currentMob);
                         AdventureQuestController.instance().showQuestDialogs(MapStage.getInstance());
@@ -293,6 +294,12 @@ public class WorldStage extends GameStage implements SaveFileContent {
         int currentBiome = World.highestBiome(world.getBiome((int) ((player.getX() + player.getWidth() / 2f) / world.getTileSize()), (int) (player.getY() / world.getTileSize())));
         List<BiomeData> biomeData = WorldSave.getCurrentSave().getWorld().getData().GetBiomes();
         float sprintingMod = currentModifications.containsKey(PlayerModification.Sprint) ? 2 : 1;
+        if (CronacheRewards.isActive()) {
+            //Cronache plane: no random wandering monsters, only the current challenger comes to the player
+            player.setMoveModifier((biomeData.size() <= currentBiome ? 1.5f : 1.0f) * sprintingMod);
+            spawnCronacheChallenger(delta);
+            return;
+        }
         if (biomeData.size() <= currentBiome) {// "if isOnRoad
             player.setMoveModifier(1.5f * sprintingMod);
             return;
@@ -350,6 +357,22 @@ public class WorldStage extends GameStage implements SaveFileContent {
             }
         }
         return false;
+    }
+
+    private void spawnCronacheChallenger(float delta) {
+        spawnDelay -= delta;
+        if (spawnDelay >= 0) return;
+        spawnDelay = 2.5f;
+        List<EnemyData> challengers = AdventureQuestController.instance().getExtraQuestSpawns(1.0f);
+        if (challengers.isEmpty())
+            return;
+        EnemyData challenger = challengers.get(0);
+        for (Pair<Float, EnemySprite> pair : enemies) {
+            EnemySprite present = pair.getValue();
+            if (present != null && present.getData() != null && challenger.name.equals(present.getData().name))
+                return; //already on the map, let it come to the player
+        }
+        spawn(challenger);
     }
 
     private boolean spawn(EnemyData enemyData) {

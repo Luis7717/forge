@@ -30,8 +30,18 @@ public class ShopActor extends MapActor {
         this.loadChanges = loadChanges;
     }
 
+    /** Standalone shop not tied to a town map (travelling merchant of the Cronache plane). */
+    public ShopActor(int id, ShopData data, PointOfInterestChanges changes) {
+        this(null, id, data, changes);
+    }
+
+    /** Changes used to track bought cards: the current map's when in a town, otherwise this shop's own. */
+    public PointOfInterestChanges getChanges() {
+        return stage != null ? stage.getChanges() : loadChanges;
+    }
+
     public float getPriceModifier() {
-        PointOfInterestChanges changes = stage.getChanges();
+        PointOfInterestChanges changes = getChanges();
         float townPricemodifier = changes == null ? 1f : changes.getTownPriceModifier();
         float shopPriceModifier = changes == null ? 1f : changes.getShopPriceModifier(objectId);
         return shopPriceModifier * townPricemodifier;

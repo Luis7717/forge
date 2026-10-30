@@ -89,6 +89,7 @@ public class DialogData implements Serializable {
         public RewardData[] grantRewards = new RewardData[0];   //launch a RewardScene with the provided data.
         public RewardData[] grantRewardsChoice = new RewardData[0];   //launch a RewardScene choice with the provided data.
         public String issueQuest; //Add quest with this ID to the player's questlog.
+        public String openMerchant; //Open a travelling merchant shop with this shop name (Cronache plane).
 
         public int addMapReputation = 0;  //Gives the player X reputation points in this POI. Negative to take.
         public String POIReference; //used with addMapReputation when a quest step affects reputation in another location
@@ -122,6 +123,7 @@ public class DialogData implements Serializable {
             grantRewards = other.grantRewards.clone();
             grantRewardsChoice = other.grantRewardsChoice.clone();
             issueQuest = other.issueQuest;
+            openMerchant = other.openMerchant;
             addMapReputation = other.addMapReputation;
             POIReference = other.POIReference;
         }

@@ -388,7 +388,7 @@ public class RewardScene extends UIScene {
         updateCollectionPool();
         if (type == Type.Shop) {
             this.shopActor = shopActor;
-            this.changes = shopActor.getMapStage().getChanges();
+            this.changes = shopActor.getChanges();
             addToSelectable(restockButton);
         } else {
             doneButton.setText("[+OK]");

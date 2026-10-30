@@ -967,7 +967,8 @@ public class MapStage extends GameStage {
 
     protected void getReward() {
         isLoadingMatch = false;
-        RewardScene.instance().loadRewards(currentMob.getRewards(), RewardScene.Type.Loot, null);
+        if (!CronacheRewards.loadVictoryRewards(currentMob))
+            RewardScene.instance().loadRewards(currentMob.getRewards(), RewardScene.Type.Loot, null);
         Forge.switchScene(RewardScene.instance());
         if (currentMob.defeatDialog == null) {
             currentMob.remove();
