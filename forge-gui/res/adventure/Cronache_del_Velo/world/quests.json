@@ -6994,7 +6994,8 @@
 									"advanceQuestFlag": "",
 									"advanceMapFlag": "",
 									"setQuestFlag": {
-										"key": ""
+										"key": "cronacheVelo",
+										"val": 1
 									},
 									"setMapFlag": {
 										"key": ""
@@ -11397,7 +11398,7 @@
 			{
 				"id": 1,
 				"name": "Esci dalla grotta",
-				"description": "La campana suona ancora. Il suono viene da fuori.",
+				"description": "Il portale da cui sei arrivato gira ancora vicino al fuoco: attraversalo per uscire. Il vecchio accanto al fuoco può spiegarti qualcosa.",
 				"objective": "Leave",
 				"mapFlag": "",
 				"mapFlagValue": 1,

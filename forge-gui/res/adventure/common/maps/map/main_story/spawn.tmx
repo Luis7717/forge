@@ -193,6 +193,12 @@
         &quot;name&quot;: &quot;Goodbye.&quot;,
         &quot;locname&quot;: &quot;adv.main_story_spawn.69.d.n21.name&quot;
       }
+    ],
+    &quot;condition&quot;: [
+      {
+        &quot;checkQuestFlag&quot;: &quot;cronacheVelo&quot;,
+        &quot;not&quot;: true
+      }
     ]
   },
   {
@@ -313,46 +319,158 @@
     &quot;loctext&quot;: &quot;adv.main_story_spawn.69.d.n36.text&quot;,
     &quot;options&quot;: [
       {
-       &quot;name&quot;: &quot;I want to trade in the five colored keys for a mox of my choice and the key to Emrakul's room&quot;,
-       &quot;locname&quot;: &quot;adv.main_story_spawn.69.d.n37.name&quot;,
-       &quot;action&quot;: [
+        &quot;name&quot;: &quot;I want to trade in the five colored keys for a mox of my choice and the key to Emrakul's room&quot;,
+        &quot;locname&quot;: &quot;adv.main_story_spawn.69.d.n37.name&quot;,
+        &quot;action&quot;: [
           {
-        &quot;grantRewardsChoice&quot;: [
-          {
-            &quot;type&quot;: &quot;card&quot;,
-            &quot;count&quot;: 1,
-            &quot;cardName&quot;: &quot;Mox Jet&quot;
+            &quot;grantRewardsChoice&quot;: [
+              {
+                &quot;type&quot;: &quot;card&quot;,
+                &quot;count&quot;: 1,
+                &quot;cardName&quot;: &quot;Mox Jet&quot;
+              },
+              {
+                &quot;type&quot;: &quot;card&quot;,
+                &quot;count&quot;: 1,
+                &quot;cardName&quot;: &quot;Mox Ruby&quot;
+              },
+              {
+                &quot;type&quot;: &quot;card&quot;,
+                &quot;count&quot;: 1,
+                &quot;cardName&quot;: &quot;Mox Sapphire&quot;
+              },
+              {
+                &quot;type&quot;: &quot;card&quot;,
+                &quot;count&quot;: 1,
+                &quot;cardName&quot;: &quot;Mox Pearl&quot;
+              },
+              {
+                &quot;type&quot;: &quot;card&quot;,
+                &quot;count&quot;: 1,
+                &quot;cardName&quot;: &quot;Mox Emerald&quot;
+              }
+            ]
           },
           {
-            &quot;type&quot;: &quot;card&quot;,
-            &quot;count&quot;: 1,
-            &quot;cardName&quot;: &quot;Mox Ruby&quot;
+            &quot;removeItem&quot;: &quot;Blue Key&quot;
           },
           {
-            &quot;type&quot;: &quot;card&quot;,
-            &quot;count&quot;: 1,
-            &quot;cardName&quot;: &quot;Mox Sapphire&quot;
+            &quot;removeItem&quot;: &quot;Green Key&quot;
           },
           {
-            &quot;type&quot;: &quot;card&quot;,
-            &quot;count&quot;: 1,
-            &quot;cardName&quot;: &quot;Mox Pearl&quot;
+            &quot;removeItem&quot;: &quot;Black Key&quot;
           },
           {
-            &quot;type&quot;: &quot;card&quot;,
-            &quot;count&quot;: 1,
-            &quot;cardName&quot;: &quot;Mox Emerald&quot;
-          }         
+            &quot;removeItem&quot;: &quot;White Key&quot;
+          },
+          {
+            &quot;removeItem&quot;: &quot;Red Key&quot;
+          },
+          {
+            &quot;addItem&quot;: &quot;Strange Key&quot;
+          }
         ]
-        },
-        { &quot;removeItem&quot;: &quot;Blue Key&quot; },
-		{ &quot;removeItem&quot;: &quot;Green Key&quot; },
-		{ &quot;removeItem&quot;: &quot;Black Key&quot; },
-		{ &quot;removeItem&quot;: &quot;White Key&quot; },
-		{ &quot;removeItem&quot;: &quot;Red Key&quot; },
-                       { &quot;addItem&quot;: &quot;Strange Key&quot; }
-         ]
-         }    
+      }
+    ]
+  },
+  {
+    &quot;condition&quot;: [
+      {
+        &quot;checkQuestFlag&quot;: &quot;cronacheVelo&quot;
+      },
+      {
+        &quot;checkQuestFlag&quot;: &quot;cronacheMago&quot;,
+        &quot;not&quot;: true
+      }
+    ],
+    &quot;text&quot;: &quot;Un vecchio in saio grigio attizza il fuoco senza voltarsi. «Ti sei svegliato, finalmente. L'hai sentita anche tu, vero? La campana.»&quot;,
+    &quot;options&quot;: [
+      {
+        &quot;name&quot;: &quot;«Chi sei? Dove mi trovo?»&quot;,
+        &quot;text&quot;: &quot;«Uno che ha sentito suonare troppe campane. Questo è Shandalar, un piano dove la magia scorre ovunque. Ma da tre notti qualcosa di sbagliato scorre insieme a lei: i morti non restano più sotto terra.»&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Continua)&quot;,
+            &quot;text&quot;: &quot;«Prendi questa runa. Usala quando vuoi e ti riporterà qui, al riparo del fuoco.» Ti mette in mano una pietra liscia, fredda come un osso.&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;addItem&quot;: &quot;Colorless rune&quot;
+              }
+            ],
+            &quot;options&quot;: [
+              {
+                &quot;name&quot;: &quot;(Continua)&quot;,
+                &quot;text&quot;: &quot;«E queste. Sono monete della sfida: mostrale ai locandieri dei villaggi e ti faranno partecipare ai tornei di maghi. Non spenderle dai mercanti.»&quot;,
+                &quot;action&quot;: [
+                  {
+                    &quot;grantRewards&quot;: [
+                      {
+                        &quot;type&quot;: &quot;item&quot;,
+                        &quot;count&quot;: 3,
+                        &quot;itemName&quot;: &quot;Bronze Challenge Coin&quot;
+                      },
+                      {
+                        &quot;type&quot;: &quot;item&quot;,
+                        &quot;count&quot;: 1,
+                        &quot;itemName&quot;: &quot;Challenge Coin&quot;
+                      },
+                      {
+                        &quot;type&quot;: &quot;item&quot;,
+                        &quot;count&quot;: 1,
+                        &quot;itemName&quot;: &quot;Silver Challenge Coin&quot;
+                      }
+                    ]
+                  },
+                  {
+                    &quot;setCharacterFlag&quot;: {
+                      &quot;key&quot;: &quot;freeChallengeCoins&quot;,
+                      &quot;val&quot;: 1
+                    }
+                  }
+                ],
+                &quot;options&quot;: [
+                  {
+                    &quot;name&quot;: &quot;«E adesso?»&quot;,
+                    &quot;text&quot;: &quot;«Adesso esci dal portale da cui sei arrivato, quello che gira alle mie spalle. A valle c'è un villaggio. Cerca la campanara: si chiama Ilde, e ne sa più di me.»&quot;,
+                    &quot;options&quot;: [
+                      {
+                        &quot;name&quot;: &quot;(Vai)&quot;,
+                        &quot;action&quot;: [
+                          {
+                            &quot;setQuestFlag&quot;: {
+                              &quot;key&quot;: &quot;cronacheMago&quot;,
+                              &quot;val&quot;: 1
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        &quot;name&quot;: &quot;(Lascialo stare)&quot;
+      }
+    ]
+  },
+  {
+    &quot;condition&quot;: [
+      {
+        &quot;checkQuestFlag&quot;: &quot;cronacheVelo&quot;
+      },
+      {
+        &quot;checkQuestFlag&quot;: &quot;cronacheMago&quot;
+      }
+    ],
+    &quot;text&quot;: &quot;«Il portale è alle mie spalle. Vai a valle e cerca Ilde, la campanara. La campana non aspetta.»&quot;,
+    &quot;options&quot;: [
+      {
+        &quot;name&quot;: &quot;(Annuisci)&quot;
+      }
     ]
   }
 ]</property>
