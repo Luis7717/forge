@@ -14,13 +14,17 @@ on:
         description: 'Bundle identifier for the build'
         required: false
         default: 'forge.cardforge.ios'
+      runner:
+        description: 'macOS runner label (macos-15, macos-15-intel, macos-14...)'
+        required: false
+        default: 'macos-15'
 
 permissions:
   contents: write
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: ${{ github.event.inputs.runner || 'macos-15' }}
     timeout-minutes: 120
     name: RoboVM iOS build (unsigned IPA)
     env:
