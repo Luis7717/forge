@@ -230,7 +230,7 @@ public class GameHUD extends Stage {
 
         ui.addActor(notificationPane);
         //move touchpad here so z-index is over notificationPane and we can still move the player
-        if (GuiBase.isAndroid()) //add touchpad for android
+        if (GuiBase.isMobile()) //add touchpad for android and iOS
             ui.addActor(touchpad);
         //MAP
         mapGroup.addActor(miniMap);
@@ -335,7 +335,7 @@ public class GameHUD extends Stage {
             return true;
         }
         //auto follow touchpad
-        if (GuiBase.isAndroid() && !MapStage.getInstance().isDialogOnlyInput() && !console.isVisible()) {
+        if (GuiBase.isMobile() && !MapStage.getInstance().isDialogOnlyInput() && !console.isVisible()) {
             if (!(Controls.actorContainsVector(avatar, touchDownCoords)) // not inside avatar bounds
                     && !(Controls.actorContainsVector(miniMap, touchDownCoords)) // not inside map bounds
                     && !(Controls.actorContainsVector(gamehud, touchDownCoords)) //not inside gamehud bounds

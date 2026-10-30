@@ -560,7 +560,7 @@ public abstract class GameStage extends Stage {
     public boolean touchDragged(int screenX, int screenY, int pointer) {
         if (isPaused())
             return true;
-        if (!GuiBase.isAndroid()) {
+        if (!GuiBase.isMobile()) {
             touchX = screenX;
             touchY = screenY;
         }
@@ -572,7 +572,7 @@ public abstract class GameStage extends Stage {
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
         if (isPaused())
             return true;
-        if (!GuiBase.isAndroid()) {
+        if (!GuiBase.isMobile()) {
             touchX = screenX;
             touchY = screenY;
         }
