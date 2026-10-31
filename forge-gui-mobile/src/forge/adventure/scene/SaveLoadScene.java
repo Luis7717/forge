@@ -107,7 +107,7 @@ public class SaveLoadScene extends UIScene {
         // Add sort toggle button logic
         sortToggleButton = ui.findActor("sortToggle");
         if (sortToggleButton != null) {
-            sortToggleButton.setText("Sort by Recent");
+            sortToggleButton.setText("Ordina per data");
             sortToggleButton.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
@@ -121,12 +121,12 @@ public class SaveLoadScene extends UIScene {
         if (sortMode == SortMode.SLOT) {
             sortMode = SortMode.RECENT;
             if (sortToggleButton != null) {
-                sortToggleButton.setText("Sort by Slot");
+                sortToggleButton.setText("Ordina per slot");
             }
         } else {
             sortMode = SortMode.SLOT;
             if (sortToggleButton != null) {
-                sortToggleButton.setText("Sort by Recent");
+                sortToggleButton.setText("Ordina per data");
             }
         }
         refreshSaveSlots();

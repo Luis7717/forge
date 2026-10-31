@@ -92,6 +92,6 @@ public class ShardTraderScene extends UIScene {
         sellShardsQuantity.setDisabled(currentShards < shardsToSell);
         buyShardsCost.setDisabled(currentGold < shardCost);
         buyShardsCost.setText( "Buy [+Shards] " + shardsToBuy + " for [+GoldCoin] " + shardCost);
-        sellShardsQuantity.setText("Sell [+Shards] " + shardsToSell + " for [+GoldCoin] " +shardPrice);
+        sellShardsQuantity.setText("Vendi [+Shards] " + shardsToSell + " per [+GoldCoin] " +shardPrice);
     }
 }

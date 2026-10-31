@@ -190,7 +190,7 @@ public class ForgePreferences extends AbstractPreferences<ForgePreferences.FPref
         UI_VIBRATE_ON_ADVENTURE_REWARD("true"),
         UI_VIBRATE_ON_SHOP_ACTION("true"),
 
-        UI_LANGUAGE("en-US"),
+        UI_LANGUAGE("it-IT"),
 
         AUTO_UPDATE("none"),
         USE_SENTRY("false"), // this controls whether automated bug reporting is done or not

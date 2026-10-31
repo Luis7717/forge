@@ -360,7 +360,7 @@ public class InventoryScene extends UIScene {
                     TextraButton button = (TextraButton) equipButton;
                     Long id = Current.player().itemInSlot(data.equipmentSlot);
                     if (id != null && id.equals(data.longID) && data.isEquipped) {
-                        button.setText("Unequip");
+                        button.setText("Togli");
                     } else {
                         button.setText(Forge.getLocalizer().getMessage("lblEquip"));
                     }

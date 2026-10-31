@@ -31,9 +31,9 @@ public class QuestLogScene extends UIScene {
         scrollWindow = ui.findActor("scrollWindow");
         root = ui.findActor("questList");
         detailRoot = ui.findActor("questDetails");
-        abandonQuestButton = Controls.newTextButton("Abandon Quest");
-        trackButton = Controls.newTextButton("Track Quest");
-        backToListButton = Controls.newTextButton("Quest List");
+        abandonQuestButton = Controls.newTextButton("Abbandona missione");
+        trackButton = Controls.newTextButton("Segui missione");
+        backToListButton = Controls.newTextButton("Elenco missioni");
         ui.onButtonPress("return", QuestLogScene.this::back);
         ui.onButtonPress("status", QuestLogScene.this::status);
         backToListButton.addListener(new ClickListener() {

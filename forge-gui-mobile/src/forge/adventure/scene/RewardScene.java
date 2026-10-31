@@ -626,7 +626,7 @@ public class RewardScene extends UIScene {
             boolean uniqueOwned = isUniqueItemOwned();
             setDisabled(isSold || uniqueOwned || WorldSave.getCurrentSave().getPlayer().getGold() < price);
             if (isSold)
-                setText("SOLD");
+                setText("VENDUTA");
             else if (uniqueOwned)
                 setText(Forge.getLocalizer().getMessage("lblOwned"));
             else
@@ -703,7 +703,7 @@ public class RewardScene extends UIScene {
             boolean uniqueOwned = isUniqueItemOwned();
             setDisabled(isSold || uniqueOwned || remainingSelections <= 0);
             if (isSold)
-                setText("SELECTED");
+                setText("SCELTA");
             else if (uniqueOwned)
                 setText(Forge.getLocalizer().getMessage("lblOwned"));
             else
@@ -720,9 +720,9 @@ public class RewardScene extends UIScene {
             if (Type.Shop != type)
                 return;
             if (collectionPool != null && Reward.Type.Card.equals(reward.getType()))
-                setText("Pick Reward" + "\n" + Forge.getLocalizer().getMessage("lblOwned") + ": " + collectionPool.count(reward.getCard()));
+                setText("Scegli" + "\n" + Forge.getLocalizer().getMessage("lblOwned") + ": " + collectionPool.count(reward.getCard()));
             else if (Reward.Type.Item.equals(reward.getType()))
-                setText("Pick Reward" + "\n" + Forge.getLocalizer().getMessage("lblOwned") + ": " + AdventurePlayer.current().countItem(reward.getItem().name));
+                setText("Scegli" + "\n" + Forge.getLocalizer().getMessage("lblOwned") + ": " + AdventurePlayer.current().countItem(reward.getItem().name));
         }
 
         public ChooseRewardButton(int i, RewardActor actor, Reward reward, TextraButton style) {
@@ -735,7 +735,7 @@ public class RewardScene extends UIScene {
             setX(actor.getX());
             setY(actor.getY() - getHeight());
 
-            setText("Pick Reward");
+            setText("Scegli");
             updateOwned();
             addListener(new ClickListener() {
                 @Override
@@ -748,7 +748,7 @@ public class RewardScene extends UIScene {
                         Current.player().addReward(rewardActor.getReward());
 
                         headerLabel.setVisible(remainingSelections > 0);
-                        headerLabel.setText("Select " + remainingSelections + " rewards");
+                        headerLabel.setText(Forge.getLocalizer().getMessage("lblSelectRewards", remainingSelections));
                         doneButton.setDisabled(remainingSelections > 0);
 
                         HapticEngine.vibrate(FPref.UI_VIBRATE_ON_ADVENTURE_REWARD, 5);
