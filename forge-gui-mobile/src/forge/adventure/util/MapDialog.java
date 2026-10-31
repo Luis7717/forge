@@ -191,8 +191,13 @@ public class MapDialog {
         }
     }
 
+    private DialogData rootDialog = null; //first dialog shown by activate(), target of "loop" options
+
     private boolean loadDialog(DialogData dialog) { //Displays a dialog with dialogue and possible choices.
         setEffects(dialog.action);
+        //"loop" option (Cronache): apply its effects, then go back to the main menu of this conversation
+        if (dialog.loop && rootDialog != null && dialog != rootDialog)
+            return loadDialog(rootDialog);
         //Conditional text branch: a dialog with no text jumps straight into its first unnamed option whose
         //conditions are met (lets one quest epilogue show different text depending on earlier choices).
         if (dialog.text.isEmpty() && dialog.options.length > 0) {
@@ -368,6 +373,7 @@ public class MapDialog {
         boolean dialogShown = false;
         for (DialogData dialog : data) {
             if (isConditionOk(dialog.condition)) {
+                rootDialog = dialog;
                 if (loadDialog(dialog))
                     dialogShown = true;
             }
