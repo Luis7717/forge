@@ -623,7 +623,9 @@ public class DuelScene extends ForgeScene {
         int mainSize = mainSection.countAll();
 
         int maxDeckSize = format == DeckFormat.Adventure ? Integer.MAX_VALUE : format.getMainRange().getMaximum();
-        int minDeckSize = format == DeckFormat.Adventure ? Config.instance().getConfigData().minDeckSize : format.getMainRange().getMinimum();
+        int minDeckSize = format == DeckFormat.Adventure
+                ? forge.adventure.util.CronacheRewards.playerMinDeckSize(Config.instance().getConfigData().minDeckSize) //Cronache: grows with the challenges
+                : format.getMainRange().getMinimum();
 
         if(format.hasCommander() && playerDeck.has(DeckSection.Commander)) {
             //If they have a partner commander, it counts toward the 99.

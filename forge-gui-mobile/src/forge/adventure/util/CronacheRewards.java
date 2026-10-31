@@ -106,6 +106,25 @@ public final class CronacheRewards {
         return effect;
     }
 
+    /** Number of the current challenge (1-100) of the Cronaca I quest, 0 if not running. */
+    public static int currentChallenge() {
+        for (forge.adventure.data.AdventureQuestData q : Current.player().getQuests()) {
+            if (q.getID() == 1001)
+                return Math.min(100, q.getCompletedStageIDs().size() + 1);
+        }
+        return 0;
+    }
+
+    /** Minimum deck size for the player: same rule as the challengers, 40 cards for 1-20 then +5 every 20. */
+    public static int playerMinDeckSize(int defaultSize) {
+        if (!isActive())
+            return defaultSize;
+        int n = currentChallenge();
+        if (n <= 0)
+            return defaultSize;
+        return 40 + 5 * ((n - 1) / 20);
+    }
+
     /** Price modifier of Tobia's cart, depending on how much he trusts the player. */
     public static float merchantPriceModifier() {
         int trust = flag(FLAG_TRUST_TOBIA);
