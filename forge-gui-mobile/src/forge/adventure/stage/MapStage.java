@@ -1099,6 +1099,18 @@ public class MapStage extends GameStage {
                 }
                 mob.updatePositon();
 
+                if (mob.getObjectId() >= CRONACHE_ID_BASE && isCronacheRoom()) {
+                    //Cronache challenger: walk straight to the player, ignoring the map navigation grid
+                    if (mob.isFrozen() && mob.pos().dst(player.pos()) < mob.unfreezeRange)
+                        continue;
+                    AIVector.set(player.pos()).sub(mob.pos());
+                    if (AIVector.len() > 0.5f) {
+                        AIVector.setLength(Math.min(AIVector.len(), mob.speed() * delta));
+                        mob.moveBy(AIVector.x, AIVector.y, delta);
+                    }
+                    continue;
+                }
+
                 ProgressableGraphPath<NavigationVertex> navPath = emptyFallbackNavPath;
 
                 if (mob.getData().flying) {
