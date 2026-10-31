@@ -832,6 +832,8 @@ public class MapStage extends GameStage {
                         MapStage.this.getReward();
                         AdventureQuestController.instance().updateQuestsWin(currentMob,enemies);
                         AdventureQuestController.instance().showQuestDialogs(MapStage.this);
+                        if (isCronacheRoom())
+                            WorldSave.getCurrentSave().autoSaveAsync(); //Cronache: progress saved after every win
                         currentMob = null;
                     });
                     player.setAnimation(CharacterSprite.AnimationTypes.Idle);
@@ -1246,6 +1248,8 @@ public class MapStage extends GameStage {
         if (mob == null) return;
         if (CronacheRewards.isActive())
             Current.player().heal(1.0f); //Cronache: every challenge starts at full life
+        if (isCronacheRoom())
+            WorldSave.getCurrentSave().autoSaveAsync(); //...and choices, purchases and picked cards are saved before it
         mob.clearCollisionHeight();
         currentMob = mob;
         player.setAnimation(CharacterSprite.AnimationTypes.Attack);

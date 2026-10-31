@@ -116,6 +116,9 @@ public class WorldSave {
             e.printStackTrace();
             return false;
         }
+        //Cronache: the whole campaign happens inside the Sala, so a loaded game goes straight back into it
+        if (CronacheRewards.isActive() && CronacheRewards.currentChallenge() > 0)
+            WorldStage.getInstance().enterSpawnPOI();
         return true;
     }
 
