@@ -173,7 +173,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
                 try {
                     if (!Forge.getAssets().manager().isLoaded(filePath, Texture.class)) {
                         if (!Forge.getAssets().manager().contains(filePath)) {
-                            Forge.getAssets().manager().load(filePath, Texture.class, Forge.getAssets().getTextureFilter());
+                            Forge.getAssets().manager().load(filePath, Texture.class, ImageCache.cardTextureParameter(filePath));
                         }
                     }
                 } catch (Exception ignored) {}
@@ -323,7 +323,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
                             try {
                                 Texture front = Forge.getAssets().manager().get(frontFace.getPath(), Texture.class, false);
                                 if (front == null) {
-                                    Forge.getAssets().manager().load(frontFace.getPath(), Texture.class, Forge.getAssets().getTextureFilter());
+                                    Forge.getAssets().manager().load(frontFace.getPath(), Texture.class, ImageCache.cardTextureParameter(frontFace.getPath()));
                                     Forge.getAssets().manager().finishLoadingAsset(frontFace.getPath());
                                     front = Forge.getAssets().manager().get(frontFace.getPath(), Texture.class, false);
                                 }
@@ -353,7 +353,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
                         try {
                             Texture replacement = Forge.getAssets().manager().get(lookup.getPath(), Texture.class, false);
                             if (replacement == null) {
-                                Forge.getAssets().manager().load(lookup.getPath(), Texture.class, Forge.getAssets().getTextureFilter());
+                                Forge.getAssets().manager().load(lookup.getPath(), Texture.class, ImageCache.cardTextureParameter(lookup.getPath()));
                                 Forge.getAssets().manager().finishLoadingAsset(lookup.getPath());
                                 replacement = Forge.getAssets().manager().get(lookup.getPath(), Texture.class, false);
                             }
@@ -377,7 +377,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
                                 if (file != null) {
                                     Texture check = Forge.getAssets().manager().get(file.getPath(), Texture.class, false);
                                     if (check == null) {
-                                        Forge.getAssets().manager().load(file.getPath(), Texture.class, Forge.getAssets().getTextureFilter());
+                                        Forge.getAssets().manager().load(file.getPath(), Texture.class, ImageCache.cardTextureParameter(file.getPath()));
                                         Forge.getAssets().manager().finishLoadingAsset(file.getPath());
                                     }
                                     ImageCache.getInstance().updateSynqCount(file, 1);
@@ -671,7 +671,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
             try {
                 Texture back = Forge.getAssets().manager().get(backFace.getPath(), Texture.class, false);
                 if (back == null) {
-                    Forge.getAssets().manager().load(backFace.getPath(), Texture.class, Forge.getAssets().getTextureFilter());
+                    Forge.getAssets().manager().load(backFace.getPath(), Texture.class, ImageCache.cardTextureParameter(backFace.getPath()));
                     Forge.getAssets().manager().finishLoadingAsset(backFace.getPath());
                     back = Forge.getAssets().manager().get(backFace.getPath(), Texture.class, false);
                 }

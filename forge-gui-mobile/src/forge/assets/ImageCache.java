@@ -460,7 +460,7 @@ public class ImageCache {
     // iOS downloaded images (Documents/cache) decode via CardTextureData so the AssetManager owns their
     // whole lifecycle; every other card image uses the stock file decode. This selects a decode PARAMETER
     // only — it caches/gets/unloads nothing.
-    private static TextureParameter cardTextureParameter(String fileName) {
+    public static TextureParameter cardTextureParameter(String fileName) {
         if (isDownloadedCardImage(fileName)) {
             TextureParameter p = new TextureParameter();
             p.textureData = new CardTextureData(fileName);
