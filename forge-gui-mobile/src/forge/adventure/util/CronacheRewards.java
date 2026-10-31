@@ -190,9 +190,9 @@ public final class CronacheRewards {
 
     public static float merchantPriceModifier() {
         if (openShop.startsWith("Cronache Bustine"))
-            return 0.5f; //Mirta's packs: 500 gold instead of the standard 1000
+            return 0.25f; //Mirta's packs: 250 gold instead of the standard 1000
         int trust = flag(FLAG_TRUST_TOBIA);
-        float base = DIFF_PRICES[difficulty()];
+        float base = 0.5f * DIFF_PRICES[difficulty()]; //Tobia sells at half the standard Adventure prices
         if (trust >= 15) return 0.75f * base;
         if (trust >= 12) return 0.9f * base;
         if (trust > 0 && trust <= 6) return 1.3f * base;
@@ -259,7 +259,7 @@ public final class CronacheRewards {
         for (int i = 0; i < unique.size() && i < MAX_CHOICES; i++)
             choices.add(new Reward(unique.get(i)));
 
-        gold = Math.round(gold * DIFF_GOLD[difficulty()]);
+        gold = Math.round(gold * DIFF_GOLD[difficulty()] * (picks > 1 && !isSpecial(n) || picks > 2 ? 1.5f : 1f)); //first-try bonus
         if (gold > 0)
             Current.player().giveGold(gold);
         RewardScene.instance().loadSelectableRewards(choices, RewardScene.Type.RewardChoice, Math.min(picks, choices.size));

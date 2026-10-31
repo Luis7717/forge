@@ -117,8 +117,18 @@ public class WorldSave {
             return false;
         }
         //Cronache: the whole campaign happens inside the Sala, so a loaded game goes straight back into it
-        if (CronacheRewards.isActive() && CronacheRewards.currentChallenge() > 0)
+        if (CronacheRewards.isActive() && CronacheRewards.currentChallenge() > 0) {
+            //story fixes in a newer build apply to existing saves: refresh texts, keep progress
+            try {
+                for (forge.adventure.data.AdventureQuestData q : currentSave.player.getQuests()) {
+                    if (q.getID() == 1001)
+                        q.refreshStoryFrom(AdventureQuestController.instance().generateQuest(1001));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
             WorldStage.getInstance().enterSpawnPOI();
+        }
         return true;
     }
 

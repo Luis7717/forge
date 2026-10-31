@@ -103,6 +103,26 @@ public class AdventureQuestData implements Serializable {
         isTracked = data.isTracked;
     }
 
+    /** Cronache: update story texts and targets of a saved quest from the current template, keeping progress. */
+    public void refreshStoryFrom(AdventureQuestData template) {
+        if (template == null)
+            return;
+        name = template.name;
+        description = template.description;
+        for (AdventureQuestStage stage : stages) {
+            for (AdventureQuestStage fresh : template.stages) {
+                if (fresh.id != stage.id)
+                    continue;
+                stage.name = fresh.name;
+                stage.description = fresh.description;
+                stage.prologue = fresh.prologue;
+                stage.epilogue = fresh.epilogue;
+                stage.enemyTags = fresh.enemyTags;
+                break;
+            }
+        }
+    }
+
     public AdventureQuestData()
     {
         declinedDialog = new DialogData();
