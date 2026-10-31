@@ -41,6 +41,8 @@ public class ShopActor extends MapActor {
     }
 
     public float getPriceModifier() {
+        if (stage == null)
+            return forge.adventure.util.CronacheRewards.merchantPriceModifier(); //Tobia's cart: price depends on trust
         PointOfInterestChanges changes = getChanges();
         float townPricemodifier = changes == null ? 1f : changes.getTownPriceModifier();
         float shopPriceModifier = changes == null ? 1f : changes.getShopPriceModifier(objectId);

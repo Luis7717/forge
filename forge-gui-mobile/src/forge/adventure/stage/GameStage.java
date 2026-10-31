@@ -436,8 +436,11 @@ public abstract class GameStage extends Stage {
             }
         }
 
-        camera.position.x = Math.min(Math.max(Scene.getIntendedWidth() / 2f, player.pos().x), getViewport().getWorldWidth() - Scene.getIntendedWidth() / 2f);
-        camera.position.y = Math.min(Math.max(Scene.getIntendedHeight() / 2f, player.pos().y), getViewport().getWorldHeight() - Scene.getIntendedHeight() / 2f);
+        //half of the visible area, taking the zoom into account (the Cronache room uses a closer camera)
+        float halfW = Scene.getIntendedWidth() * camera.zoom / 2f;
+        float halfH = Scene.getIntendedHeight() * camera.zoom / 2f;
+        camera.position.x = Math.min(Math.max(halfW, player.pos().x), getViewport().getWorldWidth() - halfW);
+        camera.position.y = Math.min(Math.max(halfH, player.pos().y), getViewport().getWorldHeight() - halfH);
 
         onActing(delta);
     }

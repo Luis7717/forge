@@ -31734,7 +31734,7 @@
 		"nameOverride": "Ciclope",
 		"sprite": "sprites/enemy/giant/cyclops.atlas",
 		"deck": [
-			"decks/standard/cyclops.dck"
+			"decks/sala/sfida_001.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31758,7 +31758,7 @@
 		"nameOverride": "Avvoltoio",
 		"sprite": "sprites/enemy/beast/bird/vulture.atlas",
 		"deck": [
-			"decks/standard/vulture.dck"
+			"decks/sala/sfida_002.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31784,7 +31784,7 @@
 		"nameOverride": "Pipistrello",
 		"sprite": "sprites/enemy/beast/smallmammals/bat.atlas",
 		"deck": [
-			"decks/standard/bat.dck"
+			"decks/sala/sfida_003.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31810,7 +31810,7 @@
 		"nameOverride": "Ghoul",
 		"sprite": "sprites/enemy/undead/ghoul.atlas",
 		"deck": [
-			"decks/standard/ghoul.dck"
+			"decks/sala/sfida_004.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31834,7 +31834,7 @@
 		"nameOverride": "Homarid",
 		"sprite": "sprites/enemy/monstrosity/homarid.atlas",
 		"deck": [
-			"decks/standard/homarid.dck"
+			"decks/sala/sfida_005.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31859,7 +31859,7 @@
 		"nameOverride": "Guerriero Minotauro",
 		"sprite": "sprites/enemy/humanoid/minotaur/amonkhet_minotaur.atlas",
 		"deck": [
-			"decks/standard/amonkhet_minotaur.dck"
+			"decks/sala/sfida_006.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31883,7 +31883,7 @@
 		"nameOverride": "Boggart",
 		"sprite": "sprites/enemy/humanoid/goblin/goblin_2.atlas",
 		"deck": [
-			"decks/standard/eyeblight.dck"
+			"decks/sala/sfida_007.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31907,7 +31907,7 @@
 		"nameOverride": "Spettro",
 		"sprite": "sprites/enemy/undead/wraith.atlas",
 		"deck": [
-			"decks/standard/wraithswampwalk.dck"
+			"decks/sala/sfida_008.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31932,7 +31932,7 @@
 		"nameOverride": "Bandito con la Fionda",
 		"sprite": "sprites/enemy/humanoid/human/bandit/banditslingshot.atlas",
 		"deck": [
-			"decks/standard/banditslingshot_flyers.dck"
+			"decks/sala/sfida_009.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -31957,7 +31957,7 @@
 		"nameOverride": "Araldo Scarno",
 		"sprite": "sprites/enemy/undead/skeleton_2.atlas",
 		"deck": [
-			"decks/cronaca1/araldo.dck"
+			"decks/sala/sfida_010.dck"
 		],
 		"ai": "",
 		"boss": true,
@@ -31976,14 +31976,14 @@
 		"questTags": [
 			"Cronache_Sfida_010"
 		],
-		"bossIntro": "Un forestiero che fa suonare la campana. Il mio signore ti vuole sotto terra."
+		"bossIntro": "Un altro campanaro. Il mio re ne ha seppelliti cento come te."
 	},
 	{
 		"name": "Cronache Sfida 011",
 		"nameOverride": "Gargoyle",
 		"sprite": "sprites/enemy/construct/gargoyle_2.atlas",
 		"deck": [
-			"decks/standard/gargoyle.dck"
+			"decks/sala/sfida_011.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32008,7 +32008,7 @@
 		"nameOverride": "Guerriero",
 		"sprite": "sprites/enemy/humanoid/human/warrior/warrior.atlas",
 		"deck": [
-			"decks/standard/human_warrior_amonkhet.dck"
+			"decks/sala/sfida_012.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32032,7 +32032,7 @@
 		"nameOverride": "Cammello",
 		"sprite": "sprites/enemy/beast/largemammals/camel.atlas",
 		"deck": [
-			"decks/standard/camel.dck"
+			"decks/sala/sfida_013.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32056,7 +32056,7 @@
 		"nameOverride": "Khan",
 		"sprite": "sprites/enemy/humanoid/human/knight/cavalier.atlas",
 		"deck": [
-			"decks/standard/mardu.dck"
+			"decks/sala/sfida_014.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32080,7 +32080,7 @@
 		"nameOverride": "Avventuriero",
 		"sprite": "sprites/enemy/humanoid/swordsman_3.atlas",
 		"deck": [
-			"decks/standard/adventurer.dck"
+			"decks/sala/sfida_015.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32104,7 +32104,7 @@
 		"nameOverride": "Gorgone",
 		"sprite": "sprites/enemy/monstrosity/gorgonen.atlas",
 		"deck": [
-			"decks/standard/gorgon_2.dck"
+			"decks/sala/sfida_016.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32128,7 +32128,7 @@
 		"nameOverride": "Abominio di Carne",
 		"sprite": "sprites/enemy/monstrosity/flesh_horror.atlas",
 		"deck": [
-			"decks/standard/flesh_horror.dck"
+			"decks/sala/sfida_017.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32153,7 +32153,7 @@
 		"nameOverride": "Djinn di Tarkir",
 		"sprite": "sprites/enemy/elemental/djinn_2.atlas",
 		"deck": [
-			"decks/standard/djinn_tarkir.dck"
+			"decks/sala/sfida_018.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32178,7 +32178,7 @@
 		"nameOverride": "Stegosauro",
 		"sprite": "sprites/enemy/beast/dinosaur/dinosaur_stegosaurus.atlas",
 		"deck": [
-			"decks/standard/dinosaur_gruul_etali.dck"
+			"decks/sala/sfida_019.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32203,7 +32203,7 @@
 		"nameOverride": "Guerriero Centauro",
 		"sprite": "sprites/enemy/fey/centaur_2.atlas",
 		"deck": [
-			"decks/standard/centaur_warrior.dck"
+			"decks/sala/sfida_020.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32227,7 +32227,7 @@
 		"nameOverride": "Gufo",
 		"sprite": "sprites/enemy/beast/bird/owl.atlas",
 		"deck": [
-			"decks/standard/owl.dck"
+			"decks/sala/sfida_021.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32253,7 +32253,7 @@
 		"nameOverride": "Pirata",
 		"sprite": "sprites/enemy/humanoid/human/rogue/pirate.atlas",
 		"deck": [
-			"decks/standard/pirate.dck"
+			"decks/sala/sfida_022.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32277,7 +32277,7 @@
 		"nameOverride": "Serpente Velenoso",
 		"sprite": "sprites/enemy/beast/reptile/snake_cobra.atlas",
 		"deck": [
-			"decks/standard/poisonoussnake.dck"
+			"decks/sala/sfida_023.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32302,7 +32302,7 @@
 		"nameOverride": "Guerriero Khenra",
 		"sprite": "sprites/enemy/humanoid/khenra/jackalwarrior.atlas",
 		"deck": [
-			"decks/standard/jackal.dck"
+			"decks/sala/sfida_024.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32327,7 +32327,7 @@
 		"nameOverride": "Il Custode del Cimitero",
 		"sprite": "sprites/enemy/undead/lich.atlas",
 		"deck": [
-			"decks/miniboss/darkenchanter.dck"
+			"decks/sala/sfida_025.dck"
 		],
 		"ai": "",
 		"boss": true,
@@ -32346,14 +32346,14 @@
 		"questTags": [
 			"Cronache_Sfida_025"
 		],
-		"bossIntro": "Le lapidi hanno perso i loro nomi. Tra poco perderai anche il tuo."
+		"bossIntro": "Ho custodito mille tombe. La tua è l'unica che non ha mai avuto un nome."
 	},
 	{
 		"name": "Cronache Sfida 026",
 		"nameOverride": "Verme",
 		"sprite": "sprites/enemy/beast/insect/smallworm.atlas",
 		"deck": [
-			"decks/standard/worm.dck"
+			"decks/sala/sfida_026.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32377,7 +32377,7 @@
 		"nameOverride": "Scheletro",
 		"sprite": "sprites/enemy/undead/skeleton.atlas",
 		"deck": [
-			"decks/standard/skeleton.dck"
+			"decks/sala/sfida_027.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32401,7 +32401,7 @@
 		"nameOverride": "Gigante Errante",
 		"sprite": "sprites/enemy/giant/wanderinggiant.atlas",
 		"deck": [
-			"decks/standard/wanderinggiant.dck"
+			"decks/sala/sfida_028.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32425,7 +32425,7 @@
 		"nameOverride": "Coccodrillo",
 		"sprite": "sprites/enemy/beast/reptile/crocodile_water.atlas",
 		"deck": [
-			"decks/standard/crocodile.dck"
+			"decks/sala/sfida_029.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32450,7 +32450,7 @@
 		"nameOverride": "Angelo dell'Ortodossia",
 		"sprite": "sprites/enemy/aberration/phyrexian/phyrexianangel.atlas",
 		"deck": [
-			"decks/standard/phyrexianangel.dck"
+			"decks/sala/sfida_030.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32474,7 +32474,7 @@
 		"nameOverride": "Scarabeo",
 		"sprite": "sprites/enemy/beast/insect/scarab.atlas",
 		"deck": [
-			"decks/standard/scarab.dck"
+			"decks/sala/sfida_031.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32499,7 +32499,7 @@
 		"nameOverride": "Goblin Fanatico",
 		"sprite": "sprites/enemy/humanoid/goblin/goblin_3.atlas",
 		"deck": [
-			"decks/standard/goblin_fanatic.dck"
+			"decks/sala/sfida_032.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32523,7 +32523,7 @@
 		"nameOverride": "Pappagallo",
 		"sprite": "sprites/enemy/beast/bird/parrot.atlas",
 		"deck": [
-			"decks/standard/parrot.dck"
+			"decks/sala/sfida_033.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32549,7 +32549,7 @@
 		"nameOverride": "Spirito Oscuro",
 		"sprite": "sprites/enemy/undead/ghost.atlas",
 		"deck": [
-			"decks/standard/dark_spirit.dck"
+			"decks/sala/sfida_034.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32573,7 +32573,7 @@
 		"nameOverride": "Panda Gigante",
 		"sprite": "sprites/enemy/beast/bear/giantpanda.atlas",
 		"deck": [
-			"decks/standard/giantpanda.dck"
+			"decks/sala/sfida_035.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32597,7 +32597,7 @@
 		"nameOverride": "Mago Blu Corrotto",
 		"sprite": "sprites/enemy/humanoid/human/wizard/corrupted_bluewiz.atlas",
 		"deck": [
-			"decks/standard/bluewiz_corrupted.dck"
+			"decks/sala/sfida_036.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32621,7 +32621,7 @@
 		"nameOverride": "Sliver Bianco",
 		"sprite": "sprites/enemy/aberration/sliver_white.atlas",
 		"deck": [
-			"decks/standard/sliver_white.dck"
+			"decks/sala/sfida_037.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32645,7 +32645,7 @@
 		"nameOverride": "Signore delle Bestie",
 		"sprite": "sprites/enemy/humanoid/human/warrior/caribou_elite.atlas",
 		"deck": [
-			"decks/standard/beastmaster.dck"
+			"decks/sala/sfida_038.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32669,7 +32669,7 @@
 		"nameOverride": "Prototipo Verde",
 		"sprite": "sprites/enemy/construct/prototype_green.atlas",
 		"deck": [
-			"decks/standard/prototype_green.dck"
+			"decks/sala/sfida_039.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32693,7 +32693,7 @@
 		"nameOverride": "Spirito",
 		"sprite": "sprites/enemy/undead/ghost_3.atlas",
 		"deck": [
-			"decks/standard/spirit.dck"
+			"decks/sala/sfida_040.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32718,7 +32718,7 @@
 		"nameOverride": "Demone Minore",
 		"sprite": "sprites/enemy/fiend/demon_4.atlas",
 		"deck": [
-			"decks/standard/demon4.dck"
+			"decks/sala/sfida_041.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32743,7 +32743,7 @@
 		"nameOverride": "Prototipo Blu",
 		"sprite": "sprites/enemy/construct/prototype_blue.atlas",
 		"deck": [
-			"decks/standard/prototype_blue.dck"
+			"decks/sala/sfida_042.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32767,7 +32767,7 @@
 		"nameOverride": "Mostro Marino",
 		"sprite": "sprites/enemy/aberration/leech_2.atlas",
 		"deck": [
-			"decks/standard/sea_monster.dck"
+			"decks/sala/sfida_043.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32791,7 +32791,7 @@
 		"nameOverride": "Criosfinge",
 		"sprite": "sprites/enemy/monstrosity/criosphinx.atlas",
 		"deck": [
-			"decks/standard/sphinx amonkhet.dck"
+			"decks/sala/sfida_044.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32816,7 +32816,7 @@
 		"nameOverride": "Mago Blu Adepto",
 		"sprite": "sprites/enemy/humanoid/human/wizard/blue_wiz2.atlas",
 		"deck": [
-			"decks/standard/bluewizard_medium_donate.dck"
+			"decks/sala/sfida_045.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32840,7 +32840,7 @@
 		"nameOverride": "Angelo Sorvegliante",
 		"sprite": "sprites/enemy/celestial/angel_2.atlas",
 		"deck": [
-			"decks/standard/azoriusangel.dck"
+			"decks/sala/sfida_046.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32866,7 +32866,7 @@
 		"nameOverride": "Nano Demolitore",
 		"sprite": "sprites/enemy/humanoid/dwarf/dwarf_3.atlas",
 		"deck": [
-			"decks/standard/dwarfdemolisher.dck"
+			"decks/sala/sfida_047.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32890,7 +32890,7 @@
 		"nameOverride": "Chierico Corrotto",
 		"sprite": "sprites/enemy/humanoid/human/cleric/corrupted_cleric.atlas",
 		"deck": [
-			"decks/standard/corruptedcleric.dck"
+			"decks/sala/sfida_048.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32914,7 +32914,7 @@
 		"nameOverride": "Leone",
 		"sprite": "sprites/enemy/beast/cat/lion.atlas",
 		"deck": [
-			"decks/standard/lion.dck"
+			"decks/sala/sfida_049.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32939,7 +32939,7 @@
 		"nameOverride": "Sorella Vessa",
 		"sprite": "sprites/enemy/humanoid/human/warlock/witchlarge.atlas",
 		"deck": [
-			"decks/miniboss/conjure.dck"
+			"decks/sala/sfida_050.dck"
 		],
 		"ai": "",
 		"boss": true,
@@ -32958,7 +32958,7 @@
 		"questTags": [
 			"Cronache_Sfida_050"
 		],
-		"bossIntro": "Cinquanta rintocchi, piccolo campanaro. Vediamo se arrivi al cinquantunesimo.",
+		"bossIntro": "Sono venuta a chiudere quello che mia sorella ha aperto. Se devo passare sopra il tuo cadavere, pazienza.",
 		"scale": 0.75
 	},
 	{
@@ -32966,7 +32966,7 @@
 		"nameOverride": "Barbaro",
 		"sprite": "sprites/enemy/humanoid/human/barbarian/barbarian.atlas",
 		"deck": [
-			"decks/standard/barbarian.dck"
+			"decks/sala/sfida_051.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -32991,7 +32991,7 @@
 		"nameOverride": "Cespuglio Nascosto",
 		"sprite": "sprites/enemy/plant/hiddenbush.atlas",
 		"deck": [
-			"decks/standard/plant.dck"
+			"decks/sala/sfida_052.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33016,7 +33016,7 @@
 		"nameOverride": "Sfidante Errante",
 		"sprite": "sprites/enemy/aberration/challenger.atlas",
 		"deck": [
-			"decks/standard/challenger_20_allied_fires.dck"
+			"decks/sala/sfida_053.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33040,7 +33040,7 @@
 		"nameOverride": "Canalizzatore dell'Etere",
 		"sprite": "sprites/enemy/humanoid/human/cleric/monk_3.atlas",
 		"deck": [
-			"decks/standard/aether_channeler.dck"
+			"decks/sala/sfida_054.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33064,7 +33064,7 @@
 		"nameOverride": "Guerriero Amphin",
 		"sprite": "sprites/enemy/humanoid/amphin/amphin_warrior.atlas",
 		"deck": [
-			"decks/standard/amphin_warrior.dck"
+			"decks/sala/sfida_055.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33089,7 +33089,7 @@
 		"nameOverride": "Minotauro Chiamaguerra",
 		"sprite": "sprites/enemy/humanoid/minotaur/minotaurlarge.atlas",
 		"deck": [
-			"decks/standard/minotaur_monored_castle.dck"
+			"decks/sala/sfida_056.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33114,7 +33114,7 @@
 		"nameOverride": "Ombra",
 		"sprite": "sprites/enemy/undead/shade.atlas",
 		"deck": [
-			"decks/standard/shade.dck"
+			"decks/sala/sfida_057.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33140,7 +33140,7 @@
 		"nameOverride": "Elementale di Fiamma",
 		"sprite": "sprites/enemy/elemental/magmaelemental.atlas",
 		"deck": [
-			"decks/standard/flame_elemental.dck"
+			"decks/sala/sfida_058.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33164,7 +33164,7 @@
 		"nameOverride": "Angelo Caduto",
 		"sprite": "sprites/enemy/celestial/fallen_angel.atlas",
 		"deck": [
-			"decks/standard/fallen_angel.dck"
+			"decks/sala/sfida_059.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33186,16 +33186,16 @@
 	},
 	{
 		"name": "Cronache Sfida 060",
-		"nameOverride": "Signore della Pestilenza",
-		"sprite": "sprites/enemy/undead/pestilencelord.atlas",
+		"nameOverride": "Emil, il Bambino Annegato",
+		"sprite": "sprites/enemy/humanoid/merfolk/merfolk_lord.atlas",
 		"deck": [
-			"decks/standard/trap.dck"
+			"decks/sala/sfida_060.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
 		"difficulty": 0.1,
 		"speed": 32,
-		"life": 17,
+		"life": 18,
 		"rewards": [
 			{
 				"type": "gold",
@@ -33203,7 +33203,7 @@
 				"count": 210
 			}
 		],
-		"colors": "B",
+		"colors": "GU",
 		"questTags": [
 			"Cronache_Sfida_060"
 		]
@@ -33213,7 +33213,7 @@
 		"nameOverride": "Cacciatore Orco",
 		"sprite": "sprites/enemy/humanoid/orc/orc_hunter.atlas",
 		"deck": [
-			"decks/standard/orc_hunter.dck"
+			"decks/sala/sfida_061.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33238,7 +33238,7 @@
 		"nameOverride": "Polpo",
 		"sprite": "sprites/enemy/beast/ocean/octopus.atlas",
 		"deck": [
-			"decks/standard/octopus.dck"
+			"decks/sala/sfida_062.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33263,7 +33263,7 @@
 		"nameOverride": "Guerriero Leonin",
 		"sprite": "sprites/enemy/humanoid/leonin/lion.atlas",
 		"deck": [
-			"decks/standard/leoninwarrior.dck"
+			"decks/sala/sfida_063.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33287,7 +33287,7 @@
 		"nameOverride": "Capitano Pirata",
 		"sprite": "sprites/enemy/humanoid/human/rogue/pirate3.atlas",
 		"deck": [
-			"decks/standard/pirate3.dck"
+			"decks/sala/sfida_064.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33311,7 +33311,7 @@
 		"nameOverride": "Gigante del Fuoco",
 		"sprite": "sprites/enemy/giant/firegiant.atlas",
 		"deck": [
-			"decks/standard/firegiant.dck"
+			"decks/sala/sfida_065.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33336,7 +33336,7 @@
 		"nameOverride": "Goblin Predatore",
 		"sprite": "sprites/enemy/humanoid/goblin/goblin_4.atlas",
 		"deck": [
-			"decks/standard/evilgoblin.dck"
+			"decks/sala/sfida_066.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33360,7 +33360,7 @@
 		"nameOverride": "Kobold Operaio",
 		"sprite": "sprites/enemy/humanoid/kobold/koboldworker.atlas",
 		"deck": [
-			"decks/standard/koboldworker.dck"
+			"decks/sala/sfida_067.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33385,7 +33385,7 @@
 		"nameOverride": "Arboreo Scelto",
 		"sprite": "sprites/enemy/plant/treant_large.atlas",
 		"deck": [
-			"decks/standard/treefolkelite.dck"
+			"decks/sala/sfida_068.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33410,7 +33410,7 @@
 		"nameOverride": "Accolita di Chandra",
 		"sprite": "sprites/enemy/humanoid/human/wizard/red_wiz2.atlas",
 		"deck": [
-			"decks/standard/chandra1.dck"
+			"decks/sala/sfida_069.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33434,7 +33434,7 @@
 		"nameOverride": "Titano della Tempesta",
 		"sprite": "sprites/enemy/giant/stormtitan.atlas",
 		"deck": [
-			"decks/standard/stormtitan.dck"
+			"decks/sala/sfida_070.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33458,7 +33458,7 @@
 		"nameOverride": "Sfidante Veterano",
 		"sprite": "sprites/enemy/aberration/challenger.atlas",
 		"deck": [
-			"decks/standard/challenger_22_dimir_control.dck"
+			"decks/sala/sfida_071.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33482,7 +33482,7 @@
 		"nameOverride": "Capo Goblin",
 		"sprite": "sprites/enemy/humanoid/goblin/wolf_rider_2.atlas",
 		"deck": [
-			"decks/standard/goblin_chief_medium.dck"
+			"decks/sala/sfida_072.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33506,7 +33506,7 @@
 		"nameOverride": "Sliver Rosso",
 		"sprite": "sprites/enemy/aberration/sliver_red.atlas",
 		"deck": [
-			"decks/standard/sliver_red.dck"
+			"decks/sala/sfida_073.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33530,7 +33530,7 @@
 		"nameOverride": "Riccio",
 		"sprite": "sprites/enemy/beast/smallmammals/hedgehog.atlas",
 		"deck": [
-			"decks/standard/hedgehog.dck"
+			"decks/sala/sfida_074.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33555,7 +33555,7 @@
 		"nameOverride": "Il Cardinale delle Ceneri",
 		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
 		"deck": [
-			"decks/miniboss/nahiri.dck"
+			"decks/sala/sfida_075.dck"
 		],
 		"ai": "",
 		"boss": true,
@@ -33574,14 +33574,14 @@
 		"questTags": [
 			"Cronache_Sfida_075"
 		],
-		"bossIntro": "Tutto ciò che brucia diventa cenere. Anche la tua speranza."
+		"bossIntro": "Ho bruciato tremila morti per salvare i vivi. Tu sei il tremilauno."
 	},
 	{
 		"name": "Cronache Sfida 076",
 		"nameOverride": "Golem Blu",
 		"sprite": "sprites/enemy/construct/golem_blue.atlas",
 		"deck": [
-			"decks/standard/blue_golem.dck"
+			"decks/sala/sfida_076.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33605,7 +33605,7 @@
 		"nameOverride": "Mago Simic",
 		"sprite": "sprites/enemy/humanoid/viashino/lizardwizard.atlas",
 		"deck": [
-			"decks/standard/simicwizard_intruderalarm.dck"
+			"decks/sala/sfida_077.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33630,7 +33630,7 @@
 		"nameOverride": "Scoiattolo",
 		"sprite": "sprites/enemy/beast/smallmammals/squirrel.atlas",
 		"deck": [
-			"decks/standard/squirrel.dck"
+			"decks/sala/sfida_078.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33655,7 +33655,7 @@
 		"nameOverride": "Gigante della Foresta",
 		"sprite": "sprites/enemy/giant/forestgiant.atlas",
 		"deck": [
-			"decks/standard/foresttitan.dck"
+			"decks/sala/sfida_079.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33680,7 +33680,7 @@
 		"nameOverride": "Alchimista di Liliana",
 		"sprite": "sprites/enemy/humanoid/human/wizard/dimir_wiz.atlas",
 		"deck": [
-			"decks/standard/dimir_ninja.dck"
+			"decks/sala/sfida_080.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33704,7 +33704,7 @@
 		"nameOverride": "Signore della Guerra Nano",
 		"sprite": "sprites/enemy/humanoid/dwarf/dwarflarge.atlas",
 		"deck": [
-			"decks/standard/dwarf_whitecastle.dck"
+			"decks/sala/sfida_081.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33729,7 +33729,7 @@
 		"nameOverride": "Negromante",
 		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
 		"deck": [
-			"decks/standard/reanimator.dck"
+			"decks/sala/sfida_082.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33753,7 +33753,7 @@
 		"nameOverride": "Mago Rakdos",
 		"sprite": "sprites/enemy/humanoid/human/wizard/rakdos_wiz.atlas",
 		"deck": [
-			"decks/standard/rakdos_vamps.dck"
+			"decks/sala/sfida_083.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33777,7 +33777,7 @@
 		"nameOverride": "Golem d'Ossa",
 		"sprite": "sprites/enemy/undead/bonegolem.atlas",
 		"deck": [
-			"decks/standard/bonegolem.dck"
+			"decks/sala/sfida_084.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33801,7 +33801,7 @@
 		"nameOverride": "Cavaliere Mercenario",
 		"sprite": "sprites/enemy/humanoid/human/knight/cavalier_2.atlas",
 		"deck": [
-			"decks/standard/knightmercenary.dck"
+			"decks/sala/sfida_085.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33825,7 +33825,7 @@
 		"nameOverride": "Capo dei Banditi",
 		"sprite": "sprites/enemy/humanoid/human/bandit/banditleader.atlas",
 		"deck": [
-			"decks/standard/banditleader_bolas.dck"
+			"decks/sala/sfida_086.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33850,7 +33850,7 @@
 		"nameOverride": "Ciclope Gigante",
 		"sprite": "sprites/enemy/giant/cyclops_large.atlas",
 		"deck": [
-			"decks/standard/luckyminotaur.dck"
+			"decks/sala/sfida_087.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33875,7 +33875,7 @@
 		"nameOverride": "Talpa Cerebrale",
 		"sprite": "sprites/enemy/monstrosity/brainmole.atlas",
 		"deck": [
-			"decks/standard/millwizard.dck"
+			"decks/sala/sfida_088.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33900,7 +33900,7 @@
 		"nameOverride": "Guardiano delle Nuvole",
 		"sprite": "sprites/enemy/celestial/peerlesssolar.atlas",
 		"deck": [
-			"decks/standard/cloudguard.dck"
+			"decks/sala/sfida_089.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33926,7 +33926,7 @@
 		"nameOverride": "Froghemoth",
 		"sprite": "sprites/enemy/aberration/froghemoth.atlas",
 		"deck": [
-			"decks/standard/froghemoth.dck"
+			"decks/sala/sfida_090.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33951,7 +33951,7 @@
 		"nameOverride": "Signore degli Zombie",
 		"sprite": "sprites/enemy/undead/lich_3.atlas",
 		"deck": [
-			"decks/standard/zombie_black_hard.dck"
+			"decks/sala/sfida_091.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -33975,7 +33975,7 @@
 		"nameOverride": "Gigante delle Nuvole",
 		"sprite": "sprites/enemy/giant/godlytitan.atlas",
 		"deck": [
-			"decks/standard/cloudgiant.dck"
+			"decks/sala/sfida_092.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34000,7 +34000,7 @@
 		"nameOverride": "Tritone Scelto",
 		"sprite": "sprites/enemy/humanoid/merfolk/naga.atlas",
 		"deck": [
-			"decks/standard/merfolk_elite.dck"
+			"decks/sala/sfida_093.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34025,7 +34025,7 @@
 		"nameOverride": "Arboreo Golgari",
 		"sprite": "sprites/enemy/plant/treant_golgari.atlas",
 		"deck": [
-			"decks/standard/treefolk_golgari.dck"
+			"decks/sala/sfida_094.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34049,7 +34049,7 @@
 		"nameOverride": "Fenice",
 		"sprite": "sprites/enemy/elemental/phoenix.atlas",
 		"deck": [
-			"decks/standard/phoenix.dck"
+			"decks/sala/sfida_095.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34074,7 +34074,7 @@
 		"nameOverride": "Kobold Evocadraghi",
 		"sprite": "sprites/enemy/humanoid/kobold/kobolddragoncaller.atlas",
 		"deck": [
-			"decks/standard/kobolddragoncaller.dck"
+			"decks/sala/sfida_096.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34099,7 +34099,7 @@
 		"nameOverride": "Demone di Tibalt",
 		"sprite": "sprites/enemy/fiend/cacodaemon.atlas",
 		"deck": [
-			"decks/standard/tibalt_demon.dck"
+			"decks/sala/sfida_097.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34124,7 +34124,7 @@
 		"nameOverride": "Bardo",
 		"sprite": "sprites/enemy/humanoid/human/bard/humanbard.atlas",
 		"deck": [
-			"decks/standard/humanbard.dck"
+			"decks/sala/sfida_098.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34148,7 +34148,7 @@
 		"nameOverride": "Incubo",
 		"sprite": "sprites/enemy/fiend/nightmare.atlas",
 		"deck": [
-			"decks/standard/nightmare.dck"
+			"decks/sala/sfida_099.dck"
 		],
 		"ai": "",
 		"spawnRate": 1,
@@ -34173,7 +34173,7 @@
 		"nameOverride": "Morvane il Re Sepolto",
 		"sprite": "sprites/enemy/undead/lich_2.atlas",
 		"deck": [
-			"decks/boss/griselbrand.dck"
+			"decks/sala/sfida_100.dck"
 		],
 		"ai": "",
 		"boss": true,
@@ -34192,9 +34192,784 @@
 		"questTags": [
 			"Cronache_Sfida_100"
 		],
-		"bossIntro": "Hai suonato la mia campana cento volte. Ora ascolta come suona per te.",
+		"bossIntro": "Cento rintocchi. Sai almeno per chi hai suonato?",
 		"scale": 1.5,
 		"gamesPerMatch": 3,
-		"bossInsult": "Anche tu avrai una lapide senza nome."
+		"bossInsult": "Torna a dormire, campanaro. Tu più di tutti."
+	},
+	{
+		"name": "Cronache Sfida 052 501",
+		"nameOverride": "Inquisitore delle Ceneri",
+		"sprite": "sprites/enemy/humanoid/viashino/dreamwalker_2.atlas",
+		"deck": [
+			"decks/sala/sfida_052_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 186
+			}
+		],
+		"colors": "RG",
+		"questTags": [
+			"Cronache_Sfida_052",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 055 501",
+		"nameOverride": "Frate Bruciatore",
+		"sprite": "sprites/enemy/humanoid/human/wizard/red_wiz3.atlas",
+		"deck": [
+			"decks/sala/sfida_055_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 195
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_055",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 058 501",
+		"nameOverride": "Penitente Ardente",
+		"sprite": "sprites/enemy/humanoid/human/peasant/peasant2.atlas",
+		"deck": [
+			"decks/sala/sfida_058_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 204
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_058",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 061 501",
+		"nameOverride": "Confessore del Rogo",
+		"sprite": "sprites/enemy/humanoid/orc/orc_warrior.atlas",
+		"deck": [
+			"decks/sala/sfida_061_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 213
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_061",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 064 501",
+		"nameOverride": "Sorella della Pira",
+		"sprite": "sprites/enemy/humanoid/elf/deftsorceress.atlas",
+		"deck": [
+			"decks/sala/sfida_064_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 222
+			}
+		],
+		"colors": "UW",
+		"questTags": [
+			"Cronache_Sfida_064",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 067 501",
+		"nameOverride": "Cavaliere della Cenere",
+		"sprite": "sprites/enemy/humanoid/kobold/koboldslinger.atlas",
+		"deck": [
+			"decks/sala/sfida_067_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 231
+			}
+		],
+		"colors": "RB",
+		"questTags": [
+			"Cronache_Sfida_067",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 070 501",
+		"nameOverride": "Mastro Inquisitore",
+		"sprite": "sprites/enemy/humanoid/human/wizard/red_wiz2.atlas",
+		"deck": [
+			"decks/sala/sfida_070_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 240
+			}
+		],
+		"colors": "R",
+		"questTags": [
+			"Cronache_Sfida_070",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 073 501",
+		"nameOverride": "Araldo del Cardinale",
+		"sprite": "sprites/enemy/humanoid/viashino/pikelizard.atlas",
+		"deck": [
+			"decks/sala/sfida_073_cr_ramo50_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 249
+			}
+		],
+		"colors": "GR",
+		"questTags": [
+			"Cronache_Sfida_073",
+			"Ramo_cr_ramo50_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 052 502",
+		"nameOverride": "Sorella del Fango",
+		"sprite": "sprites/enemy/humanoid/human/wizard/archivist.atlas",
+		"deck": [
+			"decks/sala/sfida_052_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 18,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 186
+			}
+		],
+		"colors": "U",
+		"questTags": [
+			"Cronache_Sfida_052",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 055 502",
+		"nameOverride": "Strega delle Canne",
+		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz3.atlas",
+		"deck": [
+			"decks/sala/sfida_055_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 195
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_055",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 058 502",
+		"nameOverride": "Vedova della Palude",
+		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
+		"deck": [
+			"decks/sala/sfida_058_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 204
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_058",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 061 502",
+		"nameOverride": "Figlia di Vessa",
+		"sprite": "sprites/enemy/humanoid/human/cleric/cleric_orzhov.atlas",
+		"deck": [
+			"decks/sala/sfida_061_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 19,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 213
+			}
+		],
+		"colors": "WB",
+		"questTags": [
+			"Cronache_Sfida_061",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 064 502",
+		"nameOverride": "Tessitrice di Nebbia",
+		"sprite": "sprites/enemy/humanoid/human/warlock/false_monk.atlas",
+		"deck": [
+			"decks/sala/sfida_064_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 222
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_064",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 067 502",
+		"nameOverride": "Sorella Annegata",
+		"sprite": "sprites/enemy/humanoid/human/archer/bowmandefender.atlas",
+		"deck": [
+			"decks/sala/sfida_067_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 231
+			}
+		],
+		"colors": "GW",
+		"questTags": [
+			"Cronache_Sfida_067",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 070 502",
+		"nameOverride": "Madre dei Corvi",
+		"sprite": "sprites/enemy/humanoid/human/wizard/black_wiz2.atlas",
+		"deck": [
+			"decks/sala/sfida_070_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 20,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 240
+			}
+		],
+		"colors": "RBU",
+		"questTags": [
+			"Cronache_Sfida_070",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 073 502",
+		"nameOverride": "Strega del Lutto",
+		"sprite": "sprites/enemy/humanoid/human/wizard/green_wiz2.atlas",
+		"deck": [
+			"decks/sala/sfida_073_cr_ramo50_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 249
+			}
+		],
+		"colors": "G",
+		"questTags": [
+			"Cronache_Sfida_073",
+			"Ramo_cr_ramo50_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 078 761",
+		"nameOverride": "Cavaliere di Morvane",
+		"sprite": "sprites/enemy/humanoid/human/knight/paladin_large.atlas",
+		"deck": [
+			"decks/sala/sfida_078_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 264
+			}
+		],
+		"colors": "W",
+		"questTags": [
+			"Cronache_Sfida_078",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 081 761",
+		"nameOverride": "Guardia del Sepolcro",
+		"sprite": "sprites/enemy/humanoid/human/rogue/pirate_captain.atlas",
+		"deck": [
+			"decks/sala/sfida_081_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 273
+			}
+		],
+		"colors": "URB",
+		"questTags": [
+			"Cronache_Sfida_081",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 084 761",
+		"nameOverride": "Scudiero Senza Volto",
+		"sprite": "sprites/enemy/humanoid/dwarf/dwarfpilot.atlas",
+		"deck": [
+			"decks/sala/sfida_084_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 282
+			}
+		],
+		"colors": "RW",
+		"questTags": [
+			"Cronache_Sfida_084",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 087 761",
+		"nameOverride": "Sentinella delle Ossa",
+		"sprite": "sprites/enemy/humanoid/human/bandit/bandittrapster.atlas",
+		"deck": [
+			"decks/sala/sfida_087_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 291
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_087",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 091 761",
+		"nameOverride": "Paladino del Re Sepolto",
+		"sprite": "sprites/enemy/humanoid/human/cleric/monk.atlas",
+		"deck": [
+			"decks/sala/sfida_091_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 23,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 303
+			}
+		],
+		"colors": "WUR",
+		"questTags": [
+			"Cronache_Sfida_091",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 094 761",
+		"nameOverride": "Custode del Sigillo",
+		"sprite": "sprites/enemy/humanoid/human/artificer/archaeologist.atlas",
+		"deck": [
+			"decks/sala/sfida_094_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 23,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 312
+			}
+		],
+		"colors": "UW",
+		"questTags": [
+			"Cronache_Sfida_094",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 097 761",
+		"nameOverride": "Primo Cavaliere",
+		"sprite": "sprites/enemy/humanoid/human/cleric/fanatic_priest.atlas",
+		"deck": [
+			"decks/sala/sfida_097_cr_ramo76_1.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 24,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 321
+			}
+		],
+		"colors": "W",
+		"questTags": [
+			"Cronache_Sfida_097",
+			"Ramo_cr_ramo76_1"
+		]
+	},
+	{
+		"name": "Cronache Sfida 078 762",
+		"nameOverride": "Ombra di Aurelio",
+		"sprite": "sprites/enemy/humanoid/human/bandit/banditarcher.atlas",
+		"deck": [
+			"decks/sala/sfida_078_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 21,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 264
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Sfida_078",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 081 762",
+		"nameOverride": "Servo della Fiamma",
+		"sprite": "sprites/enemy/undead/lich.atlas",
+		"deck": [
+			"decks/sala/sfida_081_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 273
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_081",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 084 762",
+		"nameOverride": "Cenere che Cammina",
+		"sprite": "sprites/enemy/humanoid/human/rogue/pirate2.atlas",
+		"deck": [
+			"decks/sala/sfida_084_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 282
+			}
+		],
+		"colors": "BRU",
+		"questTags": [
+			"Cronache_Sfida_084",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 087 762",
+		"nameOverride": "Voce del Fuoco",
+		"sprite": "sprites/enemy/humanoid/human/wizard/runescribe.atlas",
+		"deck": [
+			"decks/sala/sfida_087_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 291
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_087",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 091 762",
+		"nameOverride": "Mano di Aurelio",
+		"sprite": "sprites/enemy/humanoid/elf/shaman.atlas",
+		"deck": [
+			"decks/sala/sfida_091_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 23,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 303
+			}
+		],
+		"colors": "GU",
+		"questTags": [
+			"Cronache_Sfida_091",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 094 762",
+		"nameOverride": "Lingua di Brace",
+		"sprite": "sprites/enemy/humanoid/human/knight/braveknight.atlas",
+		"deck": [
+			"decks/sala/sfida_094_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 23,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 312
+			}
+		],
+		"colors": "UW",
+		"questTags": [
+			"Cronache_Sfida_094",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Sfida 097 762",
+		"nameOverride": "Ultimo Servo",
+		"sprite": "sprites/enemy/undead/vampire_4.atlas",
+		"deck": [
+			"decks/sala/sfida_097_cr_ramo76_2.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 32,
+		"life": 24,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 321
+			}
+		],
+		"colors": "B",
+		"questTags": [
+			"Cronache_Sfida_097",
+			"Ramo_cr_ramo76_2"
+		]
+	},
+	{
+		"name": "Cronache Cacciatore",
+		"nameOverride": "Bruno lo Scuoiatore, esattore di Tobia",
+		"sprite": "sprites/enemy/humanoid/human/bandit/bandit.atlas",
+		"deck": [
+			"decks/sala/cacciatore.dck"
+		],
+		"ai": "",
+		"spawnRate": 1,
+		"difficulty": 0.1,
+		"speed": 36,
+		"life": 22,
+		"rewards": [
+			{
+				"type": "gold",
+				"probability": 1,
+				"count": 150
+			}
+		],
+		"colors": "BR",
+		"questTags": [
+			"Cronache_Cacciatore"
+		],
+		"bossIntro": "Tobia ti saluta. E rivuole i suoi soldi. Con gli interessi."
 	}
 ]

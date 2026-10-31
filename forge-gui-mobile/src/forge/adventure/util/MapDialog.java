@@ -193,6 +193,14 @@ public class MapDialog {
 
     private boolean loadDialog(DialogData dialog) { //Displays a dialog with dialogue and possible choices.
         setEffects(dialog.action);
+        //Conditional text branch: a dialog with no text jumps straight into its first unnamed option whose
+        //conditions are met (lets one quest epilogue show different text depending on earlier choices).
+        if (dialog.text.isEmpty() && dialog.options.length > 0) {
+            for (DialogData option : dialog.options) {
+                if ((option.name == null || option.name.isEmpty()) && isConditionOk(option.condition))
+                    return loadDialog(option);
+            }
+        }
         if (dialog.options.length == 0 && dialog.text.isEmpty() && dialog.action.length > 0){
             stage.hideDialog();
             emitDialogFinished();
@@ -440,6 +448,11 @@ public class MapDialog {
             }
             if (E.advanceQuestFlag != null && !E.advanceQuestFlag.isEmpty()) { //Increase a given quest flag by 1.
                 Current.player().advanceQuestFlag(E.advanceQuestFlag);
+            }
+            if (E.addQuestFlag != null && E.addQuestFlag.key != null && !E.addQuestFlag.key.isEmpty()) {
+                //Add (or subtract) a value to a quest flag, kept in 1..120 so it never gets unset (Cronache trust).
+                int value = Current.player().getQuestFlag(E.addQuestFlag.key) + E.addQuestFlag.val;
+                Current.player().setQuestFlag(E.addQuestFlag.key, Math.max(1, Math.min(120, value)));
             }
             if (E.setMapFlag != null && !E.setMapFlag.key.isEmpty()) { //Set a local quest to given value.
                 stage.setQuestFlag(E.setMapFlag.key, E.setMapFlag.val);

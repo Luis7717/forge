@@ -231,6 +231,8 @@ public class MapStage extends GameStage {
         currentMap = targetMap;
         cronacheRoomPrepared = false;
         cronacheSpawnDelay = 2f;
+        //closer camera in the Cronache room: bigger, sharper characters and decor
+        ((com.badlogic.gdx.graphics.OrthographicCamera) getCamera()).zoom = isCronacheRoom() ? 0.7f : 1f;
         GameHUD.getInstance().showHideMap(false);
         this.tiledMap = map;
         for (MapActor actor : new Array.ArrayIterator<>(actors)) {
@@ -1007,7 +1009,8 @@ public class MapStage extends GameStage {
     private int cronacheSpawnCounter = 0;
 
     public boolean isCronacheRoom() {
-        return isInMap && currentMap != null && currentMap.endsWith("spawn.tmx") && CronacheRewards.isActive();
+        return isInMap && currentMap != null && CronacheRewards.isActive()
+                && (currentMap.endsWith("spawn.tmx") || currentMap.endsWith("cronache_sala.tmx"));
     }
 
     private PortalActor findRoomPortal() {
@@ -1029,16 +1032,22 @@ public class MapStage extends GameStage {
         if (cronacheSpawnDelay > 0)
             return;
         cronacheSpawnDelay = 1.5f;
-        java.util.List<EnemyData> challengers = AdventureQuestController.instance().getExtraQuestSpawns(1.0f);
-        if (challengers.isEmpty())
-            return;
-        EnemyData challenger = challengers.get(0);
         for (EnemySprite present : enemies) {
-            if (present != null && present.getData() != null && challenger.name.equals(present.getData().name))
-                return; //already in the room
+            if (present != null && present.getObjectId() >= CRONACHE_ID_BASE)
+                return; //one visitor at a time
         }
+        EnemyData challenger;
+        if (CronacheRewards.bountyPending()) {
+            challenger = WorldData.getEnemy(CronacheRewards.HUNTER); //Tobia's debt came due
+        } else {
+            challenger = CronacheRewards.pickChallenger(AdventureQuestController.instance().getExtraQuestSpawns(1.0f));
+        }
+        if (challenger == null)
+            return;
         cronacheSpawnCounter++;
         EnemySprite mob = new EnemySprite(CRONACHE_ID_BASE + cronacheSpawnCounter, new EnemyData(challenger));
+        if (!CronacheRewards.isHunter(challenger))
+            mob.effect = CronacheRewards.challengerEffect();
         mob.threatRange = 2000f;
         mob.pursueRange = 2000f;
         PortalActor portal = findRoomPortal();
