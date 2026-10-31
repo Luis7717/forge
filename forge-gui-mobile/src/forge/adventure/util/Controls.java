@@ -646,6 +646,7 @@ public class Controls {
         if (pn != null) // this variable is used for dialogs
             ret.setVariable("player_name", pn);
         ret.setVariable("player_color_id", colorIdToTypingString(Current.player().getColorIdentity()));
+        CronacheRewards.fillVariables(ret); //{var=cr_...} campaign statistics for the Cronache dialogs
         return ret;
     }
 

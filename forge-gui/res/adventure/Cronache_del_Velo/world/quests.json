@@ -11310,10 +11310,111 @@
 					"options": [
 						{
 							"name": "(Continua)",
-							"text": "Ti svegli su pietra fredda, in una sala di roccia illuminata da un fuoco. Non ricordi il tuo nome. Un rintocco lento e profondo, che senti nelle ossa più che nelle orecchie. Il portale da cui sei arrivato si chiude con un sibilo. Accanto al fuoco, un vecchio ti osserva come si osserva un cane nuovo. «Non provarci» dice, prima ancora che tu ti muova. «Quel portale si apre solo verso dentro. La campana chiama, e chi è chiamato resta qui finché lei non tace. Cento rintocchi. Poi, forse.»\n\nAl secondo rintocco, dall'altra parte del portale, qualcosa ha sentito la campana.",
+							"text": "Ti svegli su pietra fredda, in una sala di roccia illuminata da un fuoco. Non ricordi il tuo nome. Un rintocco lento e profondo, che senti nelle ossa più che nelle orecchie. Il portale da cui sei arrivato si chiude con un sibilo. Accanto al fuoco, un vecchio ti osserva come si osserva un cane nuovo. «Non provarci» dice, prima ancora che tu ti muova. «Quel portale si apre solo verso dentro. La campana chiama, e chi è chiamato resta qui finché lei non tace. Cento rintocchi. Poi, forse.»\n\nAl secondo rintocco, dall'altra parte del portale, qualcosa ha sentito la campana.\n\nCome affronterai la Sala? (La difficoltà non si potrà cambiare.)",
 							"options": [
 								{
-									"name": "(Preparati alla prima sfida)"
+									"name": "Pellegrino (facile)",
+									"text": "Gli sfidanti hanno 4 punti vita in meno, guadagni il 25% di oro in più e Tobia ti fa un piccolo sconto.",
+									"options": [
+										{
+											"name": "(Preparati alla prima sfida)"
+										}
+									],
+									"action": [
+										{
+											"removeItem": "",
+											"setColorIdentity": "",
+											"advanceQuestFlag": "",
+											"advanceMapFlag": "",
+											"setQuestFlag": {
+												"key": "cr_diff",
+												"val": 1
+											},
+											"setMapFlag": {
+												"key": ""
+											},
+											"issueQuest": "",
+											"POIReference": ""
+										}
+									]
+								},
+								{
+									"name": "Campanaro (normale)",
+									"text": "La Sala come è stata pensata.",
+									"options": [
+										{
+											"name": "(Preparati alla prima sfida)"
+										}
+									],
+									"action": [
+										{
+											"removeItem": "",
+											"setColorIdentity": "",
+											"advanceQuestFlag": "",
+											"advanceMapFlag": "",
+											"setQuestFlag": {
+												"key": "cr_diff",
+												"val": 2
+											},
+											"setMapFlag": {
+												"key": ""
+											},
+											"issueQuest": "",
+											"POIReference": ""
+										}
+									]
+								},
+								{
+									"name": "Penitente (difficile)",
+									"text": "Gli sfidanti hanno 4 punti vita in più, guadagni meno oro, ogni sconfitta ti costa il 10% dell'oro e Tobia alza i prezzi.",
+									"options": [
+										{
+											"name": "(Preparati alla prima sfida)"
+										}
+									],
+									"action": [
+										{
+											"removeItem": "",
+											"setColorIdentity": "",
+											"advanceQuestFlag": "",
+											"advanceMapFlag": "",
+											"setQuestFlag": {
+												"key": "cr_diff",
+												"val": 3
+											},
+											"setMapFlag": {
+												"key": ""
+											},
+											"issueQuest": "",
+											"POIReference": ""
+										}
+									]
+								},
+								{
+									"name": "Dannato (brutale)",
+									"text": "Gli sfidanti hanno 8 punti vita in più, guadagni un quarto di oro in meno, ogni sconfitta ti costa il 25% dell'oro e Tobia ti spenna.",
+									"options": [
+										{
+											"name": "(Preparati alla prima sfida)"
+										}
+									],
+									"action": [
+										{
+											"removeItem": "",
+											"setColorIdentity": "",
+											"advanceQuestFlag": "",
+											"advanceMapFlag": "",
+											"setQuestFlag": {
+												"key": "cr_diff",
+												"val": 4
+											},
+											"setMapFlag": {
+												"key": ""
+											},
+											"issueQuest": "",
+											"POIReference": ""
+										}
+									]
 								}
 							],
 							"action": [
@@ -11433,7 +11534,7 @@
 		"isTemplate": true,
 		"storyQuest": true,
 		"name": "Cronaca I: La Campana Spezzata",
-		"description": "Cento sfide nella Sala delle Campane. Ogni vittoria ti lascia scegliere una carta dal mazzo dello sconfitto. Ogni scelta ha un prezzo.",
+		"description": "Cento sfide nella Sala delle Campane. Ogni vittoria ti lascia scegliere una carta dal mazzo dello sconfitto, due se vinci al primo tentativo. Ogni dieci sfide, una sfida speciale. Ogni scelta ha un prezzo.",
 		"offerDialog": {},
 		"prologue": {},
 		"epilogue": {},
@@ -16224,7 +16325,7 @@
 			{
 				"id": 20,
 				"name": "Sfida 20: Guerriero Centauro",
-				"description": "Sfida 20 di 100. Guerriero Centauro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 20 di 100. Guerriero Centauro. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Sangue scarso: inizi la partita con 10 punti vita in meno. Se vinci scegli una carta in più. Il tuo mazzo: almeno 40 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -19208,7 +19309,7 @@
 			{
 				"id": 30,
 				"name": "Sfida 30: Angelo dell'Ortodossia",
-				"description": "Sfida 30 di 100. Angelo dell'Ortodossia. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 30 di 100. Angelo dell'Ortodossia. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Mano vuota: peschi 2 carte in meno nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -22214,7 +22315,7 @@
 			{
 				"id": 40,
 				"name": "Sfida 40: Spirito",
-				"description": "Sfida 40 di 100. Spirito. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 40 di 100. Spirito. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Il pedaggio: lo sfidante entra con Propaganda già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -28331,7 +28432,7 @@
 			{
 				"id": 60,
 				"name": "Sfida 60: Emil, il Bambino Annegato",
-				"description": "Sfida 60 di 100. Emil, il Bambino Annegato. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 60 di 100. Emil, il Bambino Annegato. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - La marea: lo sfidante ha 15 punti vita in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 50 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -31399,7 +31500,7 @@
 			{
 				"id": 70,
 				"name": "Sfida 70",
-				"description": "Sfida 70 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 70 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Doppio rintocco: lo sfidante pesca 3 carte in più nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -34487,7 +34588,7 @@
 			{
 				"id": 80,
 				"name": "Sfida 80: Alchimista di Liliana",
-				"description": "Sfida 80 di 100. Alchimista di Liliana. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 80 di 100. Alchimista di Liliana. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Le catene: lo sfidante entra con Glorious Anthem già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -37377,7 +37478,7 @@
 			{
 				"id": 90,
 				"name": "Sfida 90: Froghemoth",
-				"description": "Sfida 90 di 100. Froghemoth. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 90 di 100. Froghemoth. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Cenere: tu hai 10 punti vita in meno, lo sfidante 10 in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 60 carte.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,

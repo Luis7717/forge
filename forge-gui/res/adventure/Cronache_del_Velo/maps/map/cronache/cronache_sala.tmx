@@ -483,6 +483,15 @@
     &quot;text&quot;: &quot;«Siediti accanto al fuoco e aspetta. Arriveranno dal portale. La campana non dorme mai.»&quot;,
     &quot;options&quot;: [
       {
+        &quot;name&quot;: &quot;(Chiedi a che punto sei)&quot;,
+        &quot;text&quot;: &quot;Il vecchio conta sulle dita, senza guardarti.\n\nSfida attuale: {var=cr_sfida} di 100\nDuelli vinti: {var=cr_vinte}   persi: {var=cr_perse}   ({var=cr_perc})\nDifficoltà: {var=cr_diff}\nIl tuo mazzo deve avere almeno {var=cr_mazzo} carte.\n\nUltime carte prese:{var=cr_carte}&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Annuisci)&quot;
+          }
+        ]
+      },
+      {
         &quot;name&quot;: &quot;(Annuisci)&quot;
       }
     ]

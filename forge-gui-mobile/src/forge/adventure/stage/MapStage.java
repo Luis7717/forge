@@ -859,6 +859,7 @@ public class MapStage extends GameStage {
                 boolean defeated = Current.player().defeated();
                 if (isCronacheRoom()) {
                     //Cronache room: the player stays, the challenger walks back out and returns shortly
+                    CronacheRewards.onChallengeLost(currentMob);
                     Current.player().heal(1.0f);
                     currentMob.remove();
                     actors.removeValue(currentMob, true);

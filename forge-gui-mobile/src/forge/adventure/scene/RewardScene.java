@@ -746,6 +746,7 @@ public class RewardScene extends UIScene {
 
                         remainingSelections--;
                         Current.player().addReward(rewardActor.getReward());
+                        forge.adventure.util.CronacheRewards.recordPick(rewardActor.getReward());
 
                         headerLabel.setVisible(remainingSelections > 0);
                         headerLabel.setText(Forge.getLocalizer().getMessage("lblSelectRewards", remainingSelections));

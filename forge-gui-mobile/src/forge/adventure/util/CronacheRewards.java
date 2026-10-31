@@ -12,7 +12,13 @@ import forge.adventure.pointofintrest.PointOfInterestChanges;
 import forge.adventure.scene.RewardScene;
 import forge.deck.Deck;
 import forge.item.PaperCard;
+import forge.localinstance.properties.ForgeConstants;
+import com.github.tommyettinger.textra.TypingLabel;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -97,14 +103,67 @@ public final class CronacheRewards {
         return fallback != null ? fallback : candidates.get(0);
     }
 
-    /** Battle effect for a newly spawned challenger: the Bell's curse adds life while it lasts. */
+    // ---- difficulty (chosen in the intro): 1 Pellegrino, 2 Campanaro (default), 3 Penitente, 4 Dannato ----
+    public static final String FLAG_DIFF = "cr_diff";
+    public static final String FLAG_LOST = "cr_persa";            //1 = the current challenger already beat the player once
+    private static final String[] DIFF_NAMES = {"Campanaro", "Pellegrino", "Campanaro", "Penitente", "Dannato"};
+    private static final int[] DIFF_ENEMY_LIFE = {0, -4, 0, 4, 8};
+    private static final float[] DIFF_GOLD = {1f, 1.25f, 1f, 0.85f, 0.75f};
+    private static final float[] DIFF_DEFEAT_GOLD = {0f, 0f, 0f, 0.10f, 0.25f};
+    private static final float[] DIFF_PRICES = {1f, 0.9f, 1f, 1.1f, 1.25f};
+
+    private static int difficulty() {
+        int d = flag(FLAG_DIFF);
+        return d >= 1 && d <= 4 ? d : 2;
+    }
+
+    /** Special challenges every 10 (bosses excluded): number -> rule. */
+    public static boolean isSpecial(int n) {
+        return n == 20 || n == 30 || n == 40 || n == 60 || n == 70 || n == 80 || n == 90;
+    }
+
+    private static EffectData opp(EffectData e) {
+        if (e.opponent == null) {
+            e.opponent = new EffectData();
+            e.opponent.name = "Regola della Sala";
+        }
+        return e.opponent;
+    }
+
+    /** Battle effect for a newly spawned challenger: difficulty, the Bell's curse and the special rules. */
     public static EffectData challengerEffect() {
-        if (!isActive() || flag(FLAG_CURSE) <= 0)
+        if (!isActive())
             return null;
+        int n = currentChallenge();
         EffectData effect = new EffectData();
-        effect.name = "Maledizione della Campana";
-        effect.lifeModifier = Math.max(1, flag(FLAG_CURSE_LIFE));
-        return effect;
+        effect.name = "Regola della Sala";
+        int life = DIFF_ENEMY_LIFE[difficulty()];
+        if (flag(FLAG_CURSE) > 0)
+            life += Math.max(1, flag(FLAG_CURSE_LIFE));
+        switch (n) {
+            case 20: opp(effect).lifeModifier = -10; break;                       //Sangue scarso: you start with 10 less life
+            case 30: opp(effect).changeStartCards = -2; break;                    //Mano vuota: two cards less in hand
+            case 40: effect.startBattleWithCard = new String[]{"Propaganda"}; break; //Il pedaggio
+            case 60: life += 15; break;                                          //La marea
+            case 70: effect.changeStartCards = 3; break;                          //Doppio rintocco
+            case 80: effect.startBattleWithCard = new String[]{"Glorious Anthem"}; break; //Le catene
+            case 90: opp(effect).lifeModifier = -10; life += 10; break;           //Cenere
+            default: break;
+        }
+        effect.lifeModifier = life;
+        boolean empty = life == 0 && effect.opponent == null && effect.changeStartCards == 0 && effect.startBattleWithCard == null;
+        return empty ? null : effect;
+    }
+
+    /** Called when the player loses in the Sala: remembers it (no first-try bonus) and applies the difficulty penalty. */
+    public static void onChallengeLost(EnemySprite mob) {
+        if (!isActive() || mob == null || isHunter(mob.getData()))
+            return;
+        setFlag(FLAG_LOST, 1);
+        float pct = DIFF_DEFEAT_GOLD[difficulty()];
+        int loss = (int) (Current.player().getGold() * pct);
+        if (loss > 0)
+            Current.player().takeGold(loss);
     }
 
     /** Number of the current challenge (1-100) of the Cronaca I quest, 0 if not running. */
@@ -133,10 +192,11 @@ public final class CronacheRewards {
         if (openShop.startsWith("Cronache Bustine"))
             return 0.5f; //Mirta's packs: 500 gold instead of the standard 1000
         int trust = flag(FLAG_TRUST_TOBIA);
-        if (trust >= 15) return 0.75f;
-        if (trust >= 12) return 0.9f;
-        if (trust > 0 && trust <= 6) return 1.3f;
-        return 1.0f;
+        float base = DIFF_PRICES[difficulty()];
+        if (trust >= 15) return 0.75f * base;
+        if (trust >= 12) return 0.9f * base;
+        if (trust > 0 && trust <= 6) return 1.3f * base;
+        return base;
     }
 
     /** Bookkeeping after every won duel: curses wear off, debts come due, the hunter is paid off. */
@@ -164,6 +224,12 @@ public final class CronacheRewards {
     public static boolean loadVictoryRewards(EnemySprite mob) {
         if (!isActive() || mob == null)
             return false;
+        int n = currentChallenge();
+        boolean hunter = isHunter(mob.getData());
+        int picks = 1;
+        if (!hunter && flag(FLAG_LOST) == 0) picks++;     //won at the first attempt
+        if (!hunter && isSpecial(n)) picks++;             //special challenge
+        if (!hunter) setFlag(FLAG_LOST, 0);
         onChallengeWon(mob);
         Deck deck = Current.latestDeck();
         if (deck == null || deck.getMain() == null)
@@ -193,9 +259,10 @@ public final class CronacheRewards {
         for (int i = 0; i < unique.size() && i < MAX_CHOICES; i++)
             choices.add(new Reward(unique.get(i)));
 
+        gold = Math.round(gold * DIFF_GOLD[difficulty()]);
         if (gold > 0)
             Current.player().giveGold(gold);
-        RewardScene.instance().loadSelectableRewards(choices, RewardScene.Type.RewardChoice, 1);
+        RewardScene.instance().loadSelectableRewards(choices, RewardScene.Type.RewardChoice, Math.min(picks, choices.size));
         return true;
     }
 
@@ -218,5 +285,64 @@ public final class CronacheRewards {
         RewardScene.instance().loadRewards(actor.getRewardData(), RewardScene.Type.Shop, actor);
         Forge.switchScene(RewardScene.instance());
         return true;
+    }
+
+    // ---- statistics shown by the old man ({var=cr_...} in dialogs) ----
+    private static File picksFile() {
+        String name = Current.player().getName();
+        if (name == null || name.isEmpty()) name = "giocatore";
+        return new File(ForgeConstants.USER_ADVENTURE_DIR, "cronache_scelte_" + name.replaceAll("[^A-Za-z0-9]", "_") + ".txt");
+    }
+
+    /** Remembers which card was picked at which challenge. */
+    public static void recordPick(Reward reward) {
+        try {
+            if (!isActive() || reward == null || reward.getType() != Reward.Type.Card || reward.getCard() == null)
+                return;
+            File f = picksFile();
+            f.getParentFile().mkdirs();
+            FileWriter w = new FileWriter(f, true);
+            w.write(currentChallenge() + "|" + reward.getCard().getName() + "\n");
+            w.close();
+        } catch (Exception ignored) { }
+    }
+
+    private static String lastPicks(int max) {
+        List<String> lines = new ArrayList<>();
+        try {
+            File f = picksFile();
+            if (f.exists()) {
+                BufferedReader r = new BufferedReader(new FileReader(f));
+                String line;
+                while ((line = r.readLine()) != null)
+                    if (!line.trim().isEmpty()) lines.add(line);
+                r.close();
+            }
+        } catch (Exception ignored) { }
+        if (lines.isEmpty())
+            return "nessuna, per ora";
+        StringBuilder sb = new StringBuilder();
+        for (int i = Math.max(0, lines.size() - max); i < lines.size(); i++) {
+            String[] p = lines.get(i).split("\\|", 2);
+            sb.append("\n").append(p.length == 2 ? "Sfida " + p[0] + ": " + p[1] : lines.get(i));
+        }
+        return sb.toString();
+    }
+
+    public static void fillVariables(TypingLabel label) {
+        try {
+            if (!isActive() || Current.player() == null)
+                return;
+            int wins = Current.player().getStatistic().totalWins();
+            int losses = Current.player().getStatistic().totalLoss();
+            int total = wins + losses;
+            label.setVariable("cr_sfida", String.valueOf(currentChallenge()));
+            label.setVariable("cr_vinte", String.valueOf(wins));
+            label.setVariable("cr_perse", String.valueOf(losses));
+            label.setVariable("cr_perc", total == 0 ? "-" : (100 * wins / total) + "%");
+            label.setVariable("cr_mazzo", String.valueOf(playerMinDeckSize(40)));
+            label.setVariable("cr_diff", DIFF_NAMES[difficulty()]);
+            label.setVariable("cr_carte", lastPicks(10));
+        } catch (Exception ignored) { }
     }
 }
