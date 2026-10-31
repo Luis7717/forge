@@ -184,6 +184,12 @@ public final class FModel {
         // Runs here because preferences must be loaded before MAX_LOG_FILES is readable
         ExceptionHandler.pruneForgeLogs(getPreferences().getPrefInt(FPref.MAX_LOG_FILES));
 
+        // personal build (Cronache del Velo): move an existing install to Italian once, later changes are respected
+        if (!getPreferences().getPrefBoolean(FPref.CRONACHE_ITALIAN_SET)) {
+            getPreferences().setPref(FPref.UI_LANGUAGE, "it-IT");
+            getPreferences().setPref(FPref.CRONACHE_ITALIAN_SET, true);
+            getPreferences().save();
+        }
         Lang.createInstance(getPreferences().getPref(FPref.UI_LANGUAGE));
         Localizer.getInstance().initialize(getPreferences().getPref(FPref.UI_LANGUAGE), ForgeConstants.LANG_DIR);
 

@@ -191,6 +191,7 @@ public class ForgePreferences extends AbstractPreferences<ForgePreferences.FPref
         UI_VIBRATE_ON_SHOP_ACTION("true"),
 
         UI_LANGUAGE("it-IT"),
+        CRONACHE_ITALIAN_SET("false"), // personal build: switch an existing install to Italian once
 
         AUTO_UPDATE("none"),
         USE_SENTRY("false"), // this controls whether automated bug reporting is done or not
