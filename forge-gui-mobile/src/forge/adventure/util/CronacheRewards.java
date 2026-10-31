@@ -26,7 +26,8 @@ import java.util.Set;
  */
 public final class CronacheRewards {
     public static final String PLANE = "Cronache_del_Velo";
-    private static final int MAX_CHOICES = 15;
+    //iOS keeps only 48-120 card textures resident: 15 choices after a duel got evicted and rendered black
+    private static final int MAX_CHOICES = 8;
     private static final int MERCHANT_OBJECT_ID = 900000;
 
     private CronacheRewards() { }
