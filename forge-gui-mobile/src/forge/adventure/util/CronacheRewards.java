@@ -127,7 +127,11 @@ public final class CronacheRewards {
     }
 
     /** Price modifier of Tobia's cart, depending on how much he trusts the player. */
+    private static String openShop = "";
+
     public static float merchantPriceModifier() {
+        if (openShop.startsWith("Cronache Bustine"))
+            return 0.5f; //Mirta's packs: 500 gold instead of the standard 1000
         int trust = flag(FLAG_TRUST_TOBIA);
         if (trust >= 15) return 0.75f;
         if (trust >= 12) return 0.9f;
@@ -209,6 +213,7 @@ public final class CronacheRewards {
         }
         if (merchant == null)
             return false;
+        openShop = shopName;
         ShopActor actor = new ShopActor(MERCHANT_OBJECT_ID, merchant, new PointOfInterestChanges());
         RewardScene.instance().loadRewards(actor.getRewardData(), RewardScene.Type.Shop, actor);
         Forge.switchScene(RewardScene.instance());

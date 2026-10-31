@@ -8014,5 +8014,47 @@
 				]
 			}
 		]
+	},
+	{
+		"name": "Cronache Bustine 1",
+		"description": "Lo zaino di Mirta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "cardPackShop",
+				"count": 4
+			}
+		]
+	},
+	{
+		"name": "Cronache Bustine 2",
+		"description": "Lo zaino di Mirta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "cardPackShop",
+				"count": 6
+			}
+		]
+	},
+	{
+		"name": "Cronache Bustine 3",
+		"description": "Lo zaino di Mirta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "cardPackShop",
+				"count": 8
+			}
+		]
 	}
 ]
