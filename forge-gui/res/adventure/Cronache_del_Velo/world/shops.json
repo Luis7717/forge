@@ -7840,6 +7840,286 @@
 		]
 	},
 	{
+		"name": "Cronache Mercante 1 #W",
+		"description": "Il carretto di Tobia: oggi roba che sa d'incenso",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 3,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.15,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 1 #U",
+		"description": "Il carretto di Tobia: oggi roba fredda come il mare",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 3,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.15,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 1 #B",
+		"description": "Il carretto di Tobia: oggi roba che puzza di tomba",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 3,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.15,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 1 #R",
+		"description": "Il carretto di Tobia: oggi roba che scotta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 3,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.15,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 1 #G",
+		"description": "Il carretto di Tobia: oggi roba che sa di bosco",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 3,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.15,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			}
+		]
+	},
+	{
 		"name": "Cronache Mercante 2",
 		"description": "Il carretto di Tobia",
 		"spriteAtlas": "maps/tileset/buildings.atlas",
@@ -7859,6 +8139,326 @@
 				"type": "card",
 				"probability": 1,
 				"count": 3,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.05,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 2 #W",
+		"description": "Il carretto di Tobia: oggi roba che sa d'incenso",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.05,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 2 #U",
+		"description": "Il carretto di Tobia: oggi roba fredda come il mare",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.05,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 2 #B",
+		"description": "Il carretto di Tobia: oggi roba che puzza di tomba",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.05,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 2 #R",
+		"description": "Il carretto di Tobia: oggi roba che scotta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.05,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 2 #G",
+		"description": "Il carretto di Tobia: oggi roba che sa di bosco",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
 				"rarity": [
 					"Uncommon"
 				]
@@ -7932,6 +8532,366 @@
 		]
 	},
 	{
+		"name": "Cronache Mercante 3 #W",
+		"description": "Il carretto di Tobia: oggi roba che sa d'incenso",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.4,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.1,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 3 #U",
+		"description": "Il carretto di Tobia: oggi roba fredda come il mare",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.4,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.1,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 3 #B",
+		"description": "Il carretto di Tobia: oggi roba che puzza di tomba",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.4,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.1,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 3 #R",
+		"description": "Il carretto di Tobia: oggi roba che scotta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.4,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.1,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 3 #G",
+		"description": "Il carretto di Tobia: oggi roba che sa di bosco",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.4,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.1,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
 		"name": "Cronache Mercante 4",
 		"description": "Il carretto di Tobia",
 		"spriteAtlas": "maps/tileset/buildings.atlas",
@@ -7974,6 +8934,381 @@
 		]
 	},
 	{
+		"name": "Cronache Mercante 4 #W",
+		"description": "Il carretto di Tobia: oggi roba che sa d'incenso",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.25,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 4 #U",
+		"description": "Il carretto di Tobia: oggi roba fredda come il mare",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.25,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 4 #B",
+		"description": "Il carretto di Tobia: oggi roba che puzza di tomba",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.25,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 4 #R",
+		"description": "Il carretto di Tobia: oggi roba che scotta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.25,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 4 #G",
+		"description": "Il carretto di Tobia: oggi roba che sa di bosco",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.25,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
 		"name": "Cronache Mercante 5",
 		"description": "Il carretto di Tobia",
 		"spriteAtlas": "maps/tileset/buildings.atlas",
@@ -8001,6 +9336,326 @@
 				"type": "card",
 				"probability": 1,
 				"count": 3,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 5 #W",
+		"description": "Il carretto di Tobia: oggi roba che sa d'incenso",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"White"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 5 #U",
+		"description": "Il carretto di Tobia: oggi roba fredda come il mare",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Blue"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 5 #B",
+		"description": "Il carretto di Tobia: oggi roba che puzza di tomba",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Black"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 5 #R",
+		"description": "Il carretto di Tobia: oggi roba che scotta",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Red"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Rare"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 0.5,
+				"count": 1,
+				"rarity": [
+					"MythicRare"
+				]
+			}
+		]
+	},
+	{
+		"name": "Cronache Mercante 5 #G",
+		"description": "Il carretto di Tobia: oggi roba che sa di bosco",
+		"spriteAtlas": "maps/tileset/buildings.atlas",
+		"sprite": "RotatingShop",
+		"overlaySprite": "",
+		"unlimited": false,
+		"rewards": [
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Common"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Uncommon"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
+				"rarity": [
+					"Uncommon"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 1,
+				"rarity": [
+					"Rare"
+				],
+				"colors": [
+					"Green"
+				]
+			},
+			{
+				"type": "card",
+				"probability": 1,
+				"count": 2,
 				"rarity": [
 					"Rare"
 				]

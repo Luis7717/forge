@@ -270,18 +270,22 @@ public final class CronacheRewards {
     public static boolean openMerchant(String shopName) {
         if (shopName == null || shopName.isEmpty())
             return false;
-        ShopData merchant = null;
+        //the shop itself or one of its themed variants ("<name> #W" ...), chosen at random for variety
+        List<ShopData> options = new ArrayList<>();
         Array<ShopData> shops = WorldData.getShopList();
         for (int i = 0; i < shops.size; i++) {
-            if (shopName.equals(shops.get(i).name)) {
-                merchant = shops.get(i);
-                break;
-            }
+            String n = shops.get(i).name;
+            if (shopName.equals(n) || (n != null && n.startsWith(shopName + " #")))
+                options.add(shops.get(i));
         }
+        ShopData merchant = options.isEmpty() ? null : options.get(new java.util.Random().nextInt(options.size()));
         if (merchant == null)
             return false;
         openShop = shopName;
-        ShopActor actor = new ShopActor(MERCHANT_OBJECT_ID, merchant, new PointOfInterestChanges());
+        //fresh random stock at every visit (a derived seed made Tobia repeat the same cards)
+        PointOfInterestChanges changes = new PointOfInterestChanges();
+        changes.setRotatingShopSeed(MERCHANT_OBJECT_ID, new java.util.Random(System.nanoTime() ^ Double.doubleToLongBits(Math.random())).nextLong());
+        ShopActor actor = new ShopActor(MERCHANT_OBJECT_ID, merchant, changes);
         RewardScene.instance().loadRewards(actor.getRewardData(), RewardScene.Type.Shop, actor);
         Forge.switchScene(RewardScene.instance());
         return true;
