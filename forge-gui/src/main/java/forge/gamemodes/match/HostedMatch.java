@@ -159,7 +159,10 @@ public class HostedMatch {
         game = match.createGame();
         //game.EXPERIMENTAL_RESTORE_SNAPSHOT = FModel.getPreferences().getPrefBoolean(FPref.MATCH_EXPERIMENTAL_RESTORE);
         game.AI_TIMEOUT = FModel.getPreferences().getPrefInt(FPref.MATCH_AI_TIMEOUT);
-        game.AI_FLAT_MONTE_CARLO = FModel.getPreferences().getPrefBoolean(FPref.MATCH_AI_FLAT_MONTE_CARLO);
+        // iOS (MobiVM runtime) lacks a Java API used by the Monte Carlo rollouts and crashes mid-game:
+        // keep the standard heuristic AI there.
+        game.AI_FLAT_MONTE_CARLO = FModel.getPreferences().getPrefBoolean(FPref.MATCH_AI_FLAT_MONTE_CARLO)
+                && !GuiBase.isIOS();
         // Desktop auto-detection: phones and tablets keep the light settings, a PC gets the maximum strength.
         game.AI_FLAT_MONTE_CARLO_MAX = !forge.gui.GuiBase.isMobile();
         // ...and a phone gets the lite settings (attack search, cheap lookahead) instead of the bare profile values.
