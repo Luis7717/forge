@@ -75,7 +75,7 @@ jobs:
           gh release create ipa-latest Forge-Cronache.ipa \
             --title "Forge iOS - Cronache del Velo" \
             --notes "IPA non firmato. Installalo con Sideloadly. Build del $(date -u +%Y-%m-%d)." \
-            --prerelease
+            --latest
 
       - name: Upload build reports
         if: always()
