@@ -11314,7 +11314,7 @@
 							"options": [
 								{
 									"name": "Pellegrino (facile)",
-									"text": "Gli sfidanti hanno 4 punti vita in meno, guadagni il 25% di oro in più e Tobia ti fa un piccolo sconto.",
+									"text": "Gli sfidanti hanno 2 punti vita in meno, guadagni il 25% di oro in più e Tobia ti fa un piccolo sconto.",
 									"options": [
 										{
 											"name": "(Preparati alla prima sfida)"
@@ -11366,7 +11366,7 @@
 								},
 								{
 									"name": "Penitente (difficile)",
-									"text": "Gli sfidanti hanno 4 punti vita in più, guadagni meno oro, ogni sconfitta ti costa il 10% dell'oro e Tobia alza i prezzi.",
+									"text": "Gli sfidanti hanno 2 punti vita in più, guadagni meno oro, ogni sconfitta ti costa il 10% dell'oro e Tobia alza i prezzi.",
 									"options": [
 										{
 											"name": "(Preparati alla prima sfida)"
@@ -11392,7 +11392,7 @@
 								},
 								{
 									"name": "Dannato (brutale)",
-									"text": "Gli sfidanti hanno 8 punti vita in più, guadagni un quarto di oro in meno, ogni sconfitta ti costa il 25% dell'oro e Tobia ti spenna.",
+									"text": "Gli sfidanti hanno 4 punti vita in più, guadagni un quarto di oro in meno, ogni sconfitta ti costa il 25% dell'oro e Tobia ti spenna.",
 									"options": [
 										{
 											"name": "(Preparati alla prima sfida)"
@@ -11544,7 +11544,7 @@
 			{
 				"id": 1,
 				"name": "Sfida 1: Ciclope",
-				"description": "Sfida 1 di 100. Ciclope. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 1 di 100. Ciclope. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -11568,7 +11568,7 @@
 			{
 				"id": 2,
 				"name": "Sfida 2: Avvoltoio",
-				"description": "Sfida 2 di 100. Avvoltoio. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 2 di 100. Avvoltoio. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -11595,7 +11595,7 @@
 			{
 				"id": 3,
 				"name": "Sfida 3: Pipistrello",
-				"description": "Sfida 3 di 100. Pipistrello. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 3 di 100. Pipistrello. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -11622,7 +11622,7 @@
 			{
 				"id": 4,
 				"name": "Sfida 4: Ghoul",
-				"description": "Sfida 4 di 100. Ghoul. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 4 di 100. Ghoul. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -11899,7 +11899,7 @@
 			{
 				"id": 5,
 				"name": "Sfida 5: Homarid",
-				"description": "Sfida 5 di 100. Homarid. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 5 di 100. Homarid. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -12275,7 +12275,7 @@
 			{
 				"id": 6,
 				"name": "Sfida 6: Guerriero Minotauro",
-				"description": "Sfida 6 di 100. Guerriero Minotauro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 6 di 100. Guerriero Minotauro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -12573,7 +12573,7 @@
 			{
 				"id": 7,
 				"name": "Sfida 7: Boggart",
-				"description": "Sfida 7 di 100. Boggart. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 7 di 100. Boggart. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -12850,7 +12850,7 @@
 			{
 				"id": 8,
 				"name": "Sfida 8: Spettro",
-				"description": "Sfida 8 di 100. Spettro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 8 di 100. Spettro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -13127,7 +13127,7 @@
 			{
 				"id": 9,
 				"name": "Sfida 9: Bandito con la Fionda",
-				"description": "Sfida 9 di 100. Bandito con la Fionda. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 9 di 100. Bandito con la Fionda. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -13404,7 +13404,7 @@
 			{
 				"id": 10,
 				"name": "Sfida 10: Araldo Scarno",
-				"description": "Sfida 10 di 100 (boss). Araldo Scarno. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 10 di 100 (boss). Araldo Scarno. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -13751,7 +13751,7 @@
 			{
 				"id": 11,
 				"name": "Sfida 11: Gargoyle",
-				"description": "Sfida 11 di 100. Gargoyle. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 11 di 100. Gargoyle. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -14028,7 +14028,7 @@
 			{
 				"id": 12,
 				"name": "Sfida 12: Guerriero",
-				"description": "Sfida 12 di 100. Guerriero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 12 di 100. Guerriero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -14326,7 +14326,7 @@
 			{
 				"id": 13,
 				"name": "Sfida 13: Cammello",
-				"description": "Sfida 13 di 100. Cammello. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 13 di 100. Cammello. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -14603,7 +14603,7 @@
 			{
 				"id": 14,
 				"name": "Sfida 14: Khan",
-				"description": "Sfida 14 di 100. Khan. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 14 di 100. Khan. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -14880,7 +14880,7 @@
 			{
 				"id": 15,
 				"name": "Sfida 15: Avventuriero",
-				"description": "Sfida 15 di 100. Avventuriero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 15 di 100. Avventuriero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -15210,7 +15210,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 5
+												"val": 3
 											},
 											"setMapFlag": {
 												"key": ""
@@ -15279,7 +15279,7 @@
 			{
 				"id": 16,
 				"name": "Sfida 16: Gorgone",
-				"description": "Sfida 16 di 100. Gorgone. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 16 di 100. Gorgone. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -15577,7 +15577,7 @@
 			{
 				"id": 17,
 				"name": "Sfida 17: Abominio di Carne",
-				"description": "Sfida 17 di 100. Abominio di Carne. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 17 di 100. Abominio di Carne. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -15854,7 +15854,7 @@
 			{
 				"id": 18,
 				"name": "Sfida 18: Djinn di Tarkir",
-				"description": "Sfida 18 di 100. Djinn di Tarkir. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 18 di 100. Djinn di Tarkir. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -16131,7 +16131,7 @@
 			{
 				"id": 19,
 				"name": "Sfida 19: Stegosauro",
-				"description": "Sfida 19 di 100. Stegosauro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 19 di 100. Stegosauro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -16408,7 +16408,7 @@
 			{
 				"id": 20,
 				"name": "Sfida 20: Guerriero Centauro",
-				"description": "Sfida 20 di 100. Guerriero Centauro. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Sangue scarso: inizi la partita con 10 punti vita in meno. Se vinci scegli una carta in più. Il tuo mazzo: almeno 40 carte.",
+				"description": "Sfida 20 di 100. Guerriero Centauro. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Sangue scarso: inizi la partita con 3 punti vita in meno. Se vinci scegli una carta in più. Il tuo mazzo: almeno 40 carte. Punti vita: 10.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -16829,7 +16829,7 @@
 			{
 				"id": 21,
 				"name": "Sfida 21: Gufo",
-				"description": "Sfida 21 di 100. Gufo. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 45 carte: quelle mancanti vengono riempite con terre Wastes.",
+				"description": "Sfida 21 di 100. Gufo. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 45 carte e si parte con 13 punti vita.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -17106,7 +17106,7 @@
 			{
 				"id": 22,
 				"name": "Sfida 22: Pirata",
-				"description": "Sfida 22 di 100. Pirata. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 22 di 100. Pirata. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -17404,7 +17404,7 @@
 			{
 				"id": 23,
 				"name": "Sfida 23: Serpente Velenoso",
-				"description": "Sfida 23 di 100. Serpente Velenoso. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 23 di 100. Serpente Velenoso. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -17681,7 +17681,7 @@
 			{
 				"id": 24,
 				"name": "Sfida 24: Guerriero Khenra",
-				"description": "Sfida 24 di 100. Guerriero Khenra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 24 di 100. Guerriero Khenra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -17958,7 +17958,7 @@
 			{
 				"id": 25,
 				"name": "Sfida 25: Il Custode del Cimitero",
-				"description": "Sfida 25 di 100 (boss). Il Custode del Cimitero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 25 di 100 (boss). Il Custode del Cimitero. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -18315,7 +18315,7 @@
 			{
 				"id": 26,
 				"name": "Sfida 26: Verme",
-				"description": "Sfida 26 di 100. Verme. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 26 di 100. Verme. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -18613,7 +18613,7 @@
 			{
 				"id": 27,
 				"name": "Sfida 27: Scheletro",
-				"description": "Sfida 27 di 100. Scheletro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 27 di 100. Scheletro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -18890,7 +18890,7 @@
 			{
 				"id": 28,
 				"name": "Sfida 28: Gigante Errante",
-				"description": "Sfida 28 di 100. Gigante Errante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 28 di 100. Gigante Errante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -19167,7 +19167,7 @@
 			{
 				"id": 29,
 				"name": "Sfida 29: Coccodrillo",
-				"description": "Sfida 29 di 100. Coccodrillo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 29 di 100. Coccodrillo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -19444,7 +19444,7 @@
 			{
 				"id": 30,
 				"name": "Sfida 30: Angelo dell'Ortodossia",
-				"description": "Sfida 30 di 100. Angelo dell'Ortodossia. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Mano vuota: peschi 2 carte in meno nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 30 di 100. Angelo dell'Ortodossia. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Mano vuota: peschi 2 carte in meno nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -19806,7 +19806,7 @@
 											"POIReference": "",
 											"giveBlessing": {
 												"name": "Ossa dell'Araldo",
-												"lifeModifier": 6
+												"lifeModifier": 3
 											}
 										}
 									]
@@ -19832,7 +19832,7 @@
 			{
 				"id": 31,
 				"name": "Sfida 31: Scarabeo",
-				"description": "Sfida 31 di 100. Scarabeo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 31 di 100. Scarabeo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -20130,7 +20130,7 @@
 			{
 				"id": 32,
 				"name": "Sfida 32: Goblin Fanatico",
-				"description": "Sfida 32 di 100. Goblin Fanatico. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 32 di 100. Goblin Fanatico. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -20407,7 +20407,7 @@
 			{
 				"id": 33,
 				"name": "Sfida 33: Pappagallo",
-				"description": "Sfida 33 di 100. Pappagallo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 33 di 100. Pappagallo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -20677,7 +20677,7 @@
 			{
 				"id": 34,
 				"name": "Sfida 34: Spirito Oscuro",
-				"description": "Sfida 34 di 100. Spirito Oscuro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 34 di 100. Spirito Oscuro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -20954,7 +20954,7 @@
 			{
 				"id": 35,
 				"name": "Sfida 35: Panda Gigante",
-				"description": "Sfida 35 di 100. Panda Gigante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 35 di 100. Panda Gigante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -21284,7 +21284,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 8
+												"val": 4
 											},
 											"setMapFlag": {
 												"key": ""
@@ -21353,7 +21353,7 @@
 			{
 				"id": 36,
 				"name": "Sfida 36: Mago Blu Corrotto",
-				"description": "Sfida 36 di 100. Mago Blu Corrotto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 36 di 100. Mago Blu Corrotto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -21651,7 +21651,7 @@
 			{
 				"id": 37,
 				"name": "Sfida 37: Sliver Bianco",
-				"description": "Sfida 37 di 100. Sliver Bianco. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 37 di 100. Sliver Bianco. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -21928,7 +21928,7 @@
 			{
 				"id": 38,
 				"name": "Sfida 38: Signore delle Bestie",
-				"description": "Sfida 38 di 100. Signore delle Bestie. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 38 di 100. Signore delle Bestie. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -22205,7 +22205,7 @@
 			{
 				"id": 39,
 				"name": "Sfida 39: Prototipo Verde",
-				"description": "Sfida 39 di 100. Prototipo Verde. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 39 di 100. Prototipo Verde. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -22503,7 +22503,7 @@
 			{
 				"id": 40,
 				"name": "Sfida 40: Spirito",
-				"description": "Sfida 40 di 100. Spirito. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Il pedaggio: lo sfidante entra con Propaganda già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte.",
+				"description": "Sfida 40 di 100. Spirito. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Il pedaggio: lo sfidante entra con Propaganda già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 45 carte. Punti vita: 13.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -22912,7 +22912,7 @@
 			{
 				"id": 41,
 				"name": "Sfida 41: Demone Minore",
-				"description": "Sfida 41 di 100. Demone Minore. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 50 carte: quelle mancanti vengono riempite con terre Wastes.",
+				"description": "Sfida 41 di 100. Demone Minore. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 50 carte e si parte con 15 punti vita.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -23189,7 +23189,7 @@
 			{
 				"id": 42,
 				"name": "Sfida 42: Prototipo Blu",
-				"description": "Sfida 42 di 100. Prototipo Blu. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 42 di 100. Prototipo Blu. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -23466,7 +23466,7 @@
 			{
 				"id": 43,
 				"name": "Sfida 43: Mostro Marino",
-				"description": "Sfida 43 di 100. Mostro Marino. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 43 di 100. Mostro Marino. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -23743,7 +23743,7 @@
 			{
 				"id": 44,
 				"name": "Sfida 44: Criosfinge",
-				"description": "Sfida 44 di 100. Criosfinge. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 44 di 100. Criosfinge. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -24020,7 +24020,7 @@
 			{
 				"id": 45,
 				"name": "Sfida 45: Mago Blu Adepto",
-				"description": "Sfida 45 di 100. Mago Blu Adepto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 45 di 100. Mago Blu Adepto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -24350,7 +24350,7 @@
 			{
 				"id": 46,
 				"name": "Sfida 46: Angelo Sorvegliante",
-				"description": "Sfida 46 di 100. Angelo Sorvegliante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 46 di 100. Angelo Sorvegliante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -24648,7 +24648,7 @@
 			{
 				"id": 47,
 				"name": "Sfida 47: Nano Demolitore",
-				"description": "Sfida 47 di 100. Nano Demolitore. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 47 di 100. Nano Demolitore. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -24925,7 +24925,7 @@
 			{
 				"id": 48,
 				"name": "Sfida 48: Chierico Corrotto",
-				"description": "Sfida 48 di 100. Chierico Corrotto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 48 di 100. Chierico Corrotto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -25202,7 +25202,7 @@
 			{
 				"id": 49,
 				"name": "Sfida 49: Leone",
-				"description": "Sfida 49 di 100. Leone. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 49 di 100. Leone. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -25479,7 +25479,7 @@
 			{
 				"id": 50,
 				"name": "Sfida 50: Sorella Vessa",
-				"description": "Sfida 50 di 100 (boss). Sorella Vessa. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 50 di 100 (boss). Sorella Vessa. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -26038,7 +26038,7 @@
 			{
 				"id": 51,
 				"name": "Sfida 51: Barbaro",
-				"description": "Sfida 51 di 100. Barbaro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 51 di 100. Barbaro. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -26336,7 +26336,7 @@
 			{
 				"id": 52,
 				"name": "Sfida 52",
-				"description": "Sfida 52 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 52 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -26606,7 +26606,7 @@
 			{
 				"id": 53,
 				"name": "Sfida 53: Sfidante Errante",
-				"description": "Sfida 53 di 100. Sfidante Errante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 53 di 100. Sfidante Errante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -26883,7 +26883,7 @@
 			{
 				"id": 54,
 				"name": "Sfida 54: Canalizzatore dell'Etere",
-				"description": "Sfida 54 di 100. Canalizzatore dell'Etere. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 54 di 100. Canalizzatore dell'Etere. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -27181,7 +27181,7 @@
 			{
 				"id": 55,
 				"name": "Sfida 55",
-				"description": "Sfida 55 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 55 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -27511,7 +27511,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 10
+												"val": 5
 											},
 											"setMapFlag": {
 												"key": ""
@@ -27595,7 +27595,7 @@
 			{
 				"id": 56,
 				"name": "Sfida 56: Minotauro Chiamaguerra",
-				"description": "Sfida 56 di 100. Minotauro Chiamaguerra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 56 di 100. Minotauro Chiamaguerra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -27872,7 +27872,7 @@
 			{
 				"id": 57,
 				"name": "Sfida 57: Ombra",
-				"description": "Sfida 57 di 100. Ombra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 57 di 100. Ombra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -28149,7 +28149,7 @@
 			{
 				"id": 58,
 				"name": "Sfida 58",
-				"description": "Sfida 58 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 58 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -28447,7 +28447,7 @@
 			{
 				"id": 59,
 				"name": "Sfida 59: Angelo Caduto",
-				"description": "Sfida 59 di 100. Angelo Caduto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 59 di 100. Angelo Caduto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -28724,7 +28724,7 @@
 			{
 				"id": 60,
 				"name": "Sfida 60: Emil, il Bambino Annegato",
-				"description": "Sfida 60 di 100. Emil, il Bambino Annegato. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - La marea: lo sfidante ha 15 punti vita in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 50 carte.",
+				"description": "Sfida 60 di 100. Emil, il Bambino Annegato. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - La marea: lo sfidante ha 6 punti vita in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 50 carte. Punti vita: 15.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -29146,7 +29146,7 @@
 			{
 				"id": 61,
 				"name": "Sfida 61",
-				"description": "Sfida 61 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 55 carte: quelle mancanti vengono riempite con terre Wastes.",
+				"description": "Sfida 61 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 55 carte e si parte con 18 punti vita.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -29444,7 +29444,7 @@
 			{
 				"id": 62,
 				"name": "Sfida 62: Polpo",
-				"description": "Sfida 62 di 100. Polpo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 62 di 100. Polpo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -29721,7 +29721,7 @@
 			{
 				"id": 63,
 				"name": "Sfida 63: Guerriero Leonin",
-				"description": "Sfida 63 di 100. Guerriero Leonin. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 63 di 100. Guerriero Leonin. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -29998,7 +29998,7 @@
 			{
 				"id": 64,
 				"name": "Sfida 64",
-				"description": "Sfida 64 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 64 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -30296,7 +30296,7 @@
 			{
 				"id": 65,
 				"name": "Sfida 65: Gigante del Fuoco",
-				"description": "Sfida 65 di 100. Gigante del Fuoco. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 65 di 100. Gigante del Fuoco. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -30692,7 +30692,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 6
+												"val": 3
 											},
 											"setMapFlag": {
 												"key": ""
@@ -30723,7 +30723,7 @@
 			{
 				"id": 66,
 				"name": "Sfida 66: Goblin Predatore",
-				"description": "Sfida 66 di 100. Goblin Predatore. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 66 di 100. Goblin Predatore. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -31000,7 +31000,7 @@
 			{
 				"id": 67,
 				"name": "Sfida 67",
-				"description": "Sfida 67 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 67 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -31270,7 +31270,7 @@
 			{
 				"id": 68,
 				"name": "Sfida 68: Arboreo Scelto",
-				"description": "Sfida 68 di 100. Arboreo Scelto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 68 di 100. Arboreo Scelto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -31547,7 +31547,7 @@
 			{
 				"id": 69,
 				"name": "Sfida 69: Accolita di Chandra",
-				"description": "Sfida 69 di 100. Accolita di Chandra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 69 di 100. Accolita di Chandra. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -31845,7 +31845,7 @@
 			{
 				"id": 70,
 				"name": "Sfida 70",
-				"description": "Sfida 70 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Doppio rintocco: lo sfidante pesca 3 carte in più nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 70 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Doppio rintocco: lo sfidante pesca 3 carte in più nella mano iniziale. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -32115,7 +32115,7 @@
 			{
 				"id": 71,
 				"name": "Sfida 71: Sfidante Veterano",
-				"description": "Sfida 71 di 100. Sfidante Veterano. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 71 di 100. Sfidante Veterano. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -32392,7 +32392,7 @@
 			{
 				"id": 72,
 				"name": "Sfida 72: Capo Goblin",
-				"description": "Sfida 72 di 100. Capo Goblin. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 72 di 100. Capo Goblin. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -32690,7 +32690,7 @@
 			{
 				"id": 73,
 				"name": "Sfida 73",
-				"description": "Sfida 73 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 73 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -32967,7 +32967,7 @@
 			{
 				"id": 74,
 				"name": "Sfida 74: Riccio",
-				"description": "Sfida 74 di 100. Riccio. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 74 di 100. Riccio. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -33253,7 +33253,7 @@
 											"POIReference": "",
 											"giveBlessing": {
 												"name": "Il rimorso di Tobia",
-												"lifeModifier": 8,
+												"lifeModifier": 4,
 												"changeStartCards": 1
 											}
 										}
@@ -33299,7 +33299,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 12
+												"val": 5
 											},
 											"setMapFlag": {
 												"key": ""
@@ -33322,7 +33322,7 @@
 			{
 				"id": 75,
 				"name": "Sfida 75: Il Cardinale delle Ceneri",
-				"description": "Sfida 75 di 100 (boss). Il Cardinale delle Ceneri. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 75 di 100 (boss). Il Cardinale delle Ceneri. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -33679,7 +33679,7 @@
 			{
 				"id": 76,
 				"name": "Sfida 76: Golem Blu",
-				"description": "Sfida 76 di 100. Golem Blu. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 76 di 100. Golem Blu. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -34077,7 +34077,7 @@
 			{
 				"id": 77,
 				"name": "Sfida 77: Mago Simic",
-				"description": "Sfida 77 di 100. Mago Simic. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 77 di 100. Mago Simic. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -34366,7 +34366,7 @@
 											"POIReference": "",
 											"giveBlessing": {
 												"name": "Il debito di Vessa",
-												"lifeModifier": 10
+												"lifeModifier": 5
 											}
 										},
 										{
@@ -34410,7 +34410,7 @@
 			{
 				"id": 78,
 				"name": "Sfida 78",
-				"description": "Sfida 78 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 78 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -34708,7 +34708,7 @@
 			{
 				"id": 79,
 				"name": "Sfida 79: Gigante della Foresta",
-				"description": "Sfida 79 di 100. Gigante della Foresta. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 79 di 100. Gigante della Foresta. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -34985,7 +34985,7 @@
 			{
 				"id": 80,
 				"name": "Sfida 80: Alchimista di Liliana",
-				"description": "Sfida 80 di 100. Alchimista di Liliana. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Le catene: lo sfidante entra con Glorious Anthem già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte.",
+				"description": "Sfida 80 di 100. Alchimista di Liliana. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Le catene: lo sfidante entra con Glorious Anthem già in campo. Se vinci scegli una carta in più. Il tuo mazzo: almeno 55 carte. Punti vita: 18.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -35255,7 +35255,7 @@
 			{
 				"id": 81,
 				"name": "Sfida 81",
-				"description": "Sfida 81 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 60 carte: quelle mancanti vengono riempite con terre Wastes.",
+				"description": "Sfida 81 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Da questa sfida il tuo mazzo deve avere almeno 60 carte e si parte con 20 punti vita.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -35532,7 +35532,7 @@
 			{
 				"id": 82,
 				"name": "Sfida 82: Negromante",
-				"description": "Sfida 82 di 100. Negromante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 82 di 100. Negromante. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -35830,7 +35830,7 @@
 			{
 				"id": 83,
 				"name": "Sfida 83: Mago Rakdos",
-				"description": "Sfida 83 di 100. Mago Rakdos. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 83 di 100. Mago Rakdos. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -36107,7 +36107,7 @@
 			{
 				"id": 84,
 				"name": "Sfida 84",
-				"description": "Sfida 84 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 84 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -36384,7 +36384,7 @@
 			{
 				"id": 85,
 				"name": "Sfida 85: Cavaliere Mercenario",
-				"description": "Sfida 85 di 100. Cavaliere Mercenario. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 85 di 100. Cavaliere Mercenario. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -36714,7 +36714,7 @@
 											"advanceMapFlag": "",
 											"setQuestFlag": {
 												"key": "cr_maled_vita",
-												"val": 12
+												"val": 6
 											},
 											"setMapFlag": {
 												"key": ""
@@ -36798,7 +36798,7 @@
 			{
 				"id": 86,
 				"name": "Sfida 86: Capo dei Banditi",
-				"description": "Sfida 86 di 100. Capo dei Banditi. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 86 di 100. Capo dei Banditi. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -37075,7 +37075,7 @@
 			{
 				"id": 87,
 				"name": "Sfida 87",
-				"description": "Sfida 87 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 87 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -37373,7 +37373,7 @@
 			{
 				"id": 88,
 				"name": "Sfida 88: Talpa Cerebrale",
-				"description": "Sfida 88 di 100. Talpa Cerebrale. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 88 di 100. Talpa Cerebrale. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -37650,7 +37650,7 @@
 			{
 				"id": 89,
 				"name": "Sfida 89: Guardiano delle Nuvole",
-				"description": "Sfida 89 di 100. Guardiano delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 89 di 100. Guardiano delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -37927,7 +37927,7 @@
 			{
 				"id": 90,
 				"name": "Sfida 90: Froghemoth",
-				"description": "Sfida 90 di 100. Froghemoth. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Cenere: tu hai 10 punti vita in meno, lo sfidante 10 in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 90 di 100. Froghemoth. Entrerà nella Sala dal portale e verrà verso di te. SFIDA SPECIALE - Cenere: tu hai 5 punti vita in meno, lo sfidante 5 in più. Se vinci scegli una carta in più. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -38275,7 +38275,7 @@
 			{
 				"id": 91,
 				"name": "Sfida 91",
-				"description": "Sfida 91 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 91 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -38552,7 +38552,7 @@
 			{
 				"id": 92,
 				"name": "Sfida 92: Gigante delle Nuvole",
-				"description": "Sfida 92 di 100. Gigante delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 92 di 100. Gigante delle Nuvole. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -38850,7 +38850,7 @@
 			{
 				"id": 93,
 				"name": "Sfida 93: Tritone Scelto",
-				"description": "Sfida 93 di 100. Tritone Scelto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 93 di 100. Tritone Scelto. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -39127,7 +39127,7 @@
 			{
 				"id": 94,
 				"name": "Sfida 94",
-				"description": "Sfida 94 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 94 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -39404,7 +39404,7 @@
 			{
 				"id": 95,
 				"name": "Sfida 95: Fenice",
-				"description": "Sfida 95 di 100. Fenice. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 95 di 100. Fenice. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -39724,7 +39724,7 @@
 			{
 				"id": 96,
 				"name": "Sfida 96: Kobold Evocadraghi",
-				"description": "Sfida 96 di 100. Kobold Evocadraghi. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 96 di 100. Kobold Evocadraghi. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -40001,7 +40001,7 @@
 			{
 				"id": 97,
 				"name": "Sfida 97",
-				"description": "Sfida 97 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 97 di 100. Le tue scelte hanno deciso chi verrà. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -40299,7 +40299,7 @@
 			{
 				"id": 98,
 				"name": "Sfida 98: Bardo",
-				"description": "Sfida 98 di 100. Bardo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 98 di 100. Bardo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -40576,7 +40576,7 @@
 			{
 				"id": 99,
 				"name": "Sfida 99: Incubo",
-				"description": "Sfida 99 di 100. Incubo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 99 di 100. Incubo. Entrerà nella Sala dal portale e verrà verso di te. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,
@@ -40865,10 +40865,10 @@
 											"POIReference": "",
 											"giveBlessing": {
 												"name": "Le ceneri del Cardinale",
-												"lifeModifier": 10,
+												"lifeModifier": 5,
 												"opponent": {
 													"name": "Le ceneri del Cardinale (nemico)",
-													"lifeModifier": -5
+													"lifeModifier": -3
 												}
 											}
 										}
@@ -40895,7 +40895,7 @@
 			{
 				"id": 100,
 				"name": "Sfida 100: Morvane il Re Sepolto",
-				"description": "Sfida 100 di 100 (boss). Morvane il Re Sepolto. Entrerà nella Sala dal portale e verrà verso di te. Lo scontro si gioca al meglio delle tre partite. Il tuo mazzo: almeno 60 carte.",
+				"description": "Sfida 100 di 100 (boss). Morvane il Re Sepolto. Entrerà nella Sala dal portale e verrà verso di te. Lo scontro si gioca al meglio delle tre partite. Il tuo mazzo: almeno 60 carte. Punti vita: 20.",
 				"objective": "Defeat",
 				"mapFlag": "",
 				"mapFlagValue": 1,

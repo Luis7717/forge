@@ -1115,6 +1115,8 @@ public class MapStage extends GameStage {
                     //Cronache challenger: walk straight to the player, ignoring the map navigation grid
                     if (mob.isFrozen() && mob.pos().dst(player.pos()) < mob.unfreezeRange)
                         continue;
+                    if (mob.getObjectId() == cronacheWaitingMob && cronacheDeckSize() < CronacheRewards.playerMinDeckSize(40))
+                        continue; //waiting at the gate for a legal deck
                     AIVector.set(player.pos()).sub(mob.pos());
                     if (AIVector.len() > 0.5f) {
                         AIVector.setLength(Math.min(AIVector.len(), mob.speed() * delta));
@@ -1245,8 +1247,53 @@ public class MapStage extends GameStage {
 
     boolean started = false;
     
+    private int cronacheWarnedMob = -1;
+    private int cronacheWaitingMob = -1; //challenger waiting at the gate while the player fixes the deck
+
+    private int cronacheDeckSize() {
+        return Current.player().getSelectedDeck() == null ? 0 : Current.player().getSelectedDeck().getMain().countAll();
+    }
+
+    /** Cronache: warns before the duel when the deck is smaller than this challenge requires. */
+    private boolean cronacheDeckWarning(EnemySprite mob) {
+        if (!isCronacheRoom() || mob.getObjectId() == cronacheWarnedMob)
+            return false;
+        int needed = CronacheRewards.playerMinDeckSize(40);
+        int have = cronacheDeckSize();
+        if (have >= needed)
+            return false;
+        dialog.getButtonTable().clear();
+        dialog.getContentTable().clear();
+        dialog.clearListeners();
+        TypingLabel L = Controls.newTypingLabel("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "
+                + needed + ".{ENDCOLOR}\nSe combatti così, le carte mancanti saranno riempite con terre Wastes.");
+        L.setWrap(true);
+        L.skipToTheEnd();
+        TextraButton fight = Controls.newTextButton("Combatti comunque", () -> {
+            hideDialog();
+            cronacheWarnedMob = mob.getObjectId();
+            beginDuel(mob);
+        });
+        TextraButton fix = Controls.newTextButton("Sistemo il mazzo", () -> {
+            hideDialog();
+            PortalActor portal = findRoomPortal();
+            if (portal != null)
+                mob.setPosition(portal.getX(), portal.getY()); //the challenger waits at the gate
+            cronacheWaitingMob = mob.getObjectId(); //waits until the deck is big enough (or the player walks up to it)
+        });
+        dialog.getContentTable().add(L).width(250f);
+        dialog.getButtonTable().add(fight).width(240f);
+        dialog.getButtonTable().row();
+        dialog.getButtonTable().add(fix).width(240f);
+        dialog.setKeepWithinStage(true);
+        showDialog();
+        return true;
+    }
+
     public void beginDuel(EnemySprite mob) {
         if (mob == null) return;
+        if (cronacheDeckWarning(mob))
+            return;
         if (CronacheRewards.isActive())
             Current.player().heal(1.0f); //Cronache: every challenge starts at full life
         if (isCronacheRoom())

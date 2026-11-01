@@ -401,7 +401,8 @@ public class DuelScene extends ForgeScene {
         playerObject.setAvatarIndex(playerAvatarKey);
         humanPlayer.setPlayer(playerObject);
         humanPlayer.setTeamNumber(0);
-        humanPlayer.setStartingLife(eventData != null ? eventData.eventRules.startingLife : advPlayer.getLife());
+        humanPlayer.setStartingLife(eventData != null ? eventData.eventRules.startingLife
+                : forge.adventure.util.CronacheRewards.playerDuelLife(advPlayer.getLife())); //Cronache: life grows with the challenges
         if (eventData == null || eventData.eventRules.allowsShards)
             humanPlayer.setManaShards(advPlayer.getShards());
 
@@ -501,7 +502,8 @@ public class DuelScene extends ForgeScene {
             enemyPlayer.setAvatarIndex(enemyAvatarKey + i);
             aiPlayer.setPlayer(enemyPlayer);
             aiPlayer.setTeamNumber(currentEnemy.teamNumber);
-            aiPlayer.setStartingLife(eventData != null ? eventData.eventRules.startingLife : Math.round((float) currentEnemy.life * advPlayer.getDifficulty().enemyLifeFactor));
+            aiPlayer.setStartingLife(eventData != null ? eventData.eventRules.startingLife
+                    : forge.adventure.util.CronacheRewards.enemyDuelLife(currentEnemy, Math.round((float) currentEnemy.life * advPlayer.getDifficulty().enemyLifeFactor)));
 
             Array<EffectData> equipmentEffects = new Array<>();
             if (eventData != null && eventData.eventRules.allowsItems) {

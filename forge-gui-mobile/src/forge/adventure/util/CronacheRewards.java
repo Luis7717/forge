@@ -107,7 +107,7 @@ public final class CronacheRewards {
     public static final String FLAG_DIFF = "cr_diff";
     public static final String FLAG_LOST = "cr_persa";            //1 = the current challenger already beat the player once
     private static final String[] DIFF_NAMES = {"Campanaro", "Pellegrino", "Campanaro", "Penitente", "Dannato"};
-    private static final int[] DIFF_ENEMY_LIFE = {0, -4, 0, 4, 8};
+    private static final int[] DIFF_ENEMY_LIFE = {0, -2, 0, 2, 4};
     private static final float[] DIFF_GOLD = {1f, 1.25f, 1f, 0.85f, 0.75f};
     private static final float[] DIFF_DEFEAT_GOLD = {0f, 0f, 0f, 0.10f, 0.25f};
     private static final float[] DIFF_PRICES = {1f, 0.9f, 1f, 1.1f, 1.25f};
@@ -141,13 +141,13 @@ public final class CronacheRewards {
         if (flag(FLAG_CURSE) > 0)
             life += Math.max(1, flag(FLAG_CURSE_LIFE));
         switch (n) {
-            case 20: opp(effect).lifeModifier = -10; break;                       //Sangue scarso: you start with 10 less life
+            case 20: opp(effect).lifeModifier = -3; break;                        //Sangue scarso: you start with 3 less life
             case 30: opp(effect).changeStartCards = -2; break;                    //Mano vuota: two cards less in hand
             case 40: effect.startBattleWithCard = new String[]{"Propaganda"}; break; //Il pedaggio
-            case 60: life += 15; break;                                          //La marea
+            case 60: life += 6; break;                                           //La marea
             case 70: effect.changeStartCards = 3; break;                          //Doppio rintocco
             case 80: effect.startBattleWithCard = new String[]{"Glorious Anthem"}; break; //Le catene
-            case 90: opp(effect).lifeModifier = -10; life += 10; break;           //Cenere
+            case 90: opp(effect).lifeModifier = -5; life += 5; break;             //Cenere
             default: break;
         }
         effect.lifeModifier = life;
@@ -183,6 +183,30 @@ public final class CronacheRewards {
         if (n <= 0)
             return defaultSize;
         return 40 + 5 * ((n - 1) / 20);
+    }
+
+    /** Starting life of both players: 10 for challenges 1-20, then 13, 15, 18 and 20 (grows with the deck size). */
+    public static int duelLife(int n) {
+        if (n <= 20) return 10;
+        if (n <= 40) return 13;
+        if (n <= 60) return 15;
+        if (n <= 80) return 18;
+        return 20;
+    }
+
+    public static int playerDuelLife(int defaultLife) {
+        if (!isActive() || currentChallenge() <= 0)
+            return defaultLife;
+        return duelLife(currentChallenge());
+    }
+
+    public static int enemyDuelLife(EnemyData enemy, int defaultLife) {
+        if (!isActive() || enemy == null || enemy.name == null || !enemy.name.startsWith("Cronache") || currentChallenge() <= 0)
+            return defaultLife;
+        int life = duelLife(currentChallenge());
+        if (enemy.boss) life += 3;          //bosses are a little tougher
+        if (isHunter(enemy)) life += 2;
+        return life;
     }
 
     /** Price modifier of Tobia's cart, depending on how much he trusts the player. */
