@@ -439,6 +439,9 @@ public class WorldStage extends GameStage implements SaveFileContent {
     public void enter() {
         getPlayerSprite().LoadPos();
         getPlayerSprite().setMovementDirection(Vector2.Zero);
+        //Cronache: the whole campaign is inside the Sala, the player must never be left on the world map
+        if (CronacheRewards.isActive())
+            enterSpawnPOI = true;
         if (enterSpawnPOI) {
             enterSpawnPOI = false;
             PointOfInterest poi = Current.world().findPointsOfInterest("Spawn");
