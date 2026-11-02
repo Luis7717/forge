@@ -825,7 +825,7 @@
                                 </goals>
                                 <configuration>
                                     <versionCodeUpdateFromVersion>false</versionCodeUpdateFromVersion>
-                                    <manifestApplicationLabel>Forge (dev)</manifestApplicationLabel>
+                                    <manifestApplicationLabel>Forge Cronache</manifestApplicationLabel>
                                     <manifestProviderAuthorities>
                                         <io.sentry.android.core.SentryInitProvider>${app.id.dev}.SentryInitProvider</io.sentry.android.core.SentryInitProvider>
                                         <io.sentry.android.core.SentryPerformanceProvider>${app.id.dev}.SentryPerformanceProvider</io.sentry.android.core.SentryPerformanceProvider>

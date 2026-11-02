@@ -35,6 +35,18 @@ public class AssetsDownloader {
     private final static ImmutableList<String> downloadIgnoreExit = ImmutableList.of("Download", "Ignore", "Exit");
     private final static ImmutableList<String> downloadExit = ImmutableList.of("Download", "Exit");
 
+    //personal build (Cronache del Velo): game resources come from the fork's release, never from the official servers
+    private static final String CRONACHE_ASSETS_URL = "https://github.com/Luis7717/forge/releases/download/apk-latest/assets.zip";
+
+    private static boolean sameBuildAsResources(FileHandle buildTxt, FileHandle resDir) {
+        try {
+            FileHandle resBuild = resDir.child("build.txt");
+            return buildTxt.exists() && resBuild.exists() && buildTxt.readString().trim().equals(resBuild.readString().trim());
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public static void checkForUpdates(boolean exited, Runnable runnable) {
         if (exited)
             return;
@@ -67,7 +79,7 @@ public class AssetsDownloader {
 
         String message;
         boolean connectedToInternet = Forge.getDeviceAdapter().isConnectedToInternet();
-        if (connectedToInternet) {
+        if (connectedToInternet && !GuiBase.isAndroid()) { //Android: no official APK update prompt in this build
             //currently for desktop/mobile-dev release on github
             final String releaseTag = Forge.getDeviceAdapter().getReleaseTag(GITHUB_RELEASES_ATOM);
             try {
@@ -190,7 +202,8 @@ public class AssetsDownloader {
                 Forge.exitAnimation(false); //can't continue if this fails
                 return;
             }
-        } else if (versionString.equals(FileUtil.readFileToString(versionFile.file())) && FSkin.getSkinDir() != null) {
+        } else if (versionString.equals(FileUtil.readFileToString(versionFile.file())) && FSkin.getSkinDir() != null
+                && sameBuildAsResources(buildTxtFileHandle, resDir)) { //new APK build = new resources to download
             run(runnable);
             return; //if version matches what had been previously saved and FSkin isn't requesting assets download, no need to download assets
         }
@@ -274,7 +287,7 @@ public class AssetsDownloader {
 
         //allow deletion on Android 10 or if using app-specific directory
         boolean allowDeletion = Forge.androidVersion < 30 || GuiBase.isUsingAppDirectory();
-        String assetURL = isSnapshots ? snapsURL + "assets.zip" : releaseURL + versionString + "/" + "assets.zip";
+        String assetURL = CRONACHE_ASSETS_URL;
         new GuiDownloadZipService("", "resource files", assetURL,
                 ASSETS_DIR, RES_DIR, Forge.getSplashScreen().getProgressBar(), allowDeletion).downloadAndUnzip();
 
