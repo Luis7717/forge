@@ -42,15 +42,11 @@ jobs:
           curl -sSL -o android-maven-plugin-4.6.2.jar https://github.com/Card-Forge/android-maven-plugin/releases/download/4.6.2/android-maven-plugin-4.6.2.jar
           curl -sSL -o android-maven-plugin-4.6.2.pom https://github.com/Card-Forge/android-maven-plugin/releases/download/4.6.2/android-maven-plugin-4.6.2.pom
 
-      - name: Build shared modules
+      - name: Build APK (with the shared modules in the same reactor)
         run: |
           mvn --version
-          mvn -B -ntp install -pl .,forge-core,forge-game,forge-ai,forge-gui,forge-gui-mobile -Dmaven.test.skip=true
-
-      - name: Build APK
-        run: |
           export _JAVA_OPTIONS="-Xmx3g"
-          mvn -B -ntp -P android-dev-build install -pl forge-gui-android -Dapp.id.dev=forge.cronache \
+          mvn -B -ntp -U -P android-dev-build install -pl forge-gui-android -am -Dapp.id.dev=forge.cronache \
             -Dandroid.sdk.path=$ANDROID_SDK_ROOT -Dandroid.buildToolsVersion=35.0.0 -Dmaven.test.skip=true
           ls -la forge-gui-android/target/*.apk
 
