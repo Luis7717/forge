@@ -1039,6 +1039,17 @@ public class MapStage extends GameStage {
             if (present != null && present.getObjectId() >= CRONACHE_ID_BASE)
                 return; //one visitor at a time
         }
+        //Mandatory deck size: no challenger walks in until the deck is legal for this challenge
+        int needed = CronacheRewards.playerMinDeckSize(40);
+        int have = cronacheDeckSize();
+        if (CronacheRewards.currentChallenge() > 0 && have < needed) {
+            if (cronacheBlockShownSize != have) {
+                cronacheBlockShownSize = have;
+                showCronacheDeckBlock(have, needed);
+            }
+            return;
+        }
+        cronacheBlockShownSize = -1;
         EnemyData challenger;
         if (CronacheRewards.bountyPending()) {
             challenger = WorldData.getEnemy(CronacheRewards.HUNTER); //Tobia's debt came due
@@ -1247,46 +1258,56 @@ public class MapStage extends GameStage {
 
     boolean started = false;
     
-    private int cronacheWarnedMob = -1;
     private int cronacheWaitingMob = -1; //challenger waiting at the gate while the player fixes the deck
 
     private int cronacheDeckSize() {
         return Current.player().getSelectedDeck() == null ? 0 : Current.player().getSelectedDeck().getMain().countAll();
     }
 
-    /** Cronache: warns before the duel when the deck is smaller than this challenge requires. */
+    private int cronacheBlockShownSize = -1; //deck size when the "deck too small" notice was last shown
+
+    private void showCronacheDeckMessage(String text, Runnable onOk) {
+        dialog.getButtonTable().clear();
+        dialog.getContentTable().clear();
+        dialog.clearListeners();
+        TypingLabel L = Controls.newTypingLabel(text);
+        L.setWrap(true);
+        L.skipToTheEnd();
+        TextraButton ok = Controls.newTextButton("Sistemo il mazzo", () -> {
+            hideDialog();
+            if (onOk != null)
+                onOk.run();
+        });
+        dialog.getContentTable().add(L).width(250f);
+        dialog.getButtonTable().add(ok).width(240f);
+        dialog.setKeepWithinStage(true);
+        showDialog();
+    }
+
+    /** Shown in the room while the deck is too small: the next challenger waits behind the portal. */
+    private void showCronacheDeckBlock(int have, int needed) {
+        showCronacheDeckMessage("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "
+                + needed + ".{ENDCOLOR}\nNessuno sfidante entrerà finché il mazzo non sarà pronto.\n"
+                + "Apri il mazzo e aggiungi " + (needed - have) + " carte (puoi usare anche le terre base del menu del mazzo).", null);
+    }
+
+    /** Cronache: blocks the duel when the deck is smaller than this challenge requires. */
     private boolean cronacheDeckWarning(EnemySprite mob) {
-        if (!isCronacheRoom() || mob.getObjectId() == cronacheWarnedMob)
+        if (!isCronacheRoom())
             return false;
         int needed = CronacheRewards.playerMinDeckSize(40);
         int have = cronacheDeckSize();
         if (have >= needed)
             return false;
-        dialog.getButtonTable().clear();
-        dialog.getContentTable().clear();
-        dialog.clearListeners();
-        TypingLabel L = Controls.newTypingLabel("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "
-                + needed + ".{ENDCOLOR}\nSe combatti così, le carte mancanti saranno riempite con terre Wastes.");
-        L.setWrap(true);
-        L.skipToTheEnd();
-        TextraButton fight = Controls.newTextButton("Combatti comunque", () -> {
-            hideDialog();
-            cronacheWarnedMob = mob.getObjectId();
-            beginDuel(mob);
-        });
-        TextraButton fix = Controls.newTextButton("Sistemo il mazzo", () -> {
-            hideDialog();
+        cronacheBlockShownSize = have;
+        showCronacheDeckMessage("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "
+                + needed + ".{ENDCOLOR}\nLo sfidante ti aspetta al portale: aggiungi " + (needed - have)
+                + " carte al mazzo (puoi usare anche le terre base del menu del mazzo).", () -> {
             PortalActor portal = findRoomPortal();
             if (portal != null)
                 mob.setPosition(portal.getX(), portal.getY()); //the challenger waits at the gate
-            cronacheWaitingMob = mob.getObjectId(); //waits until the deck is big enough (or the player walks up to it)
+            cronacheWaitingMob = mob.getObjectId(); //waits until the deck is big enough
         });
-        dialog.getContentTable().add(L).width(250f);
-        dialog.getButtonTable().add(fight).width(240f);
-        dialog.getButtonTable().row();
-        dialog.getButtonTable().add(fix).width(240f);
-        dialog.setKeepWithinStage(true);
-        showDialog();
         return true;
     }
 
