@@ -39,15 +39,16 @@ jobs:
           ln -sfn ../forge-gui/res forge-gui-desktop/res
           mkdir -p ~/.forge/preferences
           printf 'UI_LANGUAGE=en-US\nCRONACHE_ITALIAN_SET=true\nCRONACHE_GRID_SET=true\n' > ~/.forge/preferences/forge.preferences
-          TOP=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/top
-          OLD=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/sala
+          SD=$GITHUB_WORKSPACE/simdecks; mkdir -p $SD
+          cp forge-gui/res/adventure/Cronache_del_Velo/decks/top/*.dck $SD/
+          for n in 091 092 093 094 095 096 097 098 099 100; do cp forge-gui/res/adventure/Cronache_del_Velo/decks/sala/sfida_$n.dck $SD/old_$n.dck; done
           mkdir -p $GITHUB_WORKSPACE/simlogs
           : > pairs.txt
-          for n in 091 092 093 094 095 096 097 098 099 100; do echo "$TOP/top_$n.dck $OLD/sfida_$n.dck top${n}_vs_old" >> pairs.txt; done
-          for n in 091 095 097 099; do echo "$TOP/top_100.dck $TOP/top_$n.dck legacy_vs_top$n" >> pairs.txt; done
-          for p in "091 099" "092 097" "093 096" "094 098" "095 099"; do set -- $p; echo "$TOP/top_$1.dck $TOP/top_$2.dck top$1_vs_top$2" >> pairs.txt; done
+          for n in 091 092 093 094 095 096 097 098 099 100; do echo "top_$n.dck old_$n.dck top${n}_vs_old" >> pairs.txt; done
+          for n in 091 095 097 099; do echo "top_100.dck top_$n.dck legacy_vs_top$n" >> pairs.txt; done
+          for p in "091 099" "092 097" "093 096" "094 098" "095 099"; do set -- $p; echo "top_$1.dck top_$2.dck top$1_vs_top$2" >> pairs.txt; done
           cd forge-gui-desktop
-          cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g -Djava.awt.headless=true -jar '"$JAR"' sim -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
+          cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g -Djava.awt.headless=true -jar '"$JAR"' sim -D '"$SD"' -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
           cd $GITHUB_WORKSPACE
           echo "## Results" > summary.md
           for f in simlogs/*.log; do
