@@ -10,6 +10,9 @@ on:
       games:
         description: 'Games per matchup'
         default: '4'
+      pairs:
+        description: 'Optional matchups "deckA deckB name;..." (file names in decks/top, old_NNN for the replaced decks)'
+        default: ''
 
 permissions:
   contents: write
@@ -36,6 +39,7 @@ jobs:
       - name: Run simulations
         env:
           GAMES: ${{ github.event.inputs.games }}
+          PAIRS: ${{ github.event.inputs.pairs }}
         run: |
           set +e
           JAR=$(ls $GITHUB_WORKSPACE/forge-gui-desktop/target/*jar-with-dependencies.jar | head -1)
@@ -50,6 +54,8 @@ jobs:
           for n in 091 092 093 094 095 096 097 098 099 100; do echo "top_$n.dck old_$n.dck top${n}_vs_old" >> pairs.txt; done
           for n in 091 095 097 099; do echo "top_100.dck top_$n.dck legacy_vs_top$n" >> pairs.txt; done
           for p in "091 099" "092 097" "093 096" "094 098" "095 099"; do set -- $p; echo "top_$1.dck top_$2.dck top$1_vs_top$2" >> pairs.txt; done
+          if [ -n "$PAIRS" ]; then echo "$PAIRS" | tr ';' '\n' | sed '/^\s*$/d' > pairs.txt; fi
+          cat pairs.txt
           cd forge-gui-desktop
           cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g -Djava.awt.headless=true -jar '"$JAR"' sim -D '"$SD"' -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
           cd $GITHUB_WORKSPACE
