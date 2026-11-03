@@ -777,6 +777,46 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
         return drawable;
     }
 
+    private float evictionCheck = 0f;
+
+    /**
+     * iOS keeps only a small number of card textures resident: when other screens (zoom, deck grid, shop) load
+     * more cards, the texture of a card still shown here can be unloaded and the card draws black until tapped.
+     * Reload it as soon as that happens.
+     */
+    private void reloadIfEvicted(float delta) {
+        if (!GuiBase.isIOS() || reward == null || !Reward.Type.Card.equals(reward.type) || image == null || image == T)
+            return;
+        evictionCheck += delta;
+        if (evictionCheck < 0.2f)
+            return;
+        evictionCheck = 0f;
+        if (image.getTextureObjectHandle() != 0)
+            return;
+        try {
+            PaperCard card = ImageUtil.getPaperCardFromImageKey(reward.getCard().getImageKey(false));
+            File f = card == null ? null : ImageKeys.getImageFile(card.getCardImageKey());
+            if (f == null)
+                return;
+            String path = f.getPath();
+            if (!Forge.getAssets().manager().isLoaded(path, Texture.class)) {
+                if (!Forge.getAssets().manager().contains(path))
+                    Forge.getAssets().manager().load(path, Texture.class, ImageCache.cardTextureParameter(path));
+                Forge.getAssets().manager().finishLoadingAsset(path);
+            }
+            Texture t = Forge.getAssets().manager().get(path, Texture.class, false);
+            if (t != null && t.getTextureObjectHandle() != 0) {
+                image = t;
+                ImageCache.getInstance().updateSynqCount(f, 1);
+                if (toolTipImage != null && tooltip != null) {
+                    toolTipImage.remove();
+                    toolTipImage = new RewardImage(processDrawable(image));
+                    tooltip.setActor(new ComplexTooltip(toolTipImage));
+                }
+            }
+        } catch (Exception ignored) { }
+    }
+
     private void setCardImage(Texture img) {
         if (img == null)
             return;
@@ -1070,6 +1110,7 @@ public class RewardActor extends Actor implements Disposable, ImageFetcher.Callb
     @Override
     public void act(float delta) {
         super.act(delta);
+        reloadIfEvicted(delta);
         if (tooltip != null && !hover && tooltip.getContainer() != null && tooltip.getContainer().hasParent())
             hideTooltip(tooltip);
         if (Forge.getAssets() != null && Forge.getAssets().manager() != null) {
