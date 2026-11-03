@@ -1,34 +1,33 @@
 [metadata]
-Name=Legacy - Dimir Tempo
+Name=Legacy - Boros Energy
 [Main]
-4 Brainstorm
-4 Ponder
-4 Force of Will
-3 Daze
-4 Orcish Bowmasters
-4 Tamiyo, Inquisitive Student
-3 Murktide Regent
-2 Barrowgoyf
-2 Delver of Secrets
-2 Thoughtseize
-3 Fatal Push
-1 Snuff Out
-2 Counterspell
-1 Kaito, Bane of Nightmares
-2 Consider
-4 Wasteland
-4 Polluted Delta
-3 Flooded Strand
-2 Misty Rainforest
-2 Underground Sea
-3 Island
-1 Undercity Sewers
+4 Guide of Souls
+4 Ocelot Pride
+4 Ajani, Nacatl Pariah
+4 Voice of Victory
+2 Seasoned Pyromancer
+4 Phlage, Titan of Fire's Fury
+4 Galvanic Discharge
+4 Lightning Bolt
+4 Swords to Plowshares
+2 Price of Progress
+2 Static Prison
+2 Fable of the Mirror-Breaker
+3 Wasteland
+4 Arid Mesa
+2 Windswept Heath
+2 Bloodstained Mire
+2 Plateau
+2 Sacred Foundry
+2 Arena of Glory
+1 Elegant Parlor
+1 Mountain
+1 Plains
 [Sideboard]
-2 Force of Negation
-2 Sheoldred's Edict
+3 Pyroblast
 2 Surgical Extraction
-2 Flusterstorm
-2 Hydroblast
-1 Grafdigger's Cage
-2 Nihil Spellbomb
-2 Sheoldred, the Apocalypse
+2 Path to Exile
+2 Kor Firewalker
+2 Clarion Conqueror
+2 Containment Priest
+2 Rest in Peace
