@@ -1,26 +1,18 @@
 [metadata]
 Name=sfida_041
 [Main]
-1 Swamp
-8 Island
-4 Counterspell
-2 Campfire
-3 Murmuring Mystic
-4 Baleful Strix
-1 Seething Landscape
-2 Cast Down
-3 Plunder the Trollshaws
-3 Snuff Out
-3 Preordain
-1 Extract a Confession
-1 Ice Tunnel
-3 Spell Pierce
-2 Thorn of the Black Rose
-1 Dimir Aqueduct
-1 Bojuka Bog
-2 Brainstorm
-1 Suffocating Fumes
-3 Contaminated Aquifer
-3 Cut Down
-3 Lórien Revealed
+18 Swamp|4ED
+4 Animate Dead|LEB
+4 Black Knight|4ED
+3 Bog Rats|DRK
+3 Erg Raiders|ARN
+2 Frozen Shade|LEB
+2 Junún Efreet|ARN
+2 Kormus Bell|LEB
+3 Lord of the Pit|LEB
+3 Mishra's Factory|ATQ
+3 Nether Shadow|LEB
+2 Soul Net|LEB
+3 Terror|4ED
+3 The Hive|LEB
 [Sideboard]
