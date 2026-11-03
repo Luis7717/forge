@@ -11,6 +11,9 @@ on:
         description: 'Games per matchup'
         default: '4'
 
+permissions:
+  contents: write
+
 jobs:
   sim:
     runs-on: ubuntu-latest
@@ -65,6 +68,15 @@ jobs:
           done
           cat summary.md
           cat summary.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Publish logs (release sim-latest)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          zip -q -r simlogs.zip simlogs summary.md
+          gh release delete sim-latest --yes --cleanup-tag || true
+          gh release create sim-latest simlogs.zip --title "AI simulation logs" --notes "Log della simulazione IA" --latest=false --prerelease
 
       - uses: actions/upload-artifact@v4
         if: always()
