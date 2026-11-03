@@ -192,6 +192,7 @@ public class ForgePreferences extends AbstractPreferences<ForgePreferences.FPref
 
         UI_LANGUAGE("it-IT"),
         CRONACHE_ITALIAN_SET("false"), // personal build: switch an existing install to Italian once
+        CRONACHE_GRID_SET("false"), // personal build: adventure deck editor as a card grid once
 
         AUTO_UPDATE("none"),
         USE_SENTRY("false"), // this controls whether automated bug reporting is done or not

@@ -296,6 +296,18 @@ public final class FModel {
         CardPreferences.load();
         DeckPreferences.load();
         ItemManagerConfig.load();
+        // personal build (Cronache del Velo): show the adventure deck editor as a card grid once, later changes are respected
+        if (!getPreferences().getPrefBoolean(FPref.CRONACHE_GRID_SET)) {
+            ItemManagerConfig.ADVENTURE_EDITOR_POOL.setViewIndex(1);
+            ItemManagerConfig.ADVENTURE_EDITOR_POOL.setImageColumnCount(4);
+            ItemManagerConfig.ADVENTURE_STORE_POOL.setViewIndex(1);
+            ItemManagerConfig.ADVENTURE_STORE_POOL.setImageColumnCount(4);
+            ItemManagerConfig.ADVENTURE_SIDEBOARD.setViewIndex(1);
+            ItemManagerConfig.ADVENTURE_SIDEBOARD.setImageColumnCount(4);
+            ItemManagerConfig.save();
+            getPreferences().setPref(FPref.CRONACHE_GRID_SET, true);
+            getPreferences().save();
+        }
 
         // Preload AI profiles
         AiProfileUtil.loadAllProfiles(ForgeConstants.AI_PROFILE_DIR);

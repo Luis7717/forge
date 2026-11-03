@@ -1,0 +1,71 @@
+name: AI simulation (Cronache top decks)
+
+# Plays AI vs AI games with the decks of the last Cronache challenges (decks/top) to check that the
+# Forge AI can actually pilot them: every top deck against the deck it replaced, and the final Legacy
+# deck against some of the Modern ones. Monte Carlo off, as on the phone.
+
+on:
+  workflow_dispatch:
+    inputs:
+      games:
+        description: 'Games per matchup'
+        default: '4'
+
+jobs:
+  sim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build desktop jar
+        run: |
+          mvn -B -ntp -U package -pl forge-gui-desktop -am -Dmaven.test.skip=true -Dlaunch4j.skip=true
+          ls forge-gui-desktop/target/*jar-with-dependencies.jar
+
+      - name: Run simulations
+        env:
+          GAMES: ${{ github.event.inputs.games }}
+        run: |
+          set +e
+          JAR=$(ls $GITHUB_WORKSPACE/forge-gui-desktop/target/*jar-with-dependencies.jar | head -1)
+          ln -sfn ../forge-gui/res forge-gui-desktop/res
+          TOP=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/top
+          OLD=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/sala
+          mkdir -p $GITHUB_WORKSPACE/simlogs
+          : > pairs.txt
+          for n in 091 092 093 094 095 096 097 098 099 100; do echo "$TOP/top_$n.dck $OLD/sfida_$n.dck top${n}_vs_old" >> pairs.txt; done
+          for n in 091 095 097 099; do echo "$TOP/top_100.dck $TOP/top_$n.dck legacy_vs_top$n" >> pairs.txt; done
+          for p in "091 099" "092 097" "093 096" "094 098" "095 099"; do set -- $p; echo "$TOP/top_$1.dck $TOP/top_$2.dck top$1_vs_top$2" >> pairs.txt; done
+          cd forge-gui-desktop
+          cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g -Djava.awt.headless=true -jar '"$JAR"' sim -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
+          cd $GITHUB_WORKSPACE
+          echo "## Results" > summary.md
+          for f in simlogs/*.log; do
+            name=$(basename $f .log)
+            echo "### $name" >> summary.md
+            grep -E "^Ai\(" $f | head -1 >> summary.md
+            echo '```' >> summary.md
+            grep -o "Ai([12])-.* has won" $f | sed 's/^.*ms\. //' | sort | uniq -c >> summary.md
+            echo "draws/timeouts: $(grep -c -E 'ended in a Draw|Stopping slow match' $f)" >> summary.md
+            echo "exceptions: $(grep -c -E 'Exception|Error:' $f)" >> summary.md
+            grep -m 3 -E 'Exception|Error:' $f >> summary.md
+            echo '```' >> summary.md
+          done
+          cat summary.md
+          cat summary.md >> $GITHUB_STEP_SUMMARY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: simlogs
+          path: |
+            simlogs/
+            summary.md

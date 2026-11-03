@@ -104,7 +104,7 @@
     {
       "type": "TextButton",
       "name": "inventory",
-      "text": "[%120][+Item]",
+      "text": "[%120][+Booster]",
       "binding": "Inventory",
       "width": 45,
       "height": 25,
