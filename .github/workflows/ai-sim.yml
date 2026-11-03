@@ -37,6 +37,8 @@ jobs:
           set +e
           JAR=$(ls $GITHUB_WORKSPACE/forge-gui-desktop/target/*jar-with-dependencies.jar | head -1)
           ln -sfn ../forge-gui/res forge-gui-desktop/res
+          mkdir -p ~/.forge/preferences
+          printf 'UI_LANGUAGE=en-US\nCRONACHE_ITALIAN_SET=true\nCRONACHE_GRID_SET=true\n' > ~/.forge/preferences/forge.preferences
           TOP=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/top
           OLD=$GITHUB_WORKSPACE/forge-gui/res/adventure/Cronache_del_Velo/decks/sala
           mkdir -p $GITHUB_WORKSPACE/simlogs
@@ -58,6 +60,7 @@ jobs:
             echo "exceptions: $(grep -c -E 'Exception|Error:' $f)" >> summary.md
             grep -m 3 -E 'Exception|Error:' $f >> summary.md
             echo '```' >> summary.md
+            echo "==== $name (tail)"; tail -n 25 $f
           done
           cat summary.md
           cat summary.md >> $GITHUB_STEP_SUMMARY
