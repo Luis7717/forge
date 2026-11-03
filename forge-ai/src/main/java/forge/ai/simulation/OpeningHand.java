@@ -108,7 +108,7 @@ public final class OpeningHand {
         int cheapSources = 0;
         for (final Card c : kept) {
             if (c.isLand()) {
-                if (CardPredicates.LANDS_PRODUCING_MANA.test(c)) {
+                if (isManaLand(c)) {
                     lands++;
                 }
             } else if (isCheapManaSource(c)) {
@@ -162,7 +162,7 @@ public final class OpeningHand {
             final CardCollectionView lib = ai.getCardsIn(ZoneType.Library);
             int l = 0;
             for (final Card c : lib) {
-                if (CardPredicates.LANDS_PRODUCING_MANA.test(c)) {
+                if (isManaLand(c)) {
                     l++;
                     final byte colors = producedColors(c);
                     for (int i = 0; i < MagicColor.WUBRG.length; i++) {
@@ -186,8 +186,33 @@ public final class OpeningHand {
         }
     }
 
+    /** A land that makes mana, or a fetch land that puts one onto the battlefield (Scalding Tarn, Evolving Wilds...). */
+    static boolean isManaLand(final Card c) {
+        return CardPredicates.LANDS_PRODUCING_MANA.test(c) || c.isLand() && fetchesLand(c);
+    }
+
+    /** The colours a fetch land can find, from the land types it searches for. */
+    private static byte fetchedColors(final Card land) {
+        byte colors = 0;
+        for (final SpellAbility sa : land.getSpellAbilities()) {
+            if (sa.getApi() != ApiType.ChangeZone || !"Library".equals(sa.getParam("Origin")))
+                continue;
+            final String t = String.valueOf(sa.getParam("ChangeType"));
+            if (t.contains("Plains")) colors |= MagicColor.WHITE;
+            if (t.contains("Island")) colors |= MagicColor.BLUE;
+            if (t.contains("Swamp")) colors |= MagicColor.BLACK;
+            if (t.contains("Mountain")) colors |= MagicColor.RED;
+            if (t.contains("Forest")) colors |= MagicColor.GREEN;
+            if (colors == 0) colors = MagicColor.ALL_COLORS; //"Land.Basic" and the like
+        }
+        return colors;
+    }
+
     static byte producedColors(final Card land) {
         byte colors = 0;
+        if (!CardPredicates.LANDS_PRODUCING_MANA.test(land) && land.isLand() && fetchesLand(land)) {
+            return fetchedColors(land);
+        }
         for (final SpellAbility sa : land.getManaAbilities()) {
             for (final byte col : MagicColor.WUBRG) {
                 if (sa.canProduce(MagicColor.toLongString(col))) {
@@ -209,7 +234,7 @@ public final class OpeningHand {
         final List<Card> spells = new ArrayList<>();
         for (final Card c : hand) {
             if (c.isLand()) {
-                if (CardPredicates.LANDS_PRODUCING_MANA.test(c)) {
+                if (isManaLand(c)) {
                     lands++;
                     colors |= producedColors(c);
                 }
