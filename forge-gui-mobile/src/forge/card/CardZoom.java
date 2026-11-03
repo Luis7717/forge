@@ -56,6 +56,10 @@ public class CardZoom extends FOverlay {
     private float totalZoomAmount;
     private static ActivateHandler activateHandler;
     private static String currentActivateAction;
+    //buttons under the zoomed card (deck editor: add/remove/favorite), built from the list's context menu
+    private static List<forge.menu.FMenuItem> zoomActions;
+    private static int zoomActionsIndex = -1;
+    private static Rectangle[] zoomActionRects = new Rectangle[0];
     private static Rectangle flipIconBounds;
     private static Rectangle mutateIconBounds;
     private static boolean showAltState;
@@ -189,6 +193,9 @@ public class CardZoom extends FOverlay {
         if (currentIndex0 < 0 || items.size() <= currentIndex0) { return; }
         activateHandler = activateHandler0;
         currentIndex = currentIndex0;
+        zoomActions = null;
+        zoomActionsIndex = -1;
+        zoomActionRects = new Rectangle[0];
         initialIndex = currentIndex0;
         viewCache.clear();
         scrollPos = targetPos = currentIndex0;
@@ -801,6 +808,18 @@ public class CardZoom extends FOverlay {
     @Override
     public boolean tap(float x, float y, int count) {
         if (closing) return true;
+        if (zoomActions != null) {
+            for (int i = 0; i < zoomActionRects.length && i < zoomActions.size(); i++) {
+                if (zoomActionRects[i] != null && zoomActionRects[i].contains(x, y)) {
+                    forge.menu.FMenuItem item = zoomActions.get(i);
+                    if (activateHandler != null)
+                        activateHandler.setSelectedIndex(currentIndex);
+                    cardZoom.hide();
+                    item.tap(0, 0, 1); //runs the same action as the long-press menu entry
+                    return true;
+                }
+            }
+        }
         if (btnHit[BTN_ROTATE].contains(x, y)) {
             toggleRotate();
             return true;
@@ -987,11 +1006,19 @@ public class CardZoom extends FOverlay {
         final float baseAlpha = g.getfloatAlphaComposite();
         g.setAlphaComposite(baseAlpha * ease);
 
+        if (activateHandler != null && zoomActionsIndex != currentIndex && !dragging) {
+            zoomActionsIndex = currentIndex;
+            zoomActions = activateHandler.getZoomActions(currentIndex);
+        }
+        final int nActions = zoomActions == null ? 0 : zoomActions.size();
+        final float actionRowH = forge.menu.FMenuItem.HEIGHT;
+        final int actionRows = (nActions + 1) / 2;
+        final float actionsH = actionRows * actionRowH;
         final float btnD = rotateBtnSize(messageHeight);
         final float pad = Utils.scale(6);
-        final float cardCy = h / 2 + (1f - ease) * h * 0.04f; // rises into place when opening, sinks when closing
-        final float btnCy = h - messageHeight - pad - btnD / 2;
-        final float maxCardHeight = h - aspectRatioMultiplier * messageHeight;
+        final float cardCy = (h - actionsH) / 2 + (1f - ease) * h * 0.04f; // rises into place when opening, sinks when closing
+        final float btnCy = h - messageHeight - actionsH - pad - btnD / 2;
+        final float maxCardHeight = h - aspectRatioMultiplier * messageHeight - actionsH;
         final float areaH = Forge.isLandscapeMode() ? maxCardHeight * LANDSCAPE_CARD_SCALE : maxCardHeight;
 
         float cardWidth, cardHeight, step;
@@ -1032,6 +1059,25 @@ public class CardZoom extends FOverlay {
             g.fillRect(FDialog.getMsgBackColor(), 0, 0, w, messageHeight);
             g.drawText(Forge.getLocalizer().getMessage("lblSwipeUpTo").replace("%s", currentActivateAction), FDialog.MSG_FONT, FDialog.getMsgForeColor(), 0, 0, w, messageHeight, false, Align.center, true);
         }
+        if (nActions > 0) {
+            if (zoomActionRects.length != nActions)
+                zoomActionRects = new Rectangle[nActions];
+            float top = h - messageHeight - actionsH;
+            float gap = Utils.scale(3);
+            for (int i = 0; i < nActions; i++) {
+                int row = i / 2, col = i % 2;
+                boolean alone = col == 0 && i == nActions - 1;
+                float bw = alone ? w - 2 * gap : (w - 3 * gap) / 2;
+                float bx = alone ? gap : gap + col * (bw + gap);
+                float by = top + row * actionRowH + gap / 2;
+                float bh = actionRowH - gap;
+                if (zoomActionRects[i] == null) zoomActionRects[i] = new Rectangle();
+                zoomActionRects[i].set(bx, by, bw, bh);
+                g.fillRect(FDialog.getMsgBackColor(), bx, by, bw, bh);
+                g.drawRect(Utils.scale(1), FDialog.getMsgForeColor(), bx, by, bw, bh);
+                g.drawText(zoomActions.get(i).getText(), FDialog.MSG_FONT, FDialog.getMsgForeColor(), bx, by, bw, bh, true, Align.center, true);
+            }
+        }
         g.fillRect(FDialog.getMsgBackColor(), 0, h - messageHeight, w, messageHeight);
         g.drawText(zoomMode ? Forge.getLocalizer().getMessage("lblSwipeDownDetailView") : Forge.getLocalizer().getMessage("lblSwipeDownPictureView"), FDialog.MSG_FONT, FDialog.getMsgForeColor(), 0, h - messageHeight, w, messageHeight, false, Align.center, true);
 
@@ -1053,6 +1099,9 @@ public class CardZoom extends FOverlay {
 
     public interface ActivateHandler {
         String getActivateAction(int index);
+
+        /** Buttons shown under the zoomed card (null for none). */
+        default List<forge.menu.FMenuItem> getZoomActions(int index) { return null; }
 
         void setSelectedIndex(int index);
 

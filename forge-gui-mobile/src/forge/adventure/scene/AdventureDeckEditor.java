@@ -1122,6 +1122,23 @@ public class AdventureDeckEditor extends FDeckEditor {
         }
 
         @Override
+        protected void buildMenu(final FDropDownMenu menu, final PaperCard card) {
+            super.buildMenu(menu, card);
+            if (card == null)
+                return;
+            //favorites from inside the deck too (same list as the collection page)
+            boolean fav = Current.player().favoriteCards.contains(card);
+            menu.addItem(new FMenuItem(Forge.getLocalizer().getMessage(fav ? "lblRemoveFavorites" : "lblAddFavorites"),
+                    fav ? (Forge.hdbuttons ? FSkinImage.HDSTAR_OUTLINE : FSkinImage.STAR_OUTLINE) : (Forge.hdbuttons ? FSkinImage.HDSTAR_FILLED : FSkinImage.STAR_FILLED),
+                    e -> {
+                        if (fav)
+                            Current.player().favoriteCards.remove(card);
+                        else
+                            Current.player().favoriteCards.add(card);
+                    }));
+        }
+
+        @Override
         public void drawBackground(Graphics g) {
             g.fillRect(FSkinColor.get(FSkinColor.Colors.ADV_CLR_THEME).alphaColor(0.5f), 0, 0, getWidth(), getHeight());
         }

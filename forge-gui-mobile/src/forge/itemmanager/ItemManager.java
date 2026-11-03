@@ -1215,6 +1215,31 @@ public abstract class ItemManager<T extends InventoryItem> extends FContainer im
         showMenu(true);
     }
 
+    /** The long-press menu entries, shown as buttons under the zoomed card. */
+    @Override
+    public List<FMenuItem> getZoomActions(int index) {
+        if (contextMenuBuilder == null)
+            return null;
+        setSelectedIndex(index);
+        T item = getSelectedItem();
+        if (item == null)
+            return null;
+        ZoomActionsMenu menu = new ZoomActionsMenu();
+        contextMenuBuilder.buildMenu(menu, item);
+        List<FMenuItem> result = menu.collected();
+        return result.isEmpty() ? null : result;
+    }
+
+    private static class ZoomActionsMenu extends forge.menu.FDropDownMenu {
+        @Override
+        protected void buildMenu() {
+        }
+
+        List<FMenuItem> collected() {
+            return new ArrayList<>(items);
+        }
+    }
+
     public float getPileByWidth() {
         if (filters.get().isEmpty()) {
             return 0f;
