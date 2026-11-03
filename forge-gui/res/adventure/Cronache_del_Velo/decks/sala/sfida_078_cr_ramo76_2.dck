@@ -1,9 +1,6 @@
 [metadata]
 Name=sfida_078_cr_ramo76_2
 [Main]
-3 Forest
-3 Mountain
-3 Plains
 2 Acidic Slime
 2 Ajani's Welcome
 1 Blessed Sanctuary
@@ -11,7 +8,7 @@ Name=sfida_078_cr_ramo76_2
 1 Bramble Sovereign
 1 Cathars' Crusade
 1 Champion of Lambholt
-2 Clifftop Retreat
+3 Clifftop Retreat
 1 Cloudstone Curio
 2 Durable Handicraft
 2 Eidolon of Blossoms
@@ -20,16 +17,19 @@ Name=sfida_078_cr_ramo76_2
 2 Flicker of Fate
 2 Flickerform
 2 Flickerwisp
+4 Forest
 2 Hammerheim Deadeye
 1 Inferno Titan
 2 Juniper Order Ranger
 2 Knight of Autumn
 2 Mogg War Marshal
+3 Mountain
+3 Plains
 1 Primeval Titan
 1 Purphoros, God of the Forge
-2 Rootbound Crag
-2 Sunpetal Grove
-2 Terramorphic Expanse
+3 Rootbound Crag
+3 Sunpetal Grove
+3 Terramorphic Expanse
 1 Titan of Industry
 1 Trostani, Selesnya's Voice
 1 Warstorm Surge

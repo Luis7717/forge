@@ -5,11 +5,10 @@ Name=sfida_020
 1 Forest|RTR|3
 1 Forest|RTR|4
 1 Forest|RTR|5
-3 Forest|THB|2
+4 Forest|THB|2
 1 Forest|THB|3
-1 Plains|RTR|2
-2 Snow-Covered Forest|CSP|1
-2 Snow-Covered Plains|CSP|1
+3 Snow-Covered Forest|CSP|1
+3 Snow-Covered Plains|CSP|1
 1 Alive // Well|DGM|1
 1 Avenging Arrow|RTR|1
 1 Boreal Centaur|CSP|1
@@ -37,4 +36,7 @@ Name=sfida_020
 1 Savage Surge|THS|1
 1 Selesnya Guildgate|DGM|1
 1 Selesnya Guildgate|GRN|1
+1 Selesnya Guildgate|GRN|2
+1 Selesnya Guildgate|RTR|1
+1 Seton's Scout|TOR|1
 [Sideboard]

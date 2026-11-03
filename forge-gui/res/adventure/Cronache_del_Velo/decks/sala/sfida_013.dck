@@ -1,7 +1,7 @@
 [metadata]
 Name=sfida_013
 [Main]
-8 Plains|AKR|2
+9 Plains|AKR|2
 3 Always Watching|SOI|1
 3 Camel|ARN|1
 3 Desert|V12|1
@@ -11,8 +11,8 @@ Name=sfida_013
 3 Honor of the Pure|M12|1
 2 Scour the Desert|MH2|1
 3 Shefet Dunes|AKR|1
-2 Solitary Camel|AKR|1
-2 Steel Dromedary|MH2|1
-2 Supply Caravan|AKH|1
-2 Tasseled Dromedary|KLD|1
+3 Solitary Camel|AKR|1
+3 Steel Dromedary|MH2|1
+3 Supply Caravan|AKH|1
+3 Tasseled Dromedary|KLD|1
 [Sideboard]

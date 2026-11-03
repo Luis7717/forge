@@ -1,13 +1,13 @@
 [metadata]
 Name=sfida_032
 [Main]
-5 Forest|SHM|1
-4 Mountain|SHM|1
-1 Ardoz, Cobbler of War|J22|1
+6 Forest|SHM|1
+5 Mountain|SHM|1
+2 Ardoz, Cobbler of War|J22|1
 3 Boartusk Liege|2X2|1
-1 Boggart Ram-Gang|PD2|1
+2 Boggart Ram-Gang|PD2|1
 3 Cinder Glade|CMM|1
-1 Game Trail|NEC|1
+2 Game Trail|NEC|1
 1 Goblin Anarchomancer|MH2|1
 1 Goblin Grenade|J22|1
 2 Grumgully, the Generous|NEC|1
@@ -15,13 +15,13 @@ Name=sfida_032
 2 Jund Hackblade|ARB|1
 3 Mountain Valley|DMC|1
 3 Picnic Ruiner|WOE|1
-2 Rootbound Crag|C16|1
-2 Rush the Room|LTR|1
+3 Rootbound Crag|C16|1
+3 Rush the Room|LTR|1
 1 Scuzzback Marauders|UMA|1
-2 Scuzzback Scrapper|SHM|1
+3 Scuzzback Scrapper|SHM|1
 1 Survey the Wreckage|RTR|1
-2 Tarfire|EVG|1
+3 Tarfire|EVG|1
 1 Tattermunge Duo|SHM|1
-2 Tattermunge Maniac|SHM|1
+3 Tattermunge Maniac|SHM|1
 1 Vexing Shusher|2XM|1
 [Sideboard]

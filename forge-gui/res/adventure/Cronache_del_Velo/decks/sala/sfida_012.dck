@@ -1,7 +1,7 @@
 [metadata]
 Name=sfida_012
 [Main]
-2 Forest
+3 Forest
 3 Mountain
 4 Plains
 1 Ahn-Crop Champion
@@ -17,13 +17,15 @@ Name=sfida_012
 1 Glory-Bound Initiate
 1 Hapatra's Mark
 1 Sixth Sense
-2 Stinging Shot
-2 Blazing Volley
+3 Stinging Shot
+3 Blazing Volley
 2 Bloodlust Inciter
 2 Djeru's Resolve
 1 Pyramid of the Pantheon
 2 Honed Khopesh
 2 Traveler's Amulet
 1 Cascading Cataracts
+1 Scattered Groves
+1 Sheltered Thicket
 2 Stone Quarry
 [Sideboard]

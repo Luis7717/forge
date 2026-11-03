@@ -2,7 +2,7 @@
 Name=sfida_048
 [Main]
 6 Plains|M15|3
-4 Swamp|M15|3
+5 Swamp|M15|3
 1 Archangel of Wrath|DMU|1
 2 Benalish Sleeper|DMU|1
 1 Caves of Koilos|DMU|1
@@ -27,11 +27,11 @@ Name=sfida_048
 1 Revitalize|M21|1
 1 Selfless Glyphweaver|STX|1
 1 Seraph of New Capenna|MOM|1
-1 Shineshadow Snarl|STX|1
+2 Shineshadow Snarl|STX|1
 1 Silent Clearing|MH1|1
-1 Sunscourge Champion|HOU|1
+2 Sunscourge Champion|HOU|1
 1 Suture Spirit|EVE|1
-1 Tainted Field|C21|1
+2 Tainted Field|C21|1
 1 Terramorphic Expanse|CM2|1
-1 Twilight Panther|RNA|1
+2 Twilight Panther|RNA|1
 [Sideboard]

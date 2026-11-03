@@ -1,9 +1,8 @@
 [metadata]
 Name=sfida_055_cr_ramo50_1
 [Main]
-20 Mountain|RAV|1
 1 Chandra Ablaze|ZEN|1
-3 Chandra's Embercat|M20|1
+4 Chandra's Embercat|M20|1
 2 Chandra's Fury|ORI|1
 2 Chandra's Incinerator|M21|1
 2 Chandra's Outburst|DOM|1
@@ -15,9 +14,10 @@ Name=sfida_055_cr_ramo50_1
 1 Chandra, Pyromaster|AKR|1
 2 Chandra, Torch of Defiance|KLD|1
 2 Claim the Firstborn|ELD|1
-3 Geistflame Reservoir|MID|1
-1 Lava Coil|GRN|1
-1 Lightning Bolt|M10|1
-1 Shock|10E|1
-1 Skewer the Critics|RNA|1
+4 Geistflame Reservoir|MID|1
+2 Lava Coil|GRN|1
+2 Lightning Bolt|M10|1
+24 Mountain|RAV|1
+2 Shock|10E|1
+2 Skewer the Critics|RNA|1
 [Sideboard]

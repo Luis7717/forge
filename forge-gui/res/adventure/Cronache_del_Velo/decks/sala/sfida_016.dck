@@ -1,7 +1,7 @@
 [metadata]
 Name=sfida_016
 [Main]
-1 Forest|GRN|1
+2 Forest|GRN|1
 1 Forest|RIX|1
 1 Forest|THS|3
 1 Forest|XLN|3
@@ -11,6 +11,7 @@ Name=sfida_016
 1 Swamp|THS|3
 2 Swamp|XLN|1
 1 Swamp|XLN|2
+1 Swamp|XLN|4
 1 Archetype of Finality|BNG|1
 2 Aspect of Gorgon|JOU|1
 1 Deadeye Tracker|XLN|1
@@ -34,5 +35,8 @@ Name=sfida_016
 1 Pirate's Cutlass|XLN|1
 3 Pitiless Gorgon|GRN|1
 1 Reaper of the Wilds|THS|1
+1 Temple of Malady|JOU|1
+1 Unknown Shores|XLN|1
+1 Visara the Dreadful|EMA|1
 2 Vraska's Finisher|WAR|1
 [Sideboard]

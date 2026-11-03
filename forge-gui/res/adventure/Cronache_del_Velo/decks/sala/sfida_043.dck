@@ -1,14 +1,14 @@
 [metadata]
 Name=sfida_043
 [Main]
-3 Island|2XM|1
+4 Island|2XM|1
 7 Island|DOM|3
 3 Island|JMP|6
-3 Island|M12|3
+4 Island|M12|3
 3 Island|VOW|3
 2 Island|ZNR|3
 1 Aquatic Incursion|RIX|1
-1 Biolume Egg|VOW|1
+2 Biolume Egg|VOW|1
 1 Caller of Gales|PLST|1
 1 Charix, the Raging Isle|ZNR|1
 1 Consuming Tide|VOW|1
@@ -34,4 +34,6 @@ Name=sfida_043
 3 Serpentine Ambush|VOW|1
 1 Slinn Voda, the Rising Deep|CMR|1
 1 Spawning Kraken|C21|1
+1 Triton Shorestalker|ZNC|1
+1 Whelming Wave|CMR|1
 [Sideboard]

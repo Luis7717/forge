@@ -1,10 +1,10 @@
 [metadata]
 Name=sfida_023
 [Main]
-11 Forest|GNT|1
-4 Forest|GNT|2
+12 Forest|GNT|1
+5 Forest|GNT|2
 3 Ambush Viper|CMR|1
-2 Blight Mamba|ONC|1
+3 Blight Mamba|ONC|1
 2 Death-Hood Cobra|MM3|1
 3 Giant Growth|BRO|1
 2 Inkmoth Nexus|WMC|1
@@ -13,7 +13,7 @@ Name=sfida_023
 3 Moss Viper|THB|1
 3 Overrun|TPR|1
 2 Saryth, the Viper's Fang|MID|1
-1 The Seedcore|ONE|1
-1 Triumph of the Hordes|NPH|1
+2 The Seedcore|ONE|1
+2 Triumph of the Hordes|NPH|1
 2 Wasteland Viper|GK2|1
 [Sideboard]

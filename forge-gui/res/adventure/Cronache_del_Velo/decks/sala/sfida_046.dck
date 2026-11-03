@@ -2,10 +2,10 @@
 Name=sfida_046
 [Main]
 1 Island|SOI|1
-1 Island|SOI|2
+2 Island|SOI|2
 1 Island|SOI|3
 1 Plains|SOI|1
-3 Plains|SOI|2
+4 Plains|SOI|2
 6 Plains|SOI|3
 3 Adarkar Wastes|DMU|1
 2 Angel of Mercy|JMP|1
@@ -23,8 +23,8 @@ Name=sfida_046
 2 Invasion of Xerex|MOM|1
 2 Invocation of Saint Traft|SOI|1
 2 Iridescent Angel|V15|1
-1 Migratory Route|KHC|1
-1 Port Town|WHO|4
+2 Migratory Route|KHC|1
+2 Port Town|WHO|4
 2 Revitalize|M19|1
-1 Seraph of Dawn|J21|1
+2 Seraph of Dawn|J21|1
 [Sideboard]

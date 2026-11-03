@@ -1,23 +1,23 @@
 [metadata]
 Name=sfida_039
 [Main]
-5 Forest|DMU|1
-2 Forest|DMU|2
+6 Forest|DMU|1
+3 Forest|DMU|2
 5 Forest|DMU|3
-3 Forest|DMU|4
-2 Argothian Opportunist|BRO|1
-3 Boulderbranch Golem|BRO|1
-3 Broken Wings|DMU|1
-3 Cradle Clearcutter|BRO|1
+4 Forest|DMU|4
+3 Argothian Opportunist|BRO|1
+4 Boulderbranch Golem|BRO|1
+4 Broken Wings|DMU|1
+4 Cradle Clearcutter|BRO|1
 1 Defense of the Heart|ULG|1
 2 Iron-Craw Crusher|BRO|1
 1 Portal to Phyrexia|BRO|1
 2 Repopulate|ULG|1
 1 Rofellos, Llanowar Emissary|UDS|1
 3 Rootwire Amalgam|BRO|1
-1 Rust Goliath|BRO|1
-1 Sarinth Steelseeker|BRO|1
+2 Rust Goliath|BRO|1
+2 Sarinth Steelseeker|BRO|1
 3 Stone Retrieval Unit|BRO|1
 3 Teething Wurmlet|BRO|1
-1 Woodcaller Automaton|BRO|1
+2 Woodcaller Automaton|BRO|1
 [Sideboard]

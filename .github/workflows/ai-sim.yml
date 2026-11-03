@@ -48,7 +48,7 @@ jobs:
           printf 'UI_LANGUAGE=en-US\nCRONACHE_ITALIAN_SET=true\nCRONACHE_GRID_SET=true\n' > ~/.forge/preferences/forge.preferences
           SD=$GITHUB_WORKSPACE/simdecks; mkdir -p $SD
           cp forge-gui/res/adventure/Cronache_del_Velo/decks/top/*.dck $SD/
-          for n in 091 092 093 094 095 096 097 098 099 100; do cp forge-gui/res/adventure/Cronache_del_Velo/decks/sala/sfida_$n.dck $SD/old_$n.dck; done
+          for f in forge-gui/res/adventure/Cronache_del_Velo/decks/sala/sfida_???.dck; do n=$(basename $f .dck); cp $f $SD/old_${n#sfida_}.dck; done
           mkdir -p $GITHUB_WORKSPACE/simlogs
           : > pairs.txt
           for n in 091 092 093 094 095 096 097 098 099 100; do echo "top_$n.dck old_$n.dck top${n}_vs_old" >> pairs.txt; done

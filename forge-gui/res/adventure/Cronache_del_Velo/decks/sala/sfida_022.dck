@@ -1,7 +1,7 @@
 [metadata]
 Name=sfida_022
 [Main]
-6 Island|ISD|1
+7 Island|ISD|1
 7 Mountain|KLD|1
 2 Buccaneer's Bravado|RIX|1
 2 Coastal Piracy|MMQ|1
@@ -11,10 +11,10 @@ Name=sfida_022
 2 Fiery Cannonade|XLN|1
 2 Glint-Horn Buccaneer|M20|1
 3 Headstrong Brute|XLN|1
-1 Marauding Looter|XLN|1
-1 Pirate's Cutlass|XLN|1
-1 Pirate's Pillage|RIX|1
-1 Pirate's Prize|XLN|1
+2 Marauding Looter|XLN|1
+2 Pirate's Cutlass|XLN|1
+2 Pirate's Pillage|RIX|1
+2 Pirate's Prize|XLN|1
 3 Rigging Runner|XLN|1
 1 Rowdy Crew|XLN|1
 3 Shipwreck Looter|XLN|1

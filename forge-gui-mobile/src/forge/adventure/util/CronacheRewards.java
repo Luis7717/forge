@@ -182,16 +182,21 @@ public final class CronacheRewards {
         int n = currentChallenge();
         if (n <= 0)
             return defaultSize;
-        return 40 + 5 * ((n - 1) / 20);
+        return deckSize(n);
     }
 
-    /** Starting life of both players: 10 for challenges 1-20, then 13, 15, 18 and 20 (grows with the deck size). */
+    /** Deck size for both sides: 40 for challenges 1-10, 45 for 11-20, 50 for 21-30, 55 for 31-50, 60 from 51. */
+    public static int deckSize(int n) {
+        if (n <= 10) return 40;
+        if (n <= 20) return 45;
+        if (n <= 30) return 50;
+        if (n <= 50) return 55;
+        return 60;
+    }
+
+    /** Starting life of both players: 10 up to challenge 50, 20 from 51 (the top decks). */
     public static int duelLife(int n) {
-        if (n <= 20) return 10;
-        if (n <= 40) return 13;
-        if (n <= 60) return 15;
-        if (n <= 80) return 18;
-        return 20;
+        return n <= 50 ? 10 : 20;
     }
 
     public static int playerDuelLife(int defaultLife) {
@@ -203,10 +208,7 @@ public final class CronacheRewards {
     public static int enemyDuelLife(EnemyData enemy, int defaultLife) {
         if (!isActive() || enemy == null || enemy.name == null || !enemy.name.startsWith("Cronache") || currentChallenge() <= 0)
             return defaultLife;
-        int life = duelLife(currentChallenge());
-        if (enemy.boss) life += 3;          //bosses are a little tougher
-        if (isHunter(enemy)) life += 2;
-        return life;
+        return duelLife(currentChallenge()); //same as the player (special challenges add their own rules)
     }
 
     /** Price modifier of Tobia's cart, depending on how much he trusts the player. */
