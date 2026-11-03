@@ -290,6 +290,10 @@ public final class CronacheRewards {
         return true;
     }
 
+    private static String merchantVisit;
+    private static ShopData merchantData;
+    private static PointOfInterestChanges merchantChanges;
+
     /** Opens the travelling merchant shop with the given shop name (defined in the plane's shops.json). */
     public static boolean openMerchant(String shopName) {
         if (shopName == null || shopName.isEmpty())
@@ -302,13 +306,21 @@ public final class CronacheRewards {
             if (shopName.equals(n) || (n != null && n.startsWith(shopName + " #")))
                 options.add(shops.get(i));
         }
-        ShopData merchant = options.isEmpty() ? null : options.get(new java.util.Random().nextInt(options.size()));
-        if (merchant == null)
+        if (options.isEmpty())
             return false;
+        //one stock per visit: going back into the shop during the same visit shows the same cards (and what was
+        //bought stays sold); the next challenge brings a new stock
+        String visit = shopName + "|" + currentChallenge() + "|" + Current.player().getName();
+        if (!visit.equals(merchantVisit) || merchantChanges == null) {
+            long seed = new java.util.Random(System.nanoTime() ^ Double.doubleToLongBits(Math.random())).nextLong();
+            merchantVisit = visit;
+            merchantData = options.get((int) Math.floorMod(seed, (long) options.size()));
+            merchantChanges = new PointOfInterestChanges();
+            merchantChanges.setRotatingShopSeed(MERCHANT_OBJECT_ID, seed);
+        }
+        ShopData merchant = merchantData;
         openShop = shopName;
-        //fresh random stock at every visit (a derived seed made Tobia repeat the same cards)
-        PointOfInterestChanges changes = new PointOfInterestChanges();
-        changes.setRotatingShopSeed(MERCHANT_OBJECT_ID, new java.util.Random(System.nanoTime() ^ Double.doubleToLongBits(Math.random())).nextLong());
+        PointOfInterestChanges changes = merchantChanges;
         ShopActor actor = new ShopActor(MERCHANT_OBJECT_ID, merchant, changes);
         RewardScene.instance().loadRewards(actor.getRewardData(), RewardScene.Type.Shop, actor);
         Forge.switchScene(RewardScene.instance());
