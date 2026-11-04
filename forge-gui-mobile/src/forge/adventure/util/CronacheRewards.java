@@ -360,6 +360,16 @@ public final class CronacheRewards {
         if ("Cronache Scambio Dai".equals(shopName)) { CronacheTrade.startGive(); return true; }
         if ("Cronache Scambio Ricevi".equals(shopName)) { CronacheTrade.startReceive(); return true; }
         if ("Cronache Sfida Amico".equals(shopName)) { CronacheTrade.exportDeckForWifi(); return true; }
+        //the old man can call Mirta back (a few times per game): her stock matches the current challenge
+        if ("Cronache Bustine Richiamo".equals(shopName)) {
+            int n = currentChallenge();
+            shopName = "Cronache Bustine " + (n <= 40 ? 1 : n <= 80 ? 2 : 3);
+        }
+        if (forge.gui.GuiBase.isIOS()) {
+            //iOS: free the card images of the previous screens before a shop loads its own
+            forge.assets.ImageCache.getInstance().unloadCardTextures(true);
+            System.gc();
+        }
         if (shopName == null || shopName.isEmpty())
             return false;
         //the shop itself or one of its themed variants ("<name> #W" ...), chosen at random for variety
