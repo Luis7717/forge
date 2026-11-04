@@ -179,15 +179,25 @@ public final class CronacheTrade {
                 out.getOrCreate(DeckSection.Sideboard).addAll(src.get(DeckSection.Sideboard));
             FModel.getDecks().getConstructed().add(out);
             WorldSave.getCurrentSave().autoSaveAsync();
-            info("{COLOR=ORANGE}Il tuo mazzo è pronto per la sfida in Wi-Fi: si chiama \"" + name + "\" (" + out.getMain().countAll() + " carte).{ENDCOLOR}\n"
-                    + "1. Tu e il tuo amico collegatevi alla stessa rete Wi-Fi.\n"
-                    + "2. Esci al menu principale (la partita è già salvata) e apri \"Online\".\n"
-                    + "3. Uno dei due sceglie di ospitare la partita, l'altro si unisce con l'indirizzo che compare a chi ospita (\"Indirizzo server\").\n"
-                    + "4. Nella stanza scegliete i mazzi: il tuo è \"" + name + "\".\n"
-                    + "Ripeti questa scelta quando cambi il mazzo, per aggiornarlo.");
+            final String deckName = name;
+            final int cards = out.getMain().countAll();
+            Gdx.app.postRunnable(() -> MapStage.getInstance().showCronacheChoice(
+                    "{COLOR=ORANGE}Il tuo mazzo è pronto: \"" + deckName + "\" (" + cards + " carte).{ENDCOLOR}\n"
+                    + "Tu e il tuo amico dovete essere sulla stessa rete Wi-Fi. Si apre la stanza Online di Forge:\n"
+                    + "- uno tocca \"Ospita una partita\" e legge il suo indirizzo (menu Online > URL del server), l'altro tocca \"Unisciti a una partita\" e lo scrive;\n"
+                    + "- poi ognuno sceglie il mazzo: il tuo è \"" + deckName + "\".\n"
+                    + "La tua Cronaca è salvata: per tornarci, dal menu principale apri di nuovo l'Avventura e carica la partita.",
+                    "Apri la sfida online", CronacheTrade::openOnlineLobby, "Più tardi"));
         } catch (Exception e) {
             info("Non sono riuscito a preparare il mazzo: " + e.getMessage());
         }
+    }
+
+    /** Leaves the adventure (already saved) and opens Forge's online lobby. */
+    public static void openOnlineLobby() {
+        WorldSave.getCurrentSave().autoSaveAsync();
+        Forge.afterClassicSwitch = () -> forge.screens.online.OnlineMenu.OnlineScreen.Lobby.open();
+        Forge.switchToClassic();
     }
 
     // ---------------------------------------------------------------- code format

@@ -885,6 +885,9 @@ public class Forge implements ApplicationListener {
         Dscreens.clear();
     }
 
+    /** Run once right after the next switch from the adventure to the classic menus. */
+    public static Runnable afterClassicSwitch;
+
     public static void switchToClassic() {
         if (switchClassic)
             return;
@@ -901,6 +904,11 @@ public class Forge implements ApplicationListener {
             openHomeDefault();
             exited = false;
             switchClassic = false;
+            if (afterClassicSwitch != null) { //e.g. Cronache: open the online lobby straight from the adventure
+                Runnable r = afterClassicSwitch;
+                afterClassicSwitch = null;
+                r.run();
+            }
             FrameRate.getInstance().updateHistoricalPeak(showFPS);
         }, ScreenUtil.getInstance().takeScreenshot(), false, false));
     }

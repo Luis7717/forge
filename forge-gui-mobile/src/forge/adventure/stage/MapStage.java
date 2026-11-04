@@ -1299,6 +1299,27 @@ public class MapStage extends GameStage {
         showDialog();
     }
 
+    /** Cronache: a message with an action button and a cancel button. */
+    public void showCronacheChoice(String text, String actionLabel, Runnable action, String cancelLabel) {
+        dialog.getButtonTable().clear();
+        dialog.getContentTable().clear();
+        dialog.clearListeners();
+        TypingLabel L = Controls.newTypingLabel(text);
+        L.setWrap(true);
+        L.skipToTheEnd();
+        TextraButton go = Controls.newTextButton(actionLabel, () -> {
+            hideDialog();
+            action.run();
+        });
+        TextraButton no = Controls.newTextButton(cancelLabel, this::hideDialog);
+        dialog.getContentTable().add(L).width(250f);
+        dialog.getButtonTable().add(go).width(240f);
+        dialog.getButtonTable().row();
+        dialog.getButtonTable().add(no).width(240f);
+        dialog.setKeepWithinStage(true);
+        showDialog();
+    }
+
     /** Shown in the room while the deck is too small: the next challenger waits behind the portal. */
     private void showCronacheDeckBlock(int have, int needed) {
         showCronacheDeckMessage("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "

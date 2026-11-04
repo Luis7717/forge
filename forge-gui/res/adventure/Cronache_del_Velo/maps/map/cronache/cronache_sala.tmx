@@ -493,10 +493,10 @@
       },
       {
         &quot;name&quot;: &quot;(Sfida un amico in Wi-Fi)&quot;,
-        &quot;text&quot;: &quot;«Due fuochi, una sola campana.» Preparo il tuo mazzo per la modalità Online di Forge: tu e il tuo amico dovete essere sulla stessa rete Wi-Fi.&quot;,
+        &quot;text&quot;: &quot;«Due fuochi, una sola campana.» Preparo il tuo mazzo e apro la sfida online di Forge: tu e il tuo amico dovete essere sulla stessa rete Wi-Fi. La tua Cronaca viene salvata prima di partire.&quot;,
         &quot;options&quot;: [
           {
-            &quot;name&quot;: &quot;(Prepara il mio mazzo)&quot;,
+            &quot;name&quot;: &quot;(Inizia la sfida online)&quot;,
             &quot;action&quot;: [
               {
                 &quot;openMerchant&quot;: &quot;Cronache Sfida Amico&quot;
