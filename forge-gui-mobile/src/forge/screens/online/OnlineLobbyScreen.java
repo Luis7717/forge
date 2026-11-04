@@ -870,4 +870,53 @@ public class OnlineLobbyScreen extends LobbyScreen implements IOnlineLobby, IDra
             });
         });
     }
+
+    // ---- Cronache del Velo: host/join without typing an address (the peer was found with a password) ----
+
+    public void cronacheHost() {
+        isHost = true;
+        setGameLobby(getLobby());
+        revalidate();
+        NetConnectUtil.ensurePlayerName();
+        final String caption = Forge.getLocalizer().getMessage("lblStartingServer");
+        LoadingOverlay.show(caption, true, () -> {
+            final ChatMessage[] result = new ChatMessage[1];
+            final IOnlineChatInterface chatInterface = (IOnlineChatInterface) OnlineScreen.Chat.getScreen();
+            FThreads.invokeInBackgroundThread(() -> {
+                result[0] = NetConnectUtil.host(OnlineLobbyScreen.this, chatInterface);
+                chatInterface.addMessage(result[0]);
+                FThreads.invokeInEdtLater(OnlineScreen.Lobby::update);
+            });
+            OnlineScreen.Lobby.update();
+        });
+    }
+
+    public void cronacheJoin(final String url) {
+        isHost = false;
+        setGameLobby(getLobby());
+        revalidate();
+        NetConnectUtil.ensurePlayerName();
+        final String caption = Forge.getLocalizer().getMessage("lblConnectingToServer");
+        LoadingOverlay.show(caption, true, () -> {
+            final IOnlineChatInterface chatInterface = (IOnlineChatInterface) OnlineScreen.Chat.getScreen();
+            ChatMessage result = null;
+            //the host may still be starting its server: retry for a few seconds
+            for (int attempt = 0; attempt < 6; attempt++) {
+                result = NetConnectUtil.join(url, OnlineLobbyScreen.this, chatInterface);
+                String message = result.getMessage();
+                boolean failed = ForgeConstants.CLOSE_CONN_COMMAND.equals(message)
+                        || (message != null && message.startsWith(ForgeConstants.CONN_ERROR_PREFIX))
+                        || ForgeConstants.INVALID_HOST_COMMAND.equals(message);
+                if (!failed)
+                    break;
+                if (attempt == 5) {
+                    closeConn(Forge.getLocalizer().getMessage("UnableConnectToServer", url));
+                    return;
+                }
+                try { Thread.sleep(1500); } catch (InterruptedException ignored) { }
+            }
+            chatInterface.addMessage(result);
+            OnlineScreen.Lobby.update();
+        });
+    }
 }

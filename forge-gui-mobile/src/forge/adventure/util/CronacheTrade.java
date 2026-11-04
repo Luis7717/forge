@@ -168,7 +168,10 @@ public final class CronacheTrade {
 
     // ---------------------------------------------------------------- Wi-Fi duel
 
-    /** Copies the current campaign deck to the constructed decks, for Forge's online mode. */
+    /**
+     * "Sfida un altro campanaro": copies the campaign deck to the constructed decks (preselected in the lobby),
+     * saves, leaves the adventure and asks for the password that pairs the two phones.
+     */
     public static void exportDeckForWifi() {
         try {
             Deck src = Current.player().getSelectedDeck();
@@ -178,26 +181,20 @@ public final class CronacheTrade {
             if (src.has(DeckSection.Sideboard))
                 out.getOrCreate(DeckSection.Sideboard).addAll(src.get(DeckSection.Sideboard));
             FModel.getDecks().getConstructed().add(out);
+            forge.localinstance.properties.ForgePreferences prefs = FModel.getPreferences();
+            String state = "CONSTRUCTED_DECK;" + name;
+            for (forge.localinstance.properties.ForgePreferences.FPref pref : new forge.localinstance.properties.ForgePreferences.FPref[]{
+                    forge.localinstance.properties.ForgePreferences.FPref.CONSTRUCTED_P1_DECK_STATE,
+                    forge.localinstance.properties.ForgePreferences.FPref.CONSTRUCTED_P2_DECK_STATE})
+                prefs.setPref(pref, state);
+            prefs.setPref(forge.localinstance.properties.ForgePreferences.FPref.PLAYER_NAME, Current.player().getName());
+            prefs.save();
             WorldSave.getCurrentSave().autoSaveAsync();
-            final String deckName = name;
-            final int cards = out.getMain().countAll();
-            Gdx.app.postRunnable(() -> MapStage.getInstance().showCronacheChoice(
-                    "{COLOR=ORANGE}Il tuo mazzo è pronto: \"" + deckName + "\" (" + cards + " carte).{ENDCOLOR}\n"
-                    + "Tu e il tuo amico dovete essere sulla stessa rete Wi-Fi. Si apre la stanza Online di Forge:\n"
-                    + "- uno tocca \"Ospita una partita\" e legge il suo indirizzo (menu Online > URL del server), l'altro tocca \"Unisciti a una partita\" e lo scrive;\n"
-                    + "- poi ognuno sceglie il mazzo: il tuo è \"" + deckName + "\".\n"
-                    + "La tua Cronaca è salvata: per tornarci, dal menu principale apri di nuovo l'Avventura e carica la partita.",
-                    "Apri la sfida online", CronacheTrade::openOnlineLobby, "Più tardi"));
+            Forge.afterClassicSwitch = forge.screens.online.CronacheLink::start;
+            Forge.switchToClassic();
         } catch (Exception e) {
-            info("Non sono riuscito a preparare il mazzo: " + e.getMessage());
+            info("Non sono riuscito a preparare la sfida: " + e.getMessage());
         }
-    }
-
-    /** Leaves the adventure (already saved) and opens Forge's online lobby. */
-    public static void openOnlineLobby() {
-        WorldSave.getCurrentSave().autoSaveAsync();
-        Forge.afterClassicSwitch = () -> forge.screens.online.OnlineMenu.OnlineScreen.Lobby.open();
-        Forge.switchToClassic();
     }
 
     // ---------------------------------------------------------------- code format
