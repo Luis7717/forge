@@ -369,6 +369,12 @@ public class DuelScene extends ForgeScene {
     @Override
     public void enter() {
         Adventure.getInstance().renderTransitionScreen = false;
+        if (forge.gui.GuiBase.isIOS()) {
+            //iOS: start every duel with an empty card-texture cache (deck grid, shop and rewards leave many images
+            //resident) so long sessions don't climb toward the memory limit and get the app killed
+            forge.assets.ImageCache.getInstance().unloadCardTextures(true);
+            System.gc();
+        }
         Localizer localizer = Forge.getLocalizer();
         SoundSystem.instance.stopBackgroundMusic();
         GameType mainGameType;

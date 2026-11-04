@@ -96,7 +96,7 @@ public class ImageCache {
         // of native memory and the main per-turn ratchet over a long game.
         if (GuiBase.isIOS()) {
             boolean lowRam = Forge.totalDeviceRAM > 0 && Forge.totalDeviceRAM <= 4500;
-            maxCardCapacity = lowRam ? 48 : 120;
+            maxCardCapacity = lowRam ? 40 : 72; //lowered: with the card grid in the deck editor the old 120 kept too much resident
         }
         //init q
         q = EvictingQueue.create(maxCardCapacity);
