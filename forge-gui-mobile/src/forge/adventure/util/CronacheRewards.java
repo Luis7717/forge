@@ -51,6 +51,9 @@ public final class CronacheRewards {
     public static final String FLAG_BOUNTY = "cr_taglia";         //1 = bounty hunter is coming
     public static final String FLAG_TRUST_TOBIA = "fid_tobia";
     public static final String HUNTER = "Cronache Cacciatore";
+    public static final String FLAG_VISIT = "cr_visita";          //>0 between a win and the next challenger (Mirta/Tobia visit)
+    /** Set when a save is loaded in the middle of a visit (e.g. after a crash): the visit is offered again. */
+    public static boolean resumeVisit = false;
     public static final String BRANCH_PREFIX = "Ramo_";           //enemy quest tag Ramo_<flag>_<value>
 
     private static int flag(String key) {
@@ -227,6 +230,7 @@ public final class CronacheRewards {
 
     /** Bookkeeping after every won duel: curses wear off, debts come due, the hunter is paid off. */
     private static void onChallengeWon(EnemySprite mob) {
+        setFlag(FLAG_VISIT, Math.min(120, currentChallenge())); //merchants' visit pending until the next challenger walks in
         if (isHunter(mob.getData())) {
             setFlag(FLAG_BOUNTY, 0);
             setFlag(FLAG_DEBT, 0);
@@ -297,6 +301,60 @@ public final class CronacheRewards {
     private static PointOfInterestChanges merchantChanges;
 
     /** Opens the travelling merchant shop with the given shop name (defined in the plane's shops.json). */
+    /** The next challenger walks in: the merchants' visit is over. */
+    public static void visitOver() {
+        resumeVisit = false;
+        if (flag(FLAG_VISIT) != 0)
+            setFlag(FLAG_VISIT, 0);
+    }
+
+    /** Completed stage (the last win) and active stage (the next challenge) of the main quest. */
+    private static forge.adventure.data.AdventureQuestStage[] visitStages() {
+        for (forge.adventure.data.AdventureQuestData q : Current.player().getQuests()) {
+            if (q.getID() != 1001)
+                continue;
+            forge.adventure.data.AdventureQuestStage done = null, next = null;
+            for (forge.adventure.data.AdventureQuestStage st : q.stages) {
+                if (st.getStatus() == AdventureQuestController.QuestStatus.COMPLETE)
+                    done = st;
+                else if (next == null && st.getStatus() == AdventureQuestController.QuestStatus.ACTIVE)
+                    next = st;
+            }
+            return new forge.adventure.data.AdventureQuestStage[]{done, next};
+        }
+        return new forge.adventure.data.AdventureQuestStage[]{null, null};
+    }
+
+    private static String findShop(forge.adventure.data.DialogData d, String prefix, int depth) {
+        if (d == null || depth > 12)
+            return null;
+        if (d.action != null)
+            for (forge.adventure.data.DialogData.ActionData a : d.action)
+                if (a != null && a.openMerchant != null && a.openMerchant.startsWith(prefix))
+                    return a.openMerchant;
+        if (d.options != null)
+            for (forge.adventure.data.DialogData o : d.options) {
+                String r = findShop(o, prefix, depth + 1);
+                if (r != null)
+                    return r;
+            }
+        return null;
+    }
+
+    /** Mirta's shop of the last win, if she came this time. */
+    public static String pendingMirtaShop() {
+        forge.adventure.data.AdventureQuestStage done = visitStages()[0];
+        return done == null ? null : findShop(done.epilogue, "Cronache Bustine", 0);
+    }
+
+    /** Tobia's menu of the next challenge (the stage prologue), if he comes this time. */
+    public static forge.adventure.data.DialogData pendingTobiaMenu() {
+        forge.adventure.data.AdventureQuestStage next = visitStages()[1];
+        if (next == null || next.prologue == null)
+            return null;
+        return findShop(next.prologue, "Cronache Mercante", 0) != null ? next.prologue : null;
+    }
+
     public static boolean openMerchant(String shopName) {
         //the old man's trade and Wi-Fi options reuse the openMerchant dialog action
         if ("Cronache Scambio Dai".equals(shopName)) { CronacheTrade.startGive(); return true; }

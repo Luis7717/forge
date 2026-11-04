@@ -1039,6 +1039,11 @@ public class MapStage extends GameStage {
             if (present != null && present.getObjectId() >= CRONACHE_ID_BASE)
                 return; //one visitor at a time
         }
+        //A save loaded in the middle of a visit (app closed or crashed while shopping): offer the merchants again
+        if (CronacheRewards.resumeVisit) {
+            showCronacheResumeVisit();
+            return;
+        }
         //Mandatory deck size: no challenger walks in until the deck is legal for this challenge
         int needed = CronacheRewards.playerMinDeckSize(40);
         int have = cronacheDeckSize();
@@ -1058,6 +1063,7 @@ public class MapStage extends GameStage {
         }
         if (challenger == null)
             return;
+        CronacheRewards.visitOver();
         cronacheSpawnCounter++;
         EnemySprite mob = new EnemySprite(CRONACHE_ID_BASE + cronacheSpawnCounter, new EnemyData(challenger));
         if (!CronacheRewards.isHunter(challenger))
@@ -1295,6 +1301,43 @@ public class MapStage extends GameStage {
         TextraButton ok = Controls.newTextButton("Ok", this::hideDialog);
         dialog.getContentTable().add(L).width(250f);
         dialog.getButtonTable().add(ok).width(240f);
+        dialog.setKeepWithinStage(true);
+        showDialog();
+    }
+
+    private void showCronacheResumeVisit() {
+        final String mirta = CronacheRewards.pendingMirtaShop();
+        final forge.adventure.data.DialogData tobia = CronacheRewards.pendingTobiaMenu();
+        if (mirta == null && tobia == null) {
+            CronacheRewards.resumeVisit = false;
+            return;
+        }
+        dialog.getButtonTable().clear();
+        dialog.getContentTable().clear();
+        dialog.clearListeners();
+        TypingLabel L = Controls.newTypingLabel("La Sala è come l'hai lasciata. " + (mirta != null && tobia != null ? "Mirta e Tobia ti aspettano ancora."
+                : mirta != null ? "Mirta ti aspetta ancora con le sue bustine." : "Tobia ti aspetta ancora."));
+        L.setWrap(true);
+        L.skipToTheEnd();
+        dialog.getContentTable().add(L).width(250f);
+        if (mirta != null) {
+            dialog.getButtonTable().add(Controls.newTextButton("(Le bustine di Mirta)", () -> {
+                hideDialog();
+                CronacheRewards.openMerchant(mirta);
+            })).width(240f);
+            dialog.getButtonTable().row();
+        }
+        if (tobia != null) {
+            dialog.getButtonTable().add(Controls.newTextButton("(Parla con Tobia)", () -> {
+                hideDialog();
+                new MapDialog(tobia, this, -1, null).activate();
+            })).width(240f);
+            dialog.getButtonTable().row();
+        }
+        dialog.getButtonTable().add(Controls.newTextButton("(Vai avanti)", () -> {
+            hideDialog();
+            CronacheRewards.resumeVisit = false;
+        })).width(240f);
         dialog.setKeepWithinStage(true);
         showDialog();
     }

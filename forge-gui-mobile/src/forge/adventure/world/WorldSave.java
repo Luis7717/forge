@@ -127,6 +127,9 @@ public class WorldSave {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            //a save made between a win and the next challenger (e.g. the app was closed or crashed while
+            //shopping): offer Mirta and Tobia again instead of losing the visit
+            CronacheRewards.resumeVisit = currentSave.player.getQuestFlag(CronacheRewards.FLAG_VISIT) > 0;
             WorldStage.getInstance().enterSpawnPOI();
         }
         return true;
