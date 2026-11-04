@@ -156,8 +156,7 @@ public final class CronacheLink {
             OnlineLobbyScreen lobby = (OnlineLobbyScreen) OnlineMenu.OnlineScreen.Lobby.getScreen();
             if (host) {
                 lobby.cronacheHost();
-                FOptionPane.showMessageDialog("Campanaro trovato! Ospiti tu la sfida.\nScegli il tuo mazzo (\"Cronache - ...\"), metti \"Pronto\" e quando è pronto anche lui tocca \"Inizia\".",
-                        "Sfida un altro campanaro");
+                autoReadyAndStart(lobby, true);
             } else {
                 //give the host a moment to open its server
                 FThreads.invokeInBackgroundThread(() -> {
@@ -167,9 +166,40 @@ public final class CronacheLink {
                     }
                     FThreads.invokeInEdtLater(() -> {
                         lobby.cronacheJoin(peerIp);
-                        FOptionPane.showMessageDialog("Campanaro trovato! La sfida la ospita lui.\nScegli il tuo mazzo (\"Cronache - ...\") e metti \"Pronto\".",
-                                "Sfida un altro campanaro");
+                        autoReadyAndStart(lobby, false);
                     });
+                });
+            }
+        });
+    }
+
+    /**
+     * Once connected, each side marks itself ready with its Cronache deck; the host starts the match
+     * as soon as both are ready. Nobody has to touch the lobby.
+     */
+    private static void autoReadyAndStart(OnlineLobbyScreen lobby, boolean host) {
+        FThreads.invokeInBackgroundThread(() -> {
+            final boolean[] readied = {false};
+            final boolean[] started = {false};
+            for (int t = 0; t < 180 && !started[0]; t++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ignored) {
+                }
+                FThreads.invokeInEdtAndWait(() -> {
+                    try {
+                        if (lobby.getLobby() == null)
+                            return;
+                        if (!readied[0])
+                            readied[0] = lobby.cronacheReadyLocal();
+                        if (host && readied[0] && !started[0] && lobby.cronacheAllReady()) {
+                            started[0] = true;
+                            lobby.cronacheStart();
+                        }
+                        if (!host && readied[0])
+                            started[0] = true; //the client only has to be ready, the host starts
+                    } catch (Exception ignored) {
+                    }
                 });
             }
         });

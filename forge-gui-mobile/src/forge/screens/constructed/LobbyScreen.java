@@ -842,6 +842,45 @@ public abstract class LobbyScreen extends LaunchScreen implements ILobbyView {
         }
     }
 
+    // ---- Cronache del Velo: automatic ready/start for the password duel ----
+
+    /** Marks the local seat ready once its deck list has loaded; true when done. */
+    public boolean cronacheReadyLocal() {
+        boolean done = false;
+        for (int i = 0; i < getNumPlayers() && i < playerPanels.size(); i++) {
+            LobbySlot slot = lobby.getSlot(i);
+            if (slot == null || slot.getType() != LobbySlotType.LOCAL)
+                continue;
+            PlayerPanel panel = playerPanels.get(i);
+            if (panel.getDeckChooser() == null || panel.getDeckChooser().getLstDecks().getSelectedItem() == null)
+                return false; //decks not loaded yet
+            if (!slot.isReady()) {
+                panel.setIsReady(true);
+                setReady(i, true);
+            }
+            done = true;
+        }
+        return done;
+    }
+
+    /** True when at least two seats are filled and every filled seat is ready with a deck. */
+    public boolean cronacheAllReady() {
+        int players = 0;
+        for (int i = 0; i < lobby.getNumberOfSlots(); i++) {
+            LobbySlot slot = lobby.getSlot(i);
+            if (slot == null || (slot.getType() != LobbySlotType.LOCAL && slot.getType() != LobbySlotType.REMOTE))
+                continue;
+            players++;
+            if (!slot.isReady() || slot.getDeck() == null)
+                return false;
+        }
+        return players >= 2;
+    }
+
+    public void cronacheStart() {
+        startMatch();
+    }
+
     void setReady(final int index, final boolean ready) {
         if (lobby.isAllowNetworking()) {
             updateDeck(index);
