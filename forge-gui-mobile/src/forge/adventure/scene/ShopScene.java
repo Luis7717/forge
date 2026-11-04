@@ -60,10 +60,15 @@ public class ShopScene extends ForgeScene {
     @Override
     public boolean leave() {
         Adventure.getInstance().renderTransitionScreen = true;
-        return super.leave();
+        boolean left = super.leave();
+        if (left && forge.adventure.util.CronacheTrade.giving)
+            forge.adventure.util.CronacheTrade.finishGive(); //Cronache: the "give cards" screen was closed
+        return left;
     }
 
     private void processAutoSell() {
+        if (forge.adventure.util.CronacheTrade.giving)
+            return; //trading, not selling
         if (FModel.getPreferences().getPrefBoolean(ForgePreferences.FPref.PROMPT_FOR_AUTOSELL)) {
             int profit = 0;
             int cards = 0;

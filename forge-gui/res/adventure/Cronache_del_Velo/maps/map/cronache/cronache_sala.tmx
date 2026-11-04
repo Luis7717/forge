@@ -467,6 +467,48 @@
         ]
       },
       {
+        &quot;name&quot;: &quot;(Scambia carte con un amico)&quot;,
+        &quot;text&quot;: &quot;«Le carte passano di mano anche fuori da qui.» Il vecchio indica un cesto vuoto accanto al fuoco.\n\nPer dare: scegli le carte, il gioco crea un codice e lo copia; mandalo al tuo amico in una chat.\nPer ricevere: copia il codice che ti hanno mandato, poi torna qui.\n(Lo scambio si sblocca dalla sfida 50.)&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Dai delle carte)&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;openMerchant&quot;: &quot;Cronache Scambio Dai&quot;
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Ricevi delle carte)&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;openMerchant&quot;: &quot;Cronache Scambio Ricevi&quot;
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Lascia perdere)&quot;
+          }
+        ]
+      },
+      {
+        &quot;name&quot;: &quot;(Sfida un amico in Wi-Fi)&quot;,
+        &quot;text&quot;: &quot;«Due fuochi, una sola campana.» Preparo il tuo mazzo per la modalità Online di Forge: tu e il tuo amico dovete essere sulla stessa rete Wi-Fi.&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Prepara il mio mazzo)&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;openMerchant&quot;: &quot;Cronache Sfida Amico&quot;
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Lascia perdere)&quot;
+          }
+        ]
+      },
+      {
         &quot;name&quot;: &quot;(Annuisci)&quot;
       }
     ]

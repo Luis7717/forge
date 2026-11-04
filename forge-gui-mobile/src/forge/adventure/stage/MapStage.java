@@ -1284,6 +1284,21 @@ public class MapStage extends GameStage {
         showDialog();
     }
 
+    /** Cronache: a plain message with an "Ok" button (trade and Wi-Fi results). */
+    public void showCronacheInfo(String text) {
+        dialog.getButtonTable().clear();
+        dialog.getContentTable().clear();
+        dialog.clearListeners();
+        TypingLabel L = Controls.newTypingLabel(text);
+        L.setWrap(true);
+        L.skipToTheEnd();
+        TextraButton ok = Controls.newTextButton("Ok", this::hideDialog);
+        dialog.getContentTable().add(L).width(250f);
+        dialog.getButtonTable().add(ok).width(240f);
+        dialog.setKeepWithinStage(true);
+        showDialog();
+    }
+
     /** Shown in the room while the deck is too small: the next challenger waits behind the portal. */
     private void showCronacheDeckBlock(int have, int needed) {
         showCronacheDeckMessage("{COLOR=ORANGE}Il tuo mazzo ha " + have + " carte, ma da questa sfida ne servono almeno "

@@ -298,6 +298,10 @@ public final class CronacheRewards {
 
     /** Opens the travelling merchant shop with the given shop name (defined in the plane's shops.json). */
     public static boolean openMerchant(String shopName) {
+        //the old man's trade and Wi-Fi options reuse the openMerchant dialog action
+        if ("Cronache Scambio Dai".equals(shopName)) { CronacheTrade.startGive(); return true; }
+        if ("Cronache Scambio Ricevi".equals(shopName)) { CronacheTrade.startReceive(); return true; }
+        if ("Cronache Sfida Amico".equals(shopName)) { CronacheTrade.exportDeckForWifi(); return true; }
         if (shopName == null || shopName.isEmpty())
             return false;
         //the shop itself or one of its themed variants ("<name> #W" ...), chosen at random for variety

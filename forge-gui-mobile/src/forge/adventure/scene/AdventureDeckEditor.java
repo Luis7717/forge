@@ -343,6 +343,15 @@ public class AdventureDeckEditor extends FDeckEditor {
             int sellable = cardManager.getItemCount(card);
             if (sellable <= 0)
                 return;
+            if (forge.adventure.util.CronacheTrade.giving) { //Cronache: choosing cards to give to a friend
+                String tradeLabel = "Metti nello scambio";
+                menu.addItem(new FMenuItem(tradeLabel, SIDEBOARD_ICON, new MoveQuantityPrompt(card + " - " + tradeLabel + " " + localizer.getMessage("lblHowMany"), sellable, result -> {
+                    int moved = forge.adventure.util.CronacheTrade.addToTrade(card, result);
+                    removeCard(card, moved);
+                    parentScreen.setHeaderText("Scambio: " + forge.adventure.util.CronacheTrade.pendingCount() + " carte pronte (esci per creare il codice)");
+                })));
+                return;
+            }
             String prompt = card + " - " + label + " " + localizer.getMessage("lblHowMany");
 
             FMenuItem sellItem = new FMenuItem(label, SIDEBOARD_ICON, new MoveQuantityPrompt(prompt, sellable, result -> {
@@ -357,6 +366,8 @@ public class AdventureDeckEditor extends FDeckEditor {
         @Override
         public void buildDeckMenu(FPopupMenu menu) {
             super.buildDeckMenu(menu);
+            if (forge.adventure.util.CronacheTrade.giving)
+                return; //no bulk selling while trading
             FMenuItem sellCurrentFilters = new FMenuItem(Forge.getLocalizer().getMessage("lblSellCurrentFilters"), FSkinImage.QUEST_COINSTACK, e1 -> sellAllByFilter());
             sellCurrentFilters.setTextColor(255, 0, 0);
             menu.addItem(sellCurrentFilters);
@@ -821,7 +832,8 @@ public class AdventureDeckEditor extends FDeckEditor {
         super(createAsShop ? new ShopConfig() : new AdventureEditorConfig(),
                 createAsShop ? null : Current.player().getSelectedDeck());
         if (createAsShop)
-            setHeaderText(Forge.getLocalizer().getMessage("lblSell"));
+            setHeaderText(forge.adventure.util.CronacheTrade.giving ? "Scambio: tieni premuta una carta e scegli \"Metti nello scambio\""
+                    : Forge.getLocalizer().getMessage("lblSell"));
         backDrop = backdrop;
     }
 
