@@ -130,6 +130,9 @@ public class WorldSave {
             //a save made between a win and the next challenger (e.g. the app was closed or crashed while
             //shopping): offer Mirta and Tobia again instead of losing the visit
             CronacheRewards.resumeVisit = currentSave.player.getQuestFlag(CronacheRewards.FLAG_VISIT) > 0;
+            //saves already past challenge 60: the old man calls the merchants
+            if (CronacheRewards.currentChallenge() > CronacheRewards.LATE_CHALLENGE)
+                currentSave.player.setQuestFlag("cr_vecchio_mercanti", 1);
             WorldStage.getInstance().enterSpawnPOI();
         }
         return true;

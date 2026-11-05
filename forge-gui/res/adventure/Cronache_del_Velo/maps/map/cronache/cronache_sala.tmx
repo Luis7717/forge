@@ -467,6 +467,263 @@
         ]
       },
       {
+        &quot;name&quot;: &quot;(Chiedi al vecchio di chiamare Tobia)&quot;,
+        &quot;text&quot;: &quot;Il vecchio batte due colpi sulla campana spezzata. Dal portale arriva il carretto di Tobia. «Mi hai fatto chiamare, campanaro?»&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Compra carte)&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;removeItem&quot;: &quot;&quot;,
+                &quot;setColorIdentity&quot;: &quot;&quot;,
+                &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                &quot;advanceMapFlag&quot;: &quot;&quot;,
+                &quot;setQuestFlag&quot;: {
+                  &quot;key&quot;: &quot;&quot;
+                },
+                &quot;setMapFlag&quot;: {
+                  &quot;key&quot;: &quot;&quot;
+                },
+                &quot;issueQuest&quot;: &quot;&quot;,
+                &quot;POIReference&quot;: &quot;&quot;,
+                &quot;openMerchant&quot;: &quot;Cronache Mercante Auto&quot;
+              }
+            ],
+            &quot;loop&quot;: true
+          },
+          {
+            &quot;name&quot;: &quot;(Chiedi un prestito)&quot;,
+            &quot;text&quot;: &quot;Tobia si accarezza la barba. «Trecento monete. Me ne ridai quattrocentocinquanta entro otto sfide. Altrimenti mando Bruno a riscuotere, e Bruno non è simpatico come me.»&quot;,
+            &quot;options&quot;: [
+              {
+                &quot;name&quot;: &quot;(Accetta il prestito)&quot;,
+                &quot;action&quot;: [
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;,
+                    &quot;addGold&quot;: 300
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;cr_debito&quot;,
+                      &quot;val&quot;: 1
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;cr_scadenza&quot;,
+                      &quot;val&quot;: 8
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;,
+                    &quot;addQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;fid_tobia&quot;,
+                      &quot;val&quot;: 1
+                    }
+                  }
+                ],
+                &quot;loop&quot;: true
+              },
+              {
+                &quot;name&quot;: &quot;(Lascia perdere)&quot;,
+                &quot;loop&quot;: true
+              }
+            ],
+            &quot;condition&quot;: [
+              {
+                &quot;checkQuestFlag&quot;: &quot;cr_debito&quot;,
+                &quot;not&quot;: true
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Restituisci il prestito: 450 oro)&quot;,
+            &quot;text&quot;: &quot;«Un cliente che paga i debiti! Ti farò dei prezzi migliori, campanaro.»&quot;,
+            &quot;options&quot;: [
+              {
+                &quot;name&quot;: &quot;(Continua)&quot;,
+                &quot;action&quot;: [
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;,
+                    &quot;addGold&quot;: -450
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;cr_debito&quot;,
+                      &quot;val&quot;: 0
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;cr_scadenza&quot;,
+                      &quot;val&quot;: 0
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;
+                  },
+                  {
+                    &quot;removeItem&quot;: &quot;&quot;,
+                    &quot;setColorIdentity&quot;: &quot;&quot;,
+                    &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                    &quot;advanceMapFlag&quot;: &quot;&quot;,
+                    &quot;setQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;setMapFlag&quot;: {
+                      &quot;key&quot;: &quot;&quot;
+                    },
+                    &quot;issueQuest&quot;: &quot;&quot;,
+                    &quot;POIReference&quot;: &quot;&quot;,
+                    &quot;addQuestFlag&quot;: {
+                      &quot;key&quot;: &quot;fid_tobia&quot;,
+                      &quot;val&quot;: 3
+                    }
+                  }
+                ],
+                &quot;loop&quot;: true
+              }
+            ],
+            &quot;condition&quot;: [
+              {
+                &quot;checkQuestFlag&quot;: &quot;cr_debito&quot;
+              },
+              {
+                &quot;hasGold&quot;: 450
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Prestito in corso)&quot;,
+            &quot;text&quot;: &quot;«Il prestito? Non ti preoccupare, campanaro. Me lo ricordo io per tutti e due.»&quot;,
+            &quot;options&quot;: [
+              {
+                &quot;name&quot;: &quot;(Continua)&quot;,
+                &quot;loop&quot;: true
+              }
+            ],
+            &quot;condition&quot;: [
+              {
+                &quot;checkQuestFlag&quot;: &quot;cr_debito&quot;
+              },
+              {
+                &quot;hasGold&quot;: 450,
+                &quot;not&quot;: true
+              }
+            ]
+          },
+          {
+            &quot;name&quot;: &quot;(Saluta Tobia)&quot;
+          }
+        ],
+        &quot;condition&quot;: [
+          {
+            &quot;checkQuestFlag&quot;: &quot;cr_vecchio_mercanti&quot;
+          }
+        ]
+      },
+      {
+        &quot;name&quot;: &quot;(Chiedi al vecchio di chiamare Mirta)&quot;,
+        &quot;text&quot;: &quot;Il vecchio batte tre colpi sulla campana spezzata. Dal portale scivola Mirta, con lo zaino pieno di bustine.&quot;,
+        &quot;options&quot;: [
+          {
+            &quot;name&quot;: &quot;(Guarda le bustine)&quot;,
+            &quot;action&quot;: [
+              {
+                &quot;removeItem&quot;: &quot;&quot;,
+                &quot;setColorIdentity&quot;: &quot;&quot;,
+                &quot;advanceQuestFlag&quot;: &quot;&quot;,
+                &quot;advanceMapFlag&quot;: &quot;&quot;,
+                &quot;setQuestFlag&quot;: {
+                  &quot;key&quot;: &quot;&quot;
+                },
+                &quot;setMapFlag&quot;: {
+                  &quot;key&quot;: &quot;&quot;
+                },
+                &quot;issueQuest&quot;: &quot;&quot;,
+                &quot;POIReference&quot;: &quot;&quot;,
+                &quot;openMerchant&quot;: &quot;Cronache Bustine Auto&quot;
+              }
+            ],
+            &quot;loop&quot;: true
+          },
+          {
+            &quot;name&quot;: &quot;(Saluta Mirta)&quot;
+          }
+        ],
+        &quot;condition&quot;: [
+          {
+            &quot;checkQuestFlag&quot;: &quot;cr_vecchio_mercanti&quot;
+          }
+        ]
+      },
+      {
         &quot;name&quot;: &quot;(Scambia carte con un amico)&quot;,
         &quot;text&quot;: &quot;«Le carte passano di mano anche fuori da qui.» Il vecchio indica un cesto vuoto accanto al fuoco.\n\nPer dare: scegli le carte, il gioco crea un codice e lo copia; mandalo al tuo amico in una chat.\nPer ricevere: copia il codice che ti hanno mandato, poi torna qui.\n(Lo scambio si sblocca dalla sfida 50.)&quot;,
         &quot;options&quot;: [

@@ -154,6 +154,22 @@ public class DuelScene extends ForgeScene {
         List<PaperCard> anteLostCards = Collections.emptyList();
         try {
             winner = humanPlayer == hostedMatch.getGame().getMatch().getWinner();
+            //Cronache: a loss pays a small consolation only if it was a real one (life to 0, from the third turn on)
+            forge.adventure.util.CronacheRewards.lastLossEarned = false;
+            if (!winner && forge.adventure.util.CronacheRewards.isActive()) {
+                try {
+                    forge.game.Game game = hostedMatch.getGame();
+                    Player me = null;
+                    for (Player p : game.getRegisteredPlayers())
+                        if (p.getRegisteredPlayer() == humanPlayer)
+                            me = p;
+                    forge.game.player.PlayerOutcome out = me == null ? null : me.getOutcome();
+                    forge.adventure.util.CronacheRewards.lastLossEarned = out != null
+                            && out.lossState == forge.game.player.GameLossReason.LifeReachedZero
+                            && game.getPhaseHandler().getTurn() >= 3;
+                } catch (Exception ignored) {
+                }
+            }
 
             //Persists expended (or potentially gained) shards back to Adventure
             if (eventData == null || eventData.eventRules.allowsShards) {

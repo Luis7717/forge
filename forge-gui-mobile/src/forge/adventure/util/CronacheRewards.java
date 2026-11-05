@@ -167,7 +167,19 @@ public final class CronacheRewards {
         int loss = (int) (Current.player().getGold() * pct);
         if (loss > 0)
             Current.player().takeGold(loss);
+        //from challenge 60 a real defeat (life to 0, not before the third turn, not conceded) pays 30 coins
+        if (lastLossEarned && currentChallenge() >= LATE_CHALLENGE) {
+            Current.player().giveGold(LOSS_GOLD);
+            com.badlogic.gdx.Gdx.app.postRunnable(() -> forge.adventure.stage.MapStage.getInstance()
+                    .showCronacheInfo("Hai perso, ma hai combattuto fino in fondo: guadagni " + LOSS_GOLD + " monete."));
+        }
+        lastLossEarned = false;
     }
+
+    public static final int LATE_CHALLENGE = 60;
+    public static final int LOSS_GOLD = 30;
+    /** Set by the duel: the last defeat was by life reaching 0, from the third turn on. */
+    public static boolean lastLossEarned = false;
 
     /** Number of the current challenge (1-100) of the Cronaca I quest, 0 if not running. */
     public static int currentChallenge() {
@@ -360,6 +372,14 @@ public final class CronacheRewards {
         if ("Cronache Scambio Dai".equals(shopName)) { CronacheTrade.startGive(); return true; }
         if ("Cronache Scambio Ricevi".equals(shopName)) { CronacheTrade.startReceive(); return true; }
         if ("Cronache Sfida Amico".equals(shopName)) { CronacheTrade.exportDeckForWifi(); return true; }
+        //from challenge 60 the old man calls Tobia and Mirta: their stock follows the last challenge won
+        if ("Cronache Mercante Auto".equals(shopName)) {
+            int n = Math.max(1, currentChallenge() - 1);
+            shopName = "Cronache Mercante " + (Math.min(4, (n - 1) / 20) + 1);
+        } else if ("Cronache Bustine Auto".equals(shopName)) {
+            int n = Math.max(1, currentChallenge() - 1);
+            shopName = "Cronache Bustine " + (n <= 40 ? 1 : n <= 80 ? 2 : 3);
+        }
         if (forge.gui.GuiBase.isIOS()) {
             //iOS: free the card images of the previous screens before a shop loads its own
             forge.assets.ImageCache.getInstance().unloadCardTextures(true);

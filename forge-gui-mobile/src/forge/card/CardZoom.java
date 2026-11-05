@@ -824,14 +824,18 @@ public class CardZoom extends FOverlay {
                     quickActionUntil = System.currentTimeMillis() + 1500;
                     item.tap(0, 0, 1);
                     String label = item.getText() == null ? "" : item.getText().toLowerCase();
-                    boolean favorite = label.contains("preferit") || label.contains("favorit");
-                    if (!favorite && items != null && currentIndex < items.size() - 1)
-                        currentIndex++;
+                    final boolean favorite = label.contains("preferit") || label.contains("favorit");
                     zoomActions = null;
-                    //rebuild the buttons once the action has run (menu handlers run a moment later)
+                    //once the action has run (menu handlers run a moment later): stay on this card while copies
+                    //are left, go on to the next one only when it is used up
                     com.badlogic.gdx.utils.Timer.schedule(new com.badlogic.gdx.utils.Timer.Task() {
                         @Override
                         public void run() {
+                            if (!favorite && activateHandler != null && items != null && currentIndex < items.size() - 1
+                                    && activateHandler.getZoomActions(currentIndex, items.get(currentIndex)) == null)
+                                currentIndex++;
+                            if (items != null && currentIndex >= items.size())
+                                currentIndex = Math.max(0, items.size() - 1);
                             zoomActionsIndex = -1;
                         }
                     }, 0.25f);
