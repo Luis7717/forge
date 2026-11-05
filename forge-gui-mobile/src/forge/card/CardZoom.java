@@ -567,6 +567,23 @@ public class CardZoom extends FOverlay {
         return new CardView(-1, null, item.toString(), "", null);
     }
 
+    private static Object keyOf(Object item) {
+        return item instanceof Entry ? ((Entry<?, ?>) item).getKey() : item;
+    }
+
+    /** Re-reads the list (it may have changed under the zoom) and shows the card at index i. */
+    private static void resync(int i) {
+        if (items == null || items.isEmpty())
+            return;
+        viewCache.clear();
+        currentIndex = Math.max(0, Math.min(items.size() - 1, i));
+        scrollPos = targetPos = currentIndex;
+        currentCard = viewAt(currentIndex);
+        prevCard = viewAt(currentIndex - 1);
+        nextCard = viewAt(currentIndex + 1);
+        onCardChanged();
+    }
+
     private static CardView viewAt(int i) {
         if (items == null || i < 0 || i >= items.size()) return null;
         CardView cv = viewCache.get(i);
@@ -822,6 +839,8 @@ public class CardZoom extends FOverlay {
                     //moving a card (add/remove) takes one copy and goes on to the next card,
                     //the favorite toggle just refreshes its label
                     quickActionUntil = System.currentTimeMillis() + 1500;
+                    final int oldIndex = currentIndex;
+                    final Object oldKey = keyOf(items == null || oldIndex >= items.size() ? null : items.get(oldIndex));
                     item.tap(0, 0, 1);
                     String label = item.getText() == null ? "" : item.getText().toLowerCase();
                     final boolean favorite = label.contains("preferit") || label.contains("favorit");
@@ -831,11 +850,25 @@ public class CardZoom extends FOverlay {
                     com.badlogic.gdx.utils.Timer.schedule(new com.badlogic.gdx.utils.Timer.Task() {
                         @Override
                         public void run() {
-                            if (!favorite && activateHandler != null && items != null && currentIndex < items.size() - 1
-                                    && activateHandler.getZoomActions(currentIndex, items.get(currentIndex)) == null)
-                                currentIndex++;
-                            if (items != null && currentIndex >= items.size())
-                                currentIndex = Math.max(0, items.size() - 1);
+                            if (items == null || items.isEmpty()) {
+                                zoomActionsIndex = -1;
+                                return;
+                            }
+                            int target = oldIndex;
+                            if (!favorite && activateHandler != null) {
+                                //the list may have been rebuilt: look for the same card again
+                                int same = -1;
+                                for (int j = 0; j < items.size() && oldKey != null; j++) {
+                                    if (oldKey.equals(keyOf(items.get(j)))) {
+                                        same = j;
+                                        break;
+                                    }
+                                }
+                                if (same >= 0) {
+                                    target = activateHandler.getZoomActions(same, items.get(same)) != null ? same : same + 1;
+                                } //else: the card left the list and the next one took its place
+                            }
+                            resync(target);
                             zoomActionsIndex = -1;
                         }
                     }, 0.25f);
