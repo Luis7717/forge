@@ -1536,7 +1536,7 @@ public class FDeckEditor extends TabPageScreen<FDeckEditor> {
 
             final int max = maxMovable;
             menu.addItem(new FMenuItem(label, icon, (e) -> {
-                if(max < 2)
+                if(max < 2 || forge.card.CardZoom.isQuickAction())
                     callback.accept(1);
                 else
                     GuiChoose.getInteger(prompt, 1, max, 20, callback);
@@ -1590,7 +1590,7 @@ public class FDeckEditor extends TabPageScreen<FDeckEditor> {
 
             @Override
             public void handleEvent(FEvent e) {
-                if(max < 2)
+                if(max < 2 || forge.card.CardZoom.isQuickAction())
                     callback.accept(1);
                 else
                     GuiChoose.getInteger(prompt, 1, max, 20, result -> {

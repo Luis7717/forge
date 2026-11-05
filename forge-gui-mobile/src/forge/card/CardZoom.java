@@ -60,6 +60,12 @@ public class CardZoom extends FOverlay {
     private static List<forge.menu.FMenuItem> zoomActions;
     private static int zoomActionsIndex = -1;
     private static Rectangle[] zoomActionRects = new Rectangle[0];
+    private static long quickActionUntil = 0;
+
+    /** True right after a zoom button was tapped: quantity prompts take a single copy instead of asking. */
+    public static boolean isQuickAction() {
+        return System.currentTimeMillis() < quickActionUntil;
+    }
     private static Rectangle flipIconBounds;
     private static Rectangle mutateIconBounds;
     private static boolean showAltState;
@@ -812,10 +818,24 @@ public class CardZoom extends FOverlay {
             for (int i = 0; i < zoomActionRects.length && i < zoomActions.size(); i++) {
                 if (zoomActionRects[i] != null && zoomActionRects[i].contains(x, y)) {
                     forge.menu.FMenuItem item = zoomActions.get(i);
-                    if (activateHandler != null)
-                        activateHandler.setSelectedIndex(currentIndex);
-                    cardZoom.hide();
-                    item.tap(0, 0, 1); //runs the same action as the long-press menu entry
+                    //runs the same action as the long-press menu entry, without closing the zoom:
+                    //moving a card (add/remove) takes one copy and goes on to the next card,
+                    //the favorite toggle just refreshes its label
+                    quickActionUntil = System.currentTimeMillis() + 1500;
+                    item.tap(0, 0, 1);
+                    String label = item.getText() == null ? "" : item.getText().toLowerCase();
+                    boolean favorite = label.contains("preferit") || label.contains("favorit");
+                    if (!favorite && items != null && currentIndex < items.size() - 1)
+                        currentIndex++;
+                    zoomActions = null;
+                    //rebuild the buttons once the action has run (menu handlers run a moment later)
+                    com.badlogic.gdx.utils.Timer.schedule(new com.badlogic.gdx.utils.Timer.Task() {
+                        @Override
+                        public void run() {
+                            zoomActionsIndex = -1;
+                        }
+                    }, 0.25f);
+                    zoomActionsIndex = currentIndex; //no buttons until then
                     return true;
                 }
             }
@@ -1008,7 +1028,8 @@ public class CardZoom extends FOverlay {
 
         if (activateHandler != null && zoomActionsIndex != currentIndex && !dragging) {
             zoomActionsIndex = currentIndex;
-            zoomActions = activateHandler.getZoomActions(currentIndex);
+            zoomActions = activateHandler.getZoomActions(currentIndex,
+                    items != null && currentIndex >= 0 && currentIndex < items.size() ? items.get(currentIndex) : null);
         }
         final int nActions = zoomActions == null ? 0 : zoomActions.size();
         final float actionRowH = forge.menu.FMenuItem.HEIGHT;
@@ -1102,6 +1123,9 @@ public class CardZoom extends FOverlay {
 
         /** Buttons shown under the zoomed card (null for none). */
         default List<forge.menu.FMenuItem> getZoomActions(int index) { return null; }
+
+        /** Same, given the zoomed item itself (the list under the zoom may have changed since it opened). */
+        default List<forge.menu.FMenuItem> getZoomActions(int index, Object item) { return getZoomActions(index); }
 
         void setSelectedIndex(int index);
 

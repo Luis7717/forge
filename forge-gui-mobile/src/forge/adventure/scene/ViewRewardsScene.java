@@ -44,7 +44,43 @@ public class ViewRewardsScene extends ForgeScene {
         screen.setBackground(currentBackground, RewardScene.Type.Loot.equals(scene.type));
 
         super.enter();
-        CardZoom.show(list, index, null, true);
+        CardZoom.show(list, index, new CardZoom.ActivateHandler() {
+            //rewards and opened packs: "Aggiungi ai preferiti" under the zoomed card
+            @Override
+            public String getActivateAction(int i) {
+                return null;
+            }
+
+            @Override
+            public void setSelectedIndex(int i) {
+            }
+
+            @Override
+            public void activate(int i) {
+            }
+
+            @Override
+            public java.util.List<forge.menu.FMenuItem> getZoomActions(int i, Object item) {
+                if (!(item instanceof forge.adventure.util.RewardActor))
+                    return null;
+                forge.adventure.util.Reward r = ((forge.adventure.util.RewardActor) item).getReward();
+                if (r == null || r.getCard() == null)
+                    return null;
+                final forge.item.PaperCard card = r.getCard();
+                final boolean fav = forge.adventure.util.Current.player().favoriteCards.contains(card);
+                java.util.List<forge.menu.FMenuItem> out = new java.util.ArrayList<>();
+                out.add(new forge.menu.FMenuItem(fav ? "Rimuovi dai preferiti" : "Aggiungi ai preferiti",
+                        forge.Forge.hdbuttons ? (fav ? forge.assets.FSkinImage.HDSTAR_OUTLINE : forge.assets.FSkinImage.HDSTAR_FILLED)
+                                : (fav ? forge.assets.FSkinImage.STAR_OUTLINE : forge.assets.FSkinImage.STAR_FILLED),
+                        e -> {
+                            if (fav)
+                                forge.adventure.util.Current.player().favoriteCards.remove(card);
+                            else
+                                forge.adventure.util.Current.player().favoriteCards.add(card);
+                        }));
+                return out;
+            }
+        }, true);
     }
 
     @Override

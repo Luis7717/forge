@@ -1218,10 +1218,24 @@ public abstract class ItemManager<T extends InventoryItem> extends FContainer im
     /** The long-press menu entries, shown as buttons under the zoomed card. */
     @Override
     public List<FMenuItem> getZoomActions(int index) {
+        return getZoomActions(index, null);
+    }
+
+    @Override
+    public List<FMenuItem> getZoomActions(int index, Object zoomed) {
         if (contextMenuBuilder == null)
             return null;
-        setSelectedIndex(index);
-        T item = getSelectedItem();
+        T item = null;
+        Object key = zoomed instanceof java.util.Map.Entry ? ((java.util.Map.Entry<?, ?>) zoomed).getKey() : zoomed;
+        if (key != null && genericType.isInstance(key)) {
+            item = genericType.cast(key);
+            if (!model.getItems().contains(item))
+                return null; //no copies left here (e.g. the last one was just moved)
+            setSelectedItem(item);
+        } else {
+            setSelectedIndex(index);
+            item = getSelectedItem();
+        }
         if (item == null)
             return null;
         ZoomActionsMenu menu = new ZoomActionsMenu();
