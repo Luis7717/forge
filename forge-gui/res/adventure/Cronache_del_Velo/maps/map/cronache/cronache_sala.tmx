@@ -467,23 +467,6 @@
         ]
       },
       {
-        &quot;name&quot;: &quot;(Chiedi al vecchio di chiamare Mirta)&quot;,
-        &quot;text&quot;: &quot;Il vecchio batte tre colpi sulla campana spezzata. Dopo un po' dal portale arriva Mirta, con il suo carretto di bustine.\n(Puoi chiamarla al massimo 3 volte in questa partita.)&quot;,
-        &quot;options&quot;: [
-          {
-            &quot;name&quot;: &quot;(Guarda le bustine)&quot;,
-            &quot;action&quot;: [
-              {
-                &quot;openMerchant&quot;: &quot;Cronache Bustine Richiamo&quot;
-              }
-            ]
-          },
-          {
-            &quot;name&quot;: &quot;(Non ora)&quot;
-          }
-        ]
-      },
-      {
         &quot;name&quot;: &quot;(Scambia carte con un amico)&quot;,
         &quot;text&quot;: &quot;«Le carte passano di mano anche fuori da qui.» Il vecchio indica un cesto vuoto accanto al fuoco.\n\nPer dare: scegli le carte, il gioco crea un codice e lo copia; mandalo al tuo amico in una chat.\nPer ricevere: copia il codice che ti hanno mandato, poi torna qui.\n(Lo scambio si sblocca dalla sfida 50.)&quot;,
         &quot;options&quot;: [

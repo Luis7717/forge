@@ -360,19 +360,6 @@ public final class CronacheRewards {
         if ("Cronache Scambio Dai".equals(shopName)) { CronacheTrade.startGive(); return true; }
         if ("Cronache Scambio Ricevi".equals(shopName)) { CronacheTrade.startReceive(); return true; }
         if ("Cronache Sfida Amico".equals(shopName)) { CronacheTrade.exportDeckForWifi(); return true; }
-        //the old man can call Mirta back (a few times per game): her stock matches the current challenge
-        if ("Cronache Bustine Richiamo".equals(shopName)) {
-            //quest flags that were never set read as "not set" in dialog conditions, so the limit lives here
-            int used = Current.player().getQuestFlag("cr_mirta_richiami");
-            if (used >= 3) {
-                com.badlogic.gdx.Gdx.app.postRunnable(() -> forge.adventure.stage.MapStage.getInstance()
-                        .showCronacheInfo("Il vecchio scuote la testa: «Mirta è già venuta tre volte. Non tornerà a comando.»"));
-                return true;
-            }
-            Current.player().setQuestFlag("cr_mirta_richiami", used + 1);
-            int n = currentChallenge();
-            shopName = "Cronache Bustine " + (n <= 40 ? 1 : n <= 80 ? 2 : 3);
-        }
         if (forge.gui.GuiBase.isIOS()) {
             //iOS: free the card images of the previous screens before a shop loads its own
             forge.assets.ImageCache.getInstance().unloadCardTextures(true);
