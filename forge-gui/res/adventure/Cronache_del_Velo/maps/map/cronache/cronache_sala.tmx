@@ -468,26 +468,11 @@
       },
       {
         &quot;name&quot;: &quot;(Chiedi al vecchio di chiamare Mirta)&quot;,
-        &quot;condition&quot;: [
-          {
-            &quot;getQuestFlag&quot;: {
-              &quot;key&quot;: &quot;cr_mirta_richiami&quot;,
-              &quot;op&quot;: &quot;&lt;&quot;,
-              &quot;val&quot;: 3
-            }
-          }
-        ],
         &quot;text&quot;: &quot;Il vecchio batte tre colpi sulla campana spezzata. Dopo un po' dal portale arriva Mirta, con il suo carretto di bustine.\n(Puoi chiamarla al massimo 3 volte in questa partita.)&quot;,
         &quot;options&quot;: [
           {
             &quot;name&quot;: &quot;(Guarda le bustine)&quot;,
             &quot;action&quot;: [
-              {
-                &quot;addQuestFlag&quot;: {
-                  &quot;key&quot;: &quot;cr_mirta_richiami&quot;,
-                  &quot;val&quot;: 1
-                }
-              },
               {
                 &quot;openMerchant&quot;: &quot;Cronache Bustine Richiamo&quot;
               }
