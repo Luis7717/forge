@@ -161,6 +161,13 @@ public class GameHUD extends Stage {
         ui.onButtonPress("deck", this::openDeck);
         ui.onButtonPress("exittoworldmap", this::exitToWorldMap);
         ui.onButtonPress("bookmark", this::bookmark);
+        //Cronache: only the deck and booster buttons are shown (under the player picture); the menu opens by
+        //tapping the player picture, the other buttons stay hidden (their keys still work)
+        for (TextraButton b : new TextraButton[]{menuActor, logbookActor, exitToWorldMapActor, bookmarkActor})
+            if (b != null) {
+                b.setVisible(false);
+                b.setTouchable(Touchable.disabled);
+            }
         keyCollection = ui.findActor("keyCollection");
         keyCollection.skipToTheEnd();
         lifePoints = ui.findActor("lifePoints");
@@ -1092,7 +1099,7 @@ public class GameHUD extends Stage {
             if (count > 1 && button == 0)
                 showHideHUD(!hidden);
             else if (button == 0)
-                setHUDOpacity(!transluscent);
+                menu();
             super.tap(event, x, y, count, button);
         }
     }
