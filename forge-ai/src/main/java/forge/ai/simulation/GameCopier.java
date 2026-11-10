@@ -241,12 +241,18 @@ public class GameCopier {
         } 
     }
 
+    /** Test only: -Dforge.test.humanclone=old|new copies every seat as if it were a human (old or new behaviour). */
+    private static final String HUMAN_CLONE_TEST = System.getProperty("forge.test.humanclone");
+
     private RegisteredPlayer clonePlayer(RegisteredPlayer p) {
         RegisteredPlayer clone = new RegisteredPlayer(p.getDeck());
         LobbyPlayer lp = p.getPlayer();
-        if (!(lp instanceof LobbyPlayerAi)) {
-            // TODO should probably also override them if they're normal AI
-            lp = new LobbyPlayerAi(p.getPlayer().getName(), Sets.newHashSet(AIOption.USE_FULL_SIMULATION));
+        if (!(lp instanceof LobbyPlayerAi) || HUMAN_CLONE_TEST != null) {
+            // A human seat is played by an AI in the copy. For a Monte Carlo rollout that must be the quick heuristic
+            // AI: the full-simulation AI copies the game again for every decision it makes (and its copies do the
+            // same), so a rollout against a human could fill hundreds of MB in seconds (OutOfMemoryError on Android).
+            boolean fullSim = HUMAN_CLONE_TEST != null ? "old".equals(HUMAN_CLONE_TEST) : !origGame.getAIFlatMonteCarlo();
+            lp = new LobbyPlayerAi(p.getPlayer().getName(), fullSim ? Sets.newHashSet(AIOption.USE_FULL_SIMULATION) : null);
         }
         clone.setPlayer(lp);
         return clone;

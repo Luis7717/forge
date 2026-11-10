@@ -16,6 +16,9 @@ on:
       simargs:
         description: 'Extra arguments for the sim command (e.g. "-mc on")'
         default: ''
+      release:
+        description: 'Release tag for the logs'
+        default: 'sim-latest'
       jopts:
         description: 'Extra JVM options (e.g. "-Dforge.mcprobe.every=40 -Dforge.mclite=true -Xmx512m")'
         default: ''
@@ -89,8 +92,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           zip -q -r simlogs.zip simlogs summary.md
-          gh release delete sim-latest --yes --cleanup-tag || true
-          gh release create sim-latest simlogs.zip --title "AI simulation logs" --notes "Log della simulazione IA" --latest=false --prerelease
+          REL="${{ github.event.inputs.release }}"; REL="${REL:-sim-latest}"
+          gh release delete "$REL" --yes --cleanup-tag || true
+          gh release create "$REL" simlogs.zip --title "AI simulation logs" --notes "Log della simulazione IA" --latest=false --prerelease
 
       - uses: actions/upload-artifact@v4
         if: always()
