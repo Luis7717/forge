@@ -117,7 +117,12 @@ public final class FlatMonteCarloPicker {
         private static final long serialVersionUID = 1L;
 
         RolloutTooSlow() {
-            super("rollout too slow", null, false, false);
+            super("rollout too slow"); //not the 4-argument constructor: missing on MobiVM (iOS)
+        }
+
+        @Override
+        public synchronized Throwable fillInStackTrace() {
+            return this; //no stack trace, as before
         }
     }
 

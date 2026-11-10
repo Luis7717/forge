@@ -171,7 +171,14 @@ public final class AITimeoutTracker {
     /** Thrown by {@link #check()} when the thread's AI deadline has passed. Carries no stack trace (cheap). */
     public static final class Expired extends RuntimeException {
         private static final long serialVersionUID = 1L;
-        Expired() { super("AI deadline reached", null, false, false); }
+        // Not the 4-argument RuntimeException constructor: MobiVM (iOS) lacks it (NoSuchMethodError when the AI ran
+        // out of time). Same effect: no stack trace is filled in.
+        Expired() { super("AI deadline reached"); }
+
+        @Override
+        public synchronized Throwable fillInStackTrace() {
+            return this;
+        }
     }
 
     private static final class Limit {
