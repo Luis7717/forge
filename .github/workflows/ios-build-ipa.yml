@@ -57,6 +57,12 @@ jobs:
         # restored above — cuts rebuild time dramatically on cache hits.
         run: SKIP_CACHE_CLEAR=1 bash forge-gui-ios/pipeline/ios-pipeline.sh ipa
 
+      - name: Print link audit (Java members missing on MobiVM)
+        if: always()
+        run: |
+          echo "==== AUDIT ===="; cat tmp/jvmdg/work/audit-report.txt 2>/dev/null || echo "no audit report"
+          echo "==== END AUDIT ===="
+
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v6
         with:
