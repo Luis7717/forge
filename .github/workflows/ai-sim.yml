@@ -13,6 +13,12 @@ on:
       pairs:
         description: 'Optional matchups "deckA deckB name;..." (file names in decks/top, old_NNN for the replaced decks)'
         default: ''
+      simargs:
+        description: 'Extra arguments for the sim command (e.g. "-mc on")'
+        default: ''
+      jopts:
+        description: 'Extra JVM options (e.g. "-Dforge.mcprobe.every=40 -Dforge.mclite=true -Xmx512m")'
+        default: ''
 
 permissions:
   contents: write
@@ -40,6 +46,8 @@ jobs:
         env:
           GAMES: ${{ github.event.inputs.games }}
           PAIRS: ${{ github.event.inputs.pairs }}
+          SIMARGS: ${{ github.event.inputs.simargs }}
+          JOPTS: ${{ github.event.inputs.jopts }}
         run: |
           set +e
           JAR=$(ls $GITHUB_WORKSPACE/forge-gui-desktop/target/*jar-with-dependencies.jar | head -1)
@@ -57,7 +65,7 @@ jobs:
           if [ -n "$PAIRS" ]; then echo "$PAIRS" | tr ';' '\n' | sed '/^\s*$/d' > pairs.txt; fi
           cat pairs.txt
           cd forge-gui-desktop
-          cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g -Djava.awt.headless=true -jar '"$JAR"' sim -D '"$SD"' -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
+          cat ../pairs.txt | xargs -P 4 -L 1 sh -c 'timeout 1800 java -Xmx2g '"$JOPTS"' -Djava.awt.headless=true -jar '"$JAR"' sim -D '"$SD"' -d "$0" "$1" -n '"${GAMES:-4}"' -c 420 '"$SIMARGS"' > '"$GITHUB_WORKSPACE"'/simlogs/"$2".log 2>&1; echo "done $2"'
           cd $GITHUB_WORKSPACE
           echo "## Results" > summary.md
           for f in simlogs/*.log; do

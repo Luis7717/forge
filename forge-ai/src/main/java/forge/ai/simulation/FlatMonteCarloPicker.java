@@ -1243,11 +1243,14 @@ public final class FlatMonteCarloPicker {
             // MyRandom is global state; this is safe because the game thread is waiting for this AI decision.
             MyRandom.setRandom(new Random(seed));
 
+            final McMemProbe probe = McMemProbe.start(player.getGame().getPhaseHandler().getTurn());
             final GameSimulator sim = new GameSimulator(player.getGame(), player, mode == Mode.RESPOND);
             final Game simGame = sim.getSimulatedGameState();
             final Player simAi = sim.getSimulatedAiPlayer();
             simGame.AI_TIMEOUT = Math.min(simGame.AI_TIMEOUT, ROLLOUT_AI_TIMEOUT_SECONDS);
             HiddenInfoShuffler.shuffle(simGame, sim.getGameCopier(), player, new Random(seed ^ HIDDEN_INFO_SALT));
+            if (probe != null)
+                probe.after("after copy (" + mode + ")", sim);
 
             final Long value;
             switch (mode) {
@@ -1263,6 +1266,10 @@ public final class FlatMonteCarloPicker {
                 default:
                     value = rolloutMain(sim, simGame, simAi, cand, cfg, playoutPlays);
                     break;
+            }
+            if (probe != null) {
+                probe.after("after playout", sim);
+                probe.end();
             }
             return value;
         } catch (final AITimeoutTracker.Expired e) {

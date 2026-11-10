@@ -246,6 +246,8 @@ public class SimulateMatch {
         if (flatMonteCarlo != null) {
             g1.AI_FLAT_MONTE_CARLO = flatMonteCarlo;
             g1.AI_FLAT_MONTE_CARLO_MAX = Boolean.TRUE.equals(flatMonteCarloMax);
+            //-Dforge.mclite=true: the phone settings (what Android uses)
+            g1.AI_FLAT_MONTE_CARLO_LITE = Boolean.getBoolean("forge.mclite");
         }
         // will run match in the same thread
         try {
