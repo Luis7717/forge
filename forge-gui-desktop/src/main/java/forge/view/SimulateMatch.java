@@ -43,6 +43,7 @@ public class SimulateMatch {
 
     public static void simulate(String[] args) {
         FModel.initialize(null, null);
+        forge.ai.simulation.McMemProbe.startWatchdog(); //diagnostics, off unless -Dforge.memwatch is set
 
         System.out.println("Simulation mode");
         if (args.length < 4) {
