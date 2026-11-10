@@ -1,13 +1,10 @@
 package forge.ai.simulation;
 
-import java.lang.management.ManagementFactory;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.management.MBeanServer;
-import javax.management.ObjectName;
 
 /**
  * Diagnostic only (off unless -Dforge.mcprobe.every=N is set): measures how much heap one Monte Carlo rollout
@@ -146,9 +143,13 @@ public final class McMemProbe {
     private static Map<String, long[]> histogram() {
         Map<String, long[]> out = new HashMap<>();
         try {
-            MBeanServer server = ManagementFactory.getPlatformMBeanServer();
-            String text = (String) server.invoke(new ObjectName("com.sun.management:type=DiagnosticCommand"),
-                    "gcClassHistogram", new Object[]{null}, new String[]{String[].class.getName()});
+            //by reflection: javax.management does not exist on every runtime (MobiVM on iOS), the probe is desktop-only
+            Object server = Class.forName("java.lang.management.ManagementFactory").getMethod("getPlatformMBeanServer").invoke(null);
+            Object name = Class.forName("javax.management.ObjectName").getConstructor(String.class)
+                    .newInstance("com.sun.management:type=DiagnosticCommand");
+            String text = (String) Class.forName("javax.management.MBeanServer")
+                    .getMethod("invoke", Class.forName("javax.management.ObjectName"), String.class, Object[].class, String[].class)
+                    .invoke(server, name, "gcClassHistogram", new Object[]{null}, new String[]{String[].class.getName()});
             for (String line : text.split("\n")) {
                 String[] f = line.trim().split("\\s+");
                 if (f.length >= 4 && f[0].endsWith(":")) {

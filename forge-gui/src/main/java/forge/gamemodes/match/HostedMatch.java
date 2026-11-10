@@ -159,10 +159,9 @@ public class HostedMatch {
         game = match.createGame();
         //game.EXPERIMENTAL_RESTORE_SNAPSHOT = FModel.getPreferences().getPrefBoolean(FPref.MATCH_EXPERIMENTAL_RESTORE);
         game.AI_TIMEOUT = FModel.getPreferences().getPrefInt(FPref.MATCH_AI_TIMEOUT);
-        // iOS (MobiVM runtime) lacks a Java API used by the Monte Carlo rollouts and crashes mid-game:
-        // keep the standard heuristic AI there.
-        game.AI_FLAT_MONTE_CARLO = FModel.getPreferences().getPrefBoolean(FPref.MATCH_AI_FLAT_MONTE_CARLO)
-                && !GuiBase.isIOS();
+        // (iOS had it off for a while after a NoSuchMethodError on MobiVM: a rollout now catches such a LinkageError,
+        // switches Monte Carlo off for that match and logs the missing member instead of crashing.)
+        game.AI_FLAT_MONTE_CARLO = FModel.getPreferences().getPrefBoolean(FPref.MATCH_AI_FLAT_MONTE_CARLO);
         // (Android had it off for a while: the rollouts ran out of the 512MB heap, because the human seat was copied
         // as a full-simulation AI that copied the game again for each decision. GameCopier now uses the heuristic AI
         // there and FlatMonteCarloPicker skips rollouts when the heap is nearly full.)

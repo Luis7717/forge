@@ -1303,6 +1303,16 @@ public final class FlatMonteCarloPicker {
             reportFailure(e);
             lastRolloutProblem = "error";
             return null;
+        } catch (final LinkageError e) {
+            // A Java API missing from the runtime (MobiVM on iOS is a reduced Java): switch Monte Carlo off for this
+            // match instead of crashing, and leave the missing member in the log so that it can be bridged.
+            if (player.getGame().AI_FLAT_MONTE_CARLO) {
+                System.err.println("Flat Monte Carlo switched off for this match, the runtime lacks: " + e);
+                e.printStackTrace();
+            }
+            player.getGame().AI_FLAT_MONTE_CARLO = false;
+            lastRolloutProblem = "error";
+            return null;
         } catch (final StackOverflowError | OutOfMemoryError e) {
             // A runaway copy must not kill the real game either (Android has small heaps).
             reportFailure(new RuntimeException(e));
