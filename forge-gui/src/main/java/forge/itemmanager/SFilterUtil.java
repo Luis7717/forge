@@ -249,10 +249,42 @@ public class SFilterUtil {
                 term = PaperCardPredicates.searchableName(stringOp, s).or(PaperCardPredicates.fromRules(IterableUtil.or(subands)));
             else
                 term = PaperCardPredicates.fromRules(IterableUtil.or(subands));
+            //the cards are shown translated (e.g. Italian): also look in the translated name, type and text
+            if (!"en-US".equals(forge.util.CardTranslation.getLanguageSelected()))
+                term = term.or(translatedTextPredicate(s, stringOp == StringOp.EQUALS_IC, inName, inType, inText));
 
             terms.add(term);
         }
         return IterableUtil.and(terms);
+    }
+
+    private static Predicate<PaperCard> translatedTextPredicate(final String what, final boolean exact,
+            final boolean inName, final boolean inType, final boolean inText) {
+        final String needle = what.toLowerCase(java.util.Locale.ROOT);
+        return pc -> {
+            CardRules rules = pc.getRules();
+            if (rules == null)
+                return false;
+            for (forge.card.ICardFace face : new forge.card.ICardFace[]{rules.getMainPart(), rules.getOtherPart()}) {
+                if (face == null)
+                    continue;
+                String name = face.getName();
+                if (inText && matchesText(forge.util.CardTranslation.getTranslatedOracle(name), needle, exact))
+                    return true;
+                if (inType && matchesText(forge.util.CardTranslation.getTranslatedType(name, ""), needle, exact))
+                    return true;
+                if (inName && matchesText(forge.util.CardTranslation.getTranslatedName(name), needle, exact))
+                    return true;
+            }
+            return false;
+        };
+    }
+
+    private static boolean matchesText(String text, String needle, boolean exact) {
+        if (text == null || text.isEmpty())
+            return false;
+        String t = text.toLowerCase(java.util.Locale.ROOT);
+        return exact ? t.equals(needle) : t.contains(needle);
     }
 
     public static <T extends InventoryItem> Predicate<T> buildItemTextFilter(String text) {

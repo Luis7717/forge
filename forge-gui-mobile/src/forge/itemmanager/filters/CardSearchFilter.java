@@ -23,6 +23,22 @@ public class CardSearchFilter extends TextSearchFilter<PaperCard> {
         inCost = inCost0;
     }
 
+    private String caption = "";
+
+    //the ghost text says what is searched: name, type and the text of the cards
+    @Override
+    public String getCaption() {
+        return caption;
+    }
+
+    @Override
+    public void setCaption(String caption0) {
+        caption = caption0 == null ? "" : caption0;
+        getWidget();
+        String what = forge.Forge.getLocalizer().getMessageorUseDefault("lblSearchCardWords", "Search name, type or text");
+        txtSearch.setGhostText(caption.isEmpty() ? what : what + " (" + caption + ")");
+    }
+
     @Override
     public ItemFilter<PaperCard> createCopy() {
         CardSearchFilter copy = new CardSearchFilter(itemManager, inName, inType, inText, inCost);
