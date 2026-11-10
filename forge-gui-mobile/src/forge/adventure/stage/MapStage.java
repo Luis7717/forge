@@ -856,8 +856,12 @@ public class MapStage extends GameStage {
                 currentMob.freezeMovement();
                 AdventureQuestController.instance().updateQuestsLose(currentMob);
                 AdventureQuestController.instance().showQuestDialogs(MapStage.this);
+                int goldBeforeDefeat = Current.player().getGold();
                 boolean defeated = Current.player().defeated();
                 if (isCronacheRoom()) {
+                    //from challenge 60 a defeat costs no coins (the difficulty's gold loss is given back)
+                    if (CronacheRewards.currentChallenge() >= CronacheRewards.LATE_CHALLENGE && Current.player().getGold() < goldBeforeDefeat)
+                        Current.player().giveGold(goldBeforeDefeat - Current.player().getGold());
                     //Cronache room: the player stays, the challenger walks back out and returns shortly
                     CronacheRewards.onChallengeLost(currentMob);
                     Current.player().heal(1.0f);

@@ -165,7 +165,7 @@ public final class CronacheRewards {
         setFlag(FLAG_LOST, 1);
         float pct = DIFF_DEFEAT_GOLD[difficulty()];
         int loss = (int) (Current.player().getGold() * pct);
-        if (loss > 0)
+        if (loss > 0 && currentChallenge() < LATE_CHALLENGE) //from challenge 60 a defeat costs no coins
             Current.player().takeGold(loss);
         //from challenge 60 a real defeat (life to 0, not before the third turn, not conceded) pays 30 coins
         if (lastLossEarned && currentChallenge() >= LATE_CHALLENGE) {
