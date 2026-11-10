@@ -1230,6 +1230,23 @@ public final class FlatMonteCarloPicker {
         return reactivePercent <= 5 ? AGGRO_HOLD_FACTOR : 1.0;
     }
 
+    /** Heap headroom a rollout wants on a small heap (one copy is a few MB; the rest is margin for the game itself). */
+    private static final long ROLLOUT_HEADROOM_BYTES = 96L << 20;
+
+    /** True on a small heap (phone) that is nearly full: the rollout is skipped. Never true on a desktop heap. */
+    static boolean lowOnMemory() {
+        final Runtime rt = Runtime.getRuntime();
+        final long max = rt.maxMemory();
+        if (max == Long.MAX_VALUE || max > (1536L << 20))
+            return false;
+        long free = max - (rt.totalMemory() - rt.freeMemory());
+        if (free >= ROLLOUT_HEADROOM_BYTES)
+            return false;
+        System.gc(); //what looks full may only be garbage
+        free = max - (rt.totalMemory() - rt.freeMemory());
+        return free < ROLLOUT_HEADROOM_BYTES;
+    }
+
     /**
      * One sample of one candidate.
      *
@@ -1238,6 +1255,11 @@ public final class FlatMonteCarloPicker {
     private static Long rollout(final Player player, final Candidate cand, final long seed, final Config cfg,
                                 final int playoutPlays, final Mode mode) {
         TOTAL_ROLLOUTS.incrementAndGet();
+        if (lowOnMemory()) {
+            //phones have small heaps (512MB on Android): rather the heuristic choice than an OutOfMemoryError
+            lastRolloutProblem = "memory";
+            return null;
+        }
         final Random savedRandom = MyRandom.getRandom();
         try {
             // MyRandom is global state; this is safe because the game thread is waiting for this AI decision.

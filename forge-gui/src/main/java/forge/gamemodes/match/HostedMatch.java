@@ -162,9 +162,10 @@ public class HostedMatch {
         // iOS (MobiVM runtime) lacks a Java API used by the Monte Carlo rollouts and crashes mid-game:
         // keep the standard heuristic AI there.
         game.AI_FLAT_MONTE_CARLO = FModel.getPreferences().getPrefBoolean(FPref.MATCH_AI_FLAT_MONTE_CARLO)
-                && !GuiBase.isIOS() && !GuiBase.isAndroid();
-        // Android: the rollouts copy the whole game many times a turn and fill the 512MB Java heap
-        // (OutOfMemoryError mid-duel on the Cronache Android build), so the phone keeps the heuristic AI too.
+                && !GuiBase.isIOS();
+        // (Android had it off for a while: the rollouts ran out of the 512MB heap, because the human seat was copied
+        // as a full-simulation AI that copied the game again for each decision. GameCopier now uses the heuristic AI
+        // there and FlatMonteCarloPicker skips rollouts when the heap is nearly full.)
         // Desktop auto-detection: phones and tablets keep the light settings, a PC gets the maximum strength.
         game.AI_FLAT_MONTE_CARLO_MAX = !forge.gui.GuiBase.isMobile();
         // ...and a phone gets the lite settings (attack search, cheap lookahead) instead of the bare profile values.
