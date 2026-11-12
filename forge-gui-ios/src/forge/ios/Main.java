@@ -169,6 +169,11 @@ public class Main extends IOSApplication.Delegate {
             } catch (Throwable t) {
                 log("Failed to re-apply System.out/err redirection: " + t.getMessage());
             }
+            try {
+                IOSMemoryLog.start(); //"[mem]" line in forge.log every minute
+            } catch (Throwable t) {
+                log("Memory log not started: " + t);
+            }
             return iosApp;
         } catch (Throwable e) {
             log("Exception in createApplication(): " + e.getMessage());
