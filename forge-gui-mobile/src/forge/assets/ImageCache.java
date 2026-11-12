@@ -156,6 +156,9 @@ public class ImageCache {
             }
         } catch (Exception ignored) {}
         getCardsLoaded().clear();
+        synchronized (recent) {
+            recent.clear();
+        }
         imageRecord.get().clear();
         counter = 0;
         ((Forge) Gdx.app.getApplicationListener()).needsUpdate = true;
@@ -167,8 +170,7 @@ public class ImageCache {
     public void updateSynqCount(File file, int count) {
         if (file == null)
             return;
-        getSyncQ().add(file.getPath());
-        getCardsLoaded().add(file.getPath());
+        touch(file.getPath());
         counter += count;
     }
 
@@ -333,6 +335,9 @@ public class ImageCache {
             image = getAsset(imageFile);
 
             if (image != null) {
+                //mark it as recently used: textures that only came through this fast path were never tracked,
+                //so the cache never unloaded them (1200 card textures, ~1GB, after an hour on iOS)
+                touch(imageFile.getPath());
                 return image;
             }
 
@@ -372,6 +377,17 @@ public class ImageCache {
         return image;
     }
 
+    /** Records a card texture as loaded and recently used (the least recently used ones beyond the cap are unloaded). */
+    private void touch(String fileName) {
+        synchronized (recent) {
+            recent.put(fileName, Boolean.TRUE); //access order: moves it to the most recent end
+        }
+        getCardsLoaded().add(fileName);
+    }
+
+    /** Card textures by last use, least recent first (an EvictingQueue of requests filled up with duplicates). */
+    private final java.util.LinkedHashMap<String, Boolean> recent = new java.util.LinkedHashMap<>(256, 0.75f, true);
+
     private Texture getAsset(File file) {
         if (file == null)
             return null;
@@ -392,8 +408,7 @@ public class ImageCache {
         if (check != null) {
             if (!others) {
                 //update first before clearing
-                getSyncQ().add(fileName);
-                getCardsLoaded().add(fileName);
+                touch(fileName);
                 unloadCardTextures(false);
             }
 
@@ -426,6 +441,9 @@ public class ImageCache {
                 if (!Forge.getAssets().manager().contains(fileName)) {
                     Forge.getAssets().manager().load(fileName, Texture.class, cardTextureParameter(fileName));
                     counter += 1;
+                    //track it from the start, so that it can be unloaded later even if it is never asked for again
+                    touch(fileName);
+                    unloadCardTextures(false);
                 }
 
                 // Every card still waiting for its texture reaches this point on EVERY frame. AssetManager.update(int)
@@ -487,6 +505,9 @@ public class ImageCache {
                 }
                 getSyncQ().clear();
                 getCardsLoaded().clear();
+                synchronized (recent) {
+                    recent.clear();
+                }
                 counter = 0;
                 CardRenderer.clearcardArtCache();
             } catch (Exception ignored) {}
@@ -494,10 +515,19 @@ public class ImageCache {
         }
         if (getCardsLoaded().size() <= maxCardCapacity)
             return;
-        //get latest images from syncQ
-        Set<String> newQ = Sets.newHashSet(getSyncQ());
-        //get all images not in newQ (cards to unload)
-        Set<String> toUnload = Sets.difference(getCardsLoaded(), newQ);
+        //least recently used beyond the cap (and any loaded card never marked as used)
+        java.util.List<String> toUnload = new java.util.ArrayList<>();
+        synchronized (recent) {
+            for (String f : getCardsLoaded())
+                if (!recent.containsKey(f))
+                    toUnload.add(f);
+            int excess = getCardsLoaded().size() - toUnload.size() - maxCardCapacity;
+            java.util.Iterator<String> it = recent.keySet().iterator();
+            while (excess-- > 0 && it.hasNext())
+                toUnload.add(it.next());
+            for (String f : toUnload)
+                recent.remove(f);
+        }
         //unload from assetmanager to save RAM
         try {
             for (String asset : toUnload) {
