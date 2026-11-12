@@ -31,7 +31,6 @@ import com.google.common.base.Supplier;
 import com.google.common.base.Suppliers;
 import com.google.common.collect.EvictingQueue;
 import com.google.common.collect.Queues;
-import com.google.common.collect.Sets;
 import forge.deck.DeckProxy;
 import forge.item.PaperToken;
 import org.apache.commons.lang3.StringUtils;
