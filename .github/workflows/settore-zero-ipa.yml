@@ -49,4 +49,4 @@ jobs:
           gh release create settore-zero-ipa SettoreZero.ipa \
             --title "Settore Zero (IPA)" \
             --notes "Build automatica dal commit ${GITHUB_SHA}. IPA non firmata: installala con TrollStore, Sideloadly o AltStore." \
-            --target "${GITHUB_SHA}" --prerelease
+            --target "${GITHUB_SHA}" --prerelease || { sleep 8; gh release view settore-zero-ipa > /dev/null; }
