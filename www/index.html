@@ -68,11 +68,9 @@ html,body{margin:0;height:100%;background:#05070a;overflow:hidden;font-family:-a
 #lv span{color:#6cf;margin-left:6px}
 .card.r3{box-shadow:0 0 10px #b45cff55}.card.r4{box-shadow:0 0 14px #ff9a1f77}.card.r5{box-shadow:0 0 18px #ff3355;animation:myth 1.2s infinite alternate}@keyframes myth{to{box-shadow:0 0 26px #ff33aa,0 0 6px #fff inset}}
 #fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
-#covz{position:absolute;left:0;right:0;bottom:0;height:calc(env(safe-area-inset-bottom) + 104px);padding-top:18px;text-align:center;font-size:14px;font-weight:800;letter-spacing:.12em;color:#cfe;background:linear-gradient(#0000,#0a2a18cc 35%,#0a2a18ee);border-top:2px solid #5fe08f66;touch-action:none}
+#covz{display:none;position:absolute;left:0;right:0;bottom:0;height:calc(env(safe-area-inset-bottom) + 104px);padding-top:18px;text-align:center;font-size:14px;font-weight:800;letter-spacing:.12em;color:#cfe;background:linear-gradient(#0000,#0a2a18cc 35%,#0a2a18ee);border-top:2px solid #5fe08f66;touch-action:none}
 #covz.on{background:linear-gradient(#0000,#1f8f4acc 35%,#1f8f4aee);color:#fff;border-top-color:#5fe08f}
-#wp{bottom:calc(env(safe-area-inset-bottom) + 118px)!important}
-#swap{bottom:calc(env(safe-area-inset-bottom) + 118px)!important}
-#adv{bottom:calc(env(safe-area-inset-bottom) + 200px)!important}
+
 </style></head><body>
 <canvas id="c"></canvas><canvas id="ov"></canvas>
 <div id="hud">
@@ -4770,7 +4768,7 @@ document.addEventListener('contextmenu',e=>e.preventDefault());
 /* ===== update ===== */
 function advance(){if(G.phase!=='clear')return;$('adv').style.display='none';const st=G.stages[G.si];G.mv={P:st.outP,t:0,kind:'out',last:G.si>=G.nS-1,dur:Math.max(.7,pathLen(st.outP)/(5.2*(1+.05*pk('sp'))))};G.phase='out';}
 function update(dt){G.t+=dt;const w=cw(),t=WT[w.t],ws=wst(w);
- const moving=!!G.mv,want=moving||!(cov.down||keys.Space)?1:0,shoot=(aim.down||aim.hold>0)&&!moving;if(aim.hold>0)aim.hold-=dt;G.idle+=dt;
+ const moving=!!G.mv,shoot=(aim.down||aim.hold>0)&&!moving,want=moving||shoot?1:0;if(aim.hold>0)aim.hold-=dt;G.idle+=dt;
  G.lean=clamp(G.lean+(want?1:-1)*dt*G.lsp,0,1);G.cdw-=dt;G.kick=Math.max(0,G.kick-dt*7);G.mflash-=dt;G.beam-=dt;G.hitM-=dt;G.hurtFx=Math.max(0,G.hurtFx-dt);G.shake=Math.max(0,G.shake-dt*1.6);
  if(G.ammo[w.id]<ws.mag&&(G.lean<.2||G.ammo[w.id]<=0||G.idle>1.2)){G.rel+=dt/(ws.rel*(G.lean<.2?.7:1.3));if(G.rel>=1){G.ammo[w.id]=ws.mag;G.rel=0;snd('rel');}}else G.rel=0;
  // percorso
@@ -4821,13 +4819,13 @@ function drawOv(){const g=og;g.setTransform(DPR,0,0,DPR,0,0);g.clearRect(0,0,inn
  for(let i=G.dn.length-1;i>=0;i--){const d=G.dn[i];d.life-=.016;if(d.life<=0){G.dn.splice(i,1);continue;}const s=proj2(d.p);if(!s)continue;g.globalAlpha=Math.min(1,d.life*2.5);g.fillStyle='#000';g.fillText(d.txt,s[0]+1,s[1]-(1-d.life)*40+1);g.fillStyle=d.c;g.fillText(d.txt,s[0],s[1]-(1-d.life)*40);}
  g.globalAlpha=1;
  if(G.lean>.5&&(aim.down||G.cdw>-.4)){const x=aim.cx,y=aim.cy;g.lineWidth=2;g.strokeStyle=G.hitM>0?(G.hitHead?'#ffd65a':'#ff4040'):'rgba(255,255,255,.85)';g.beginPath();g.arc(x,y,G.hitM>0?15:20,0,7);g.stroke();g.fillStyle=g.strokeStyle;g.fillRect(x-1.5,y-1.5,3,3);
-  if(!(G.ammo[cw().id]>0)){g.fillStyle='#ffb040';g.fillText('Riparati per ricaricare',x,y-34);}}
+  if(!(G.ammo[cw().id]>0)){g.fillStyle='#ffb040';g.fillText('Rilascia per ricaricare',x,y-34);}}
  if(G.boss){const w=innerWidth*.7,x=(innerWidth-w)/2,y=innerHeight*.2;g.fillStyle='rgba(0,0,0,.6)';g.fillRect(x-2,y-2,w+4,10);g.fillStyle='#ff3ac8';g.fillRect(x,y,w*Math.max(0,G.boss.hp/G.boss.mhp),6);g.fillStyle='#fff';g.fillText(chOf(G.L).boss.toUpperCase(),innerWidth/2,y-8);}
  if(G.slow>0){g.fillStyle='rgba(80,170,255,'+(.12*Math.min(1,G.slow))+')';g.fillRect(0,0,innerWidth,innerHeight);}}
 
 /* ===== flow ===== */
 function startLevel(L){ainit();resize();buildLevel(L);state='play';ui.style.display='none';hud.style.display='block';$('toast').innerHTML='';$('adv').style.display='none';$('fade').style.opacity=0;aim.down=false;aim.hold=0;cov.down=false;$('covz').classList.remove('on');ndc.set(0,0);dots();last=performance.now();MU.track=null;musicStart('level');
- toast('<b>'+lvTxt(L)+'</b>'+(L===1?'<br>Tocca i nemici per sparare · tieni premuto in basso per ripararti':L%5===0?'<br><span style="color:#ff3ac8">Mira al nucleo luminoso</span>':''),L===1?5500:3200);}
+ toast('<b>'+lvTxt(L)+'</b>'+(L===1?'<br>Tieni premuto: esci dal riparo e spari · rilascia: ti ripari e ricarichi':L%5===0?'<br><span style="color:#ff3ac8">Mira al nucleo luminoso</span>':''),L===1?5500:3200);}
 function pause(){if(state!=='play')return;state='pause';if(AC)MUS.gain.setTargetAtTime(0,AC.currentTime,.05);ui.className='ov';ui.style.display='flex';
  ui.innerHTML=`<div class="pan"><h2>PAUSA</h2><button class="b p big" data-a="resume">RIPRENDI</button><button class="b big" data-a="tsnd">Audio: ${S.snd?'ON':'OFF'}</button><button class="b big" data-a="tmus">Musica: ${S.mus===0?'OFF':'ON'}</button><button class="b big" data-a="tgfx">Grafica: ${S.gfx===0?'LEGGERA':'ALTA'}</button>
  <button class="b d big" data-a="quit">TORNA ALLA BASE</button><p class="tip">Uscendo conservi i crediti e le armi trovate finora.</p></div>`;}
@@ -4853,7 +4851,7 @@ function drawHub(){const keep=ui.querySelector('.sc'),st=keep?keep.scrollTop:0;
   <button class="b g big" data-a="play">ENTRA ▶</button></div>
   <div class="card"><h4>Equipaggiamento (${S.eq.length}/3)</h4>${S.eq.map(id=>{const w=wget(id);return`<div style="margin-top:4px">${wname(w)}${w.l?' +'+w.l:''} <small>· ${RAR[w.r].n} · DPS ${wst(w).dps.toFixed(0)}</small></div>`;}).join('')}</div>
   <div class="card"><h4>Rarità</h4><div class="dots" style="margin-top:6px">${RAR.map(r=>`<span style="color:${r.c};font-size:12px;font-weight:700;margin-right:8px;white-space:nowrap"><i style="background:${r.c}"></i>${r.n}</span>`).join(' ')}</div></div>
-  <div class="tip"><b>Un solo dito.</b> Il personaggio sta in piedi: tocca i nemici per sparare (tieni premuto per il fuoco continuo). Tieni premuta la fascia in basso per abbassarti dietro il riparo e ricaricare; quando la lasci si rialza. Il mirino sta un po' sopra il dito, così vedi dove spari. Al riparo i colpi non ti toccano, ma droni, granate e Bruti sì: abbattili prima che arrivino.<br>Il cerchio rosso su un nemico avvisa che sta per sparare: riparati. Colpo alla testa = danno doppio e interrompe la mira. I barili rossi esplodono. Spara ai bauli per aprirli; un <b>armadietto ammaccato</b> che fa scintille nasconde un baule segreto.<br><br><span style="opacity:.7">Modelli 3D: soldato Mixamo (dagli esempi three.js) · «Space Ship Hallway» di yeeyeeman, CC-BY 4.0 · barile dagli asset Babylon.js, CC-BY 4.0 · armi dal pacchetto CC0 «Guns &amp; Explosives» di 3DModelsCC0.</span></div>`;}
+  <div class="tip"><b>Un solo dito.</b> Il personaggio sta nascosto dietro il riparo e intanto ricarica. Tieni premuto sullo schermo: esce e spara dove punta il mirino, che sta un po' sopra il dito così vedi dove spari. Appena rilasci rientra al riparo. Al riparo i colpi non ti toccano, ma droni, granate e Bruti sì: abbattili prima che arrivino.<br>Il cerchio rosso su un nemico avvisa che sta per sparare: riparati. Colpo alla testa = danno doppio e interrompe la mira. I barili rossi esplodono. Spara ai bauli per aprirli; un <b>armadietto ammaccato</b> che fa scintille nasconde un baule segreto.<br><br><span style="opacity:.7">Modelli 3D: soldato Mixamo (dagli esempi three.js) · «Space Ship Hallway» di yeeyeeman, CC-BY 4.0 · barile dagli asset Babylon.js, CC-BY 4.0 · armi dal pacchetto CC0 «Guns &amp; Explosives» di 3DModelsCC0.</span></div>`;}
  else if(tab===1){h+=`<small style="color:#9aa6b6">${S.inv.length} armi · puoi portarne 3 in missione</small><div style="height:6px"></div>`+[...S.inv].sort((a,b)=>(S.eq.includes(b.id)-S.eq.includes(a.id))||b.r-a.r||wst(b).dps-wst(a).dps).map(wcard).join('');}
  else if(tab===2){h+=CR.map((c,i)=>`<div class="card" style="border-left-color:${c.c}"><h4 style="color:${c.c}">${c.n}</h4><small>${['Qualsiasi rarità, per lo più comuni','Minimo Non comune, buone probabilità di Rara ed Epica','Minimo Rara, alta probabilità di Leggendaria e Mitica'][i]}</small><div class="row"><button class="b p" data-a="crate" data-v="${i}" ${S.cr<c.p?'disabled':''}>Apri · ${c.p} ◈</button></div></div>`).join('');}
  else{h+=Object.keys(PK).map(k=>{const P=PK[k],n=pk(k),c=pkCost(k);return`<div class="card" style="border-left-color:#5fe08f"><h4>${P.n} <small>${n}/${P.max}</small></h4><small>${P.d}</small><div class="row"><button class="b g" data-a="perk" data-v="${k}" ${n>=P.max||S.cr<c?'disabled':''}>${n>=P.max?'MAX':'Acquista '+c+' ◈'}</button></div></div>`;}).join('');}
