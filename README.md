@@ -10,3 +10,9 @@ Questo ramo è indipendente da Forge: contiene solo il gioco e la build dell'IPA
 L'IPA compilata si trova nella release **Settore Zero (IPA)** del repository
 (o tra gli artifact della build). Non è firmata: installala con TrollStore,
 Sideloadly o AltStore.
+
+## Crediti dei modelli 3D
+
+- Soldato: personaggio Mixamo, dagli esempi di three.js
+- «Space Ship Hallway» di yeeyeeman (Sketchfab), licenza CC-BY 4.0
+- Barile: dagli asset di Babylon.js, licenza CC-BY 4.0
