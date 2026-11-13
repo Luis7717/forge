@@ -16,3 +16,4 @@ Sideloadly o AltStore.
 - Soldato: personaggio Mixamo, dagli esempi di three.js
 - «Space Ship Hallway» di yeeyeeman (Sketchfab), licenza CC-BY 4.0
 - Barile: dagli asset di Babylon.js, licenza CC-BY 4.0
+- Armi e granata: pacchetto «Guns & Explosives» di 3DModelsCC0, licenza CC0

@@ -10,7 +10,11 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-15-intel
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15-intel, macos-15, macos-14]
+    runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,13 +37,14 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: SettoreZero-ipa
+          name: SettoreZero-ipa-${{ matrix.runner }}
           path: SettoreZero.ipa
 
       - name: Pubblica come release scaricabile
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if gh release view settore-zero-ipa --json assets -q '.assets[].name' 2>/dev/null | grep -q SettoreZero.ipa && [ "$(gh release view settore-zero-ipa --json targetCommitish -q .targetCommitish)" = "${GITHUB_SHA}" ]; then echo "release già aggiornata"; exit 0; fi
           gh release delete settore-zero-ipa --yes --cleanup-tag || true
           gh release create settore-zero-ipa SettoreZero.ipa \
             --title "Settore Zero (IPA)" \
