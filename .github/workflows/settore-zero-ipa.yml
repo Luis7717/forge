@@ -1,0 +1,47 @@
+name: Settore Zero IPA
+
+on:
+  push:
+    branches: [settore-zero]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compila l'app
+        run: |
+          set -euo pipefail
+          APP=build/Payload/SettoreZero.app
+          mkdir -p "$APP"
+          SDK=$(xcrun --sdk iphoneos --show-sdk-path)
+          xcrun --sdk iphoneos swiftc -O \
+            -target arm64-apple-ios14.0 -sdk "$SDK" \
+            App/main.swift -o "$APP/SettoreZero"
+          cp App/Info.plist "$APP/Info.plist"
+          cp App/AppIcon60x60@2x.png App/AppIcon60x60@3x.png "$APP/"
+          cp www/index.html "$APP/index.html"
+          printf 'APPL????' > "$APP/PkgInfo"
+          codesign --force --sign - --timestamp=none "$APP"
+          cd build && zip -qry ../SettoreZero.ipa Payload
+          ls -la ../SettoreZero.ipa
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: SettoreZero-ipa
+          path: SettoreZero.ipa
+
+      - name: Pubblica come release scaricabile
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete settore-zero-ipa --yes --cleanup-tag || true
+          gh release create settore-zero-ipa SettoreZero.ipa \
+            --title "Settore Zero (IPA)" \
+            --notes "Build automatica dal commit ${GITHUB_SHA}. IPA non firmata: installala con TrollStore, Sideloadly o AltStore." \
+            --target "${GITHUB_SHA}" --prerelease
