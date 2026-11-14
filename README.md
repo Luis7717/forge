@@ -17,3 +17,4 @@ Sideloadly o AltStore.
 - «Space Ship Hallway» di yeeyeeman (Sketchfab), licenza CC-BY 4.0
 - Barile: dagli asset di Babylon.js, licenza CC-BY 4.0
 - Armi e granata: pacchetto «Guns & Explosives» di 3DModelsCC0, licenza CC0
+- Androide «Xbot» (Mixamo) e robot «RobotExpressive» di Tomás Laulhé / Quaternius (CC0), dagli esempi three.js
